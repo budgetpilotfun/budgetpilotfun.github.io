@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The real per-mile cost of driving for a rideshare app | Budget Pilot</title>
+<meta name="description" content="One illustrative week of rideshare driving laid out as a profit-and-loss statement: fares against fuel, wear, depreciation and insurance, per hour and per mile.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/rideshare-driving-real-cost/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="The real per-mile cost of driving for a rideshare app">
+<meta property="og:description" content="One illustrative week of rideshare driving as a profit-and-loss statement, with the costs the payout screen leaves off.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/rideshare-driving-real-cost/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/rideshare-driving-real-cost.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/rideshare-driving-real-cost.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - The real per-mile cost of driving for a rideshare app">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Running Costs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The real per-mile cost of driving for a rideshare app">
+<meta name="twitter:description" content="One illustrative week of rideshare driving as a profit-and-loss statement, with the costs the payout screen leaves off.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/rideshare-driving-real-cost.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+/* Form: a profit-and-loss statement for one illustrative week.
+   Ruled ledger lines with dotted leaders, section subtotals, a double-ruled net line. */
+  .pl-sheet{
+    background:var(--card); border:1px solid var(--line-2); border-radius:6px;
+    padding:22px 20px 18px; margin:10px 0 34px; font-variant-numeric:tabular-nums;
+  }
+  .pl-head{text-align:center; border-bottom:1px solid var(--line-2); padding-bottom:12px; margin-bottom:14px}
+  .pl-head .pl-co{font-family:var(--disp); font-size:22px; line-height:1.2}
+  .pl-head .pl-per{font-size:13px; color:var(--faint); letter-spacing:.04em}
+  .pl-sec{
+    font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--sky); margin:18px 0 4px;
+  }
+  .pl-row{display:flex; align-items:baseline; gap:8px; font-size:15.5px; padding:3px 0}
+  .pl-row .pl-lab{flex:0 1 auto}
+  .pl-row .pl-lab small{display:block; font-size:12.5px; color:var(--faint); line-height:1.35}
+  .pl-row .pl-dots{flex:1 1 20px; border-bottom:1.5px dotted var(--line-2); transform:translateY(-4px); min-width:14px}
+  .pl-row .pl-amt{font-family:var(--mono); font-size:15px; white-space:nowrap}
+  .pl-row.pl-sub{border-top:1px solid var(--line-2); margin-top:6px; padding-top:7px; font-weight:600}
+  .pl-row.pl-accr .pl-amt{color:var(--bad)}
+  .pl-row.pl-net{
+    margin-top:14px; padding:8px 0 6px; border-top:1px solid var(--ink);
+    border-bottom:4px double var(--ink); font-weight:600; font-size:17px;
+  }
+  .pl-row.pl-net .pl-amt{font-size:17px; color:var(--good)}
+  .pl-row.pl-blank .pl-amt{min-width:84px; border-bottom:1.5px solid var(--ink); color:transparent}
+  .pl-ratios{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:0 0 32px;
+  }
+  .pl-ratios div{border-left:3px solid var(--amber); padding:4px 0 4px 12px}
+  .pl-ratios b{display:block; font-family:var(--mono); font-size:20px; font-weight:500}
+  .pl-ratios span{font-size:13.5px; color:var(--muted); line-height:1.4; display:block}
+  .pl-notes h2{font-size:clamp(22px,3.8vw,27px); margin-top:36px}
+  .pl-calc{font-family:var(--mono); font-size:14.5px; background:var(--sky-soft); padding:10px 12px; border-radius:6px; overflow-wrap:anywhere}
+  @media (max-width:420px){
+    .pl-sheet{padding:18px 12px 14px}
+    .pl-row{font-size:14.5px}
+    .pl-row .pl-amt{font-size:14px}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"The real per-mile cost of driving for a rideshare app","description":"One illustrative week of rideshare driving as a profit-and-loss statement, with the costs the payout screen leaves off.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/rideshare-driving-real-cost/",
+  "image":"https://budgetpilot.fun/articles/og/rideshare-driving-real-cost.jpg",
+  "articleSection":"Running Costs",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Running Costs","item":"https://budgetpilot.fun/articles/running-costs/"},
+  {"@type":"ListItem","position":4,"name":"The real per-mile cost of driving for a rideshare app"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/running-costs/">Running Costs</a>
+  </div>
+
+  <div class="kicker">Running Costs</div>
+  <h1>The real per-mile cost of driving for a rideshare app</h1>
+  <p class="standfirst">Six hundred miles, thirty-two hours logged in, one ordinary sedan. Here is that week written up the way an accountant would, and the gap between what the app deposited and what the driver actually earned.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The payout screen shows one number: what landed in your account. A profit-and-loss statement shows two, and the space between them is where most drivers&rsquo; hourly rate quietly shrinks. The week below is a composite built for illustration. Every input is labeled, every total is arithmetic you can check, and none of it describes any particular app&rsquo;s pay formula.</p>
+
+<div class="pl-sheet" role="table" aria-label="Illustrative weekly profit and loss statement">
+  <div class="pl-head">
+    <div class="pl-co">Statement of operations, one week</div>
+    <div class="pl-per">Composite driver &middot; 32 hours logged in &middot; 600 miles total, 380 with a rider aboard</div>
+  </div>
+
+  <div class="pl-sec">Income</div>
+  <div class="pl-row"><span class="pl-lab">Fares paid out to driver</span><span class="pl-dots"></span><span class="pl-amt">$650.00</span></div>
+  <div class="pl-row"><span class="pl-lab">Tips</span><span class="pl-dots"></span><span class="pl-amt">$45.00</span></div>
+  <div class="pl-row pl-sub"><span class="pl-lab">Total income</span><span class="pl-dots"></span><span class="pl-amt">$695.00</span></div>
+
+  <div class="pl-sec">Expenses paid in cash this week</div>
+  <div class="pl-row"><span class="pl-lab">Fuel<small>600 mi &divide; 30 mpg = 20 gal, at $3.50</small></span><span class="pl-dots"></span><span class="pl-amt">$70.00</span></div>
+  <div class="pl-row"><span class="pl-lab">Car washes and cleaning supplies</span><span class="pl-dots"></span><span class="pl-amt">$12.00</span></div>
+  <div class="pl-row"><span class="pl-lab">Share of phone and data plan</span><span class="pl-dots"></span><span class="pl-amt">$10.00</span></div>
+  <div class="pl-row pl-sub"><span class="pl-lab">Cash expenses</span><span class="pl-dots"></span><span class="pl-amt">$92.00</span></div>
+
+  <div class="pl-sec">Expenses accrued, paid later</div>
+  <div class="pl-row pl-accr"><span class="pl-lab">Maintenance and tires<small>600 mi &times; $0.08</small></span><span class="pl-dots"></span><span class="pl-amt">$48.00</span></div>
+  <div class="pl-row pl-accr"><span class="pl-lab">Depreciation<small>600 mi &times; $0.15</small></span><span class="pl-dots"></span><span class="pl-amt">$90.00</span></div>
+  <div class="pl-row pl-accr"><span class="pl-lab">Added insurance cost, weekly share</span><span class="pl-dots"></span><span class="pl-amt">$30.00</span></div>
+  <div class="pl-row pl-sub"><span class="pl-lab">Accrued expenses</span><span class="pl-dots"></span><span class="pl-amt">$168.00</span></div>
+
+  <div class="pl-row pl-sub"><span class="pl-lab">Total expenses</span><span class="pl-dots"></span><span class="pl-amt">$260.00</span></div>
+  <div class="pl-row pl-net"><span class="pl-lab">Net before tax</span><span class="pl-dots"></span><span class="pl-amt">$435.00</span></div>
+  <div class="pl-row pl-blank"><span class="pl-lab">Tax set-aside<small>your figure; see below</small></span><span class="pl-dots"></span><span class="pl-amt">blank</span></div>
+</div>
+
+<div class="pl-ratios">
+  <div><b>$13.59</b><span>net per logged-in hour<br>$435 &divide; 32</span></div>
+  <div><b>$18.84</b><span>what it <em>feels</em> like per hour<br>($695 &minus; $92) &divide; 32</span></div>
+  <div><b>43.3&cent;</b><span>cost per mile driven<br>$260 &divide; 600</span></div>
+  <div><b>68.4&cent;</b><span>cost per paid mile<br>$260 &divide; 380</span></div>
+</div>
+
+<div class="pl-notes">
+<h2>Reading the statement</h2>
+
+<p><strong>The two hourly rates are the whole story.</strong> A driver who subtracts only what leaves the wallet this week (fuel, washes, the phone) sees $603 of profit and roughly $18.84 an hour. The $168 of accrued costs is just as real, it simply arrives later: as a brake job, a set of tires, or a trade-in offer lower than expected. Counting it drops the week to $435, about $13.59 an hour. Neither number is a claim about what rideshare pays; both are what this illustration&rsquo;s inputs produce.</p>
+
+<p><strong>Deadhead miles are expenses with no income line.</strong> Of the 600 miles, 220 were driven empty: to pickups, back toward busy areas, home at the end of the shift. That is why the cost per paid mile (68.4&cent;) sits so far above the cost per mile driven (43.3&cent;). If you only track trip miles, you are pricing the job as if the empty miles were free.</p>
+
+<h2>Where the accrued lines come from</h2>
+
+<p>These are the lines to replace with your own numbers first, because they are the ones most people have never estimated.</p>
+
+<p><strong>Depreciation.</strong> Take what the car is worth today, subtract what you expect it to be worth after a stretch of heavy driving, and divide by the miles. The illustration assumed this:</p>
+<p class="pl-calc">($18,000 now &minus; $12,000 later) &divide; 40,000 miles = $0.15 per mile</p>
+<p>Look up comparable listings at today&rsquo;s mileage and at forty thousand more; the difference is your own figure. High-mileage driving pulls the car into older, cheaper price bands faster, which is the part that never shows on a statement until you sell. We take this up at length in <a href="/articles/depreciation-the-silent-bill/">the bill that never arrives</a>.</p>
+
+<p><strong>Maintenance and tires.</strong> Of the 8&cent; a mile, 2&cent; is tires: an $800 set lasting 40,000 miles. The other 6&cent; is a placeholder for oil, brakes, filters and the repairs that heavy mileage pulls forward. Your owner&rsquo;s manual may list a &ldquo;severe service&rdquo; schedule, and frequent short trips with idling can fall under it. Check which one applies to how you actually drive, and build your number from <a href="/articles/your-real-cost-per-mile/">a full per-mile worksheet</a>.</p>
+
+<p><strong>Insurance.</strong> A personal auto policy may exclude or limit coverage while you&rsquo;re logged into a rideshare app, and the details differ by insurer and by state. The $30 here stands for whatever it costs you to close that gap, typically through an endorsement or a different policy. Ask your insurer directly, in writing: what is covered while the app is on and waiting, while a ride is accepted, and while a passenger is aboard? Don&rsquo;t rely on a general description of what the app provides; read its current terms yourself.</p>
+
+<h2>The blank line</h2>
+
+<p>We left the tax set-aside empty on purpose. Income from driving for an app is generally reportable, and self-employed people may owe self-employment tax on top of income tax, but the amount depends on your whole return. The IRS publishes a standard mileage rate each year that some drivers can use in place of actual expenses; it is a tax figure, not a measure of what your car costs you, and the two can differ substantially. Our <a href="/articles/car-expenses-and-taxes/">basics on car expenses and taxes</a> explains who to ask, and <a href="https://www.irs.gov/">irs.gov</a> has the current rate and rules. Fill in the line with a number from a tax professional or your own return, not a round guess.</p>
+
+<h2>Which inputs move the net line most</h2>
+
+<p>Split the expenses into the ones that scale with miles and the ones that don&rsquo;t. Fuel, maintenance and depreciation scale: in this week they come to about 34.7&cent; a mile (11.7&cent; fuel, 8&cent; upkeep, 15&cent; depreciation). Washes, phone and insurance are closer to fixed. That split tells you where effort pays.</p>
+<p class="pl-calc">Cut 70 deadhead miles: 70 &times; $0.3467 &asymp; $24.27 more net<br>Fuel up 50&cent;/gal: 20 gal &times; $0.50 = $10.00 less net</p>
+<p>In this illustration, trimming empty miles is worth more than a sizable swing at the pump. Your own ratio will differ, which is the reason to work it out rather than borrow ours.</p>
+
+<h2>Running it on your own week</h2>
+
+<p>You need four things you already have: the weekly payout summary, your odometer at the start and end of the week, your fuel receipts, and the number of hours you were logged in. Everything else is a per-mile rate you estimate once and reuse. After two or three weeks the statement stops being an exercise and becomes a baseline, and the question it answers is narrower than &ldquo;is this worth it?&rdquo; It is: at my car&rsquo;s real cost per mile, which hours and which areas leave the net line where I need it to be?</p>
+</div>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/tires-as-a-line-item/">Tires as a line item</a></li>
+      <li><a href="/articles/what-moves-your-premium/">What moves your premium at renewal</a></li>
+      <li><a href="/articles/the-costs-nobody-counts/">Parking, tolls and the costs nobody counts</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parking, tolls and the costs nobody counts | Budget Pilot</title>
+<meta name="description" content="A seven-day diary of one illustrative household&#x27;s tolls, parking, fines and small car costs, tallied by category and then annualized the careful way.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/the-costs-nobody-counts/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Parking, tolls and the costs nobody counts">
+<meta property="og:description" content="One week of tolls, parking and small car costs, tallied and annualized.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/the-costs-nobody-counts/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/the-costs-nobody-counts.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/the-costs-nobody-counts.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Parking, tolls and the costs nobody counts">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Running Costs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Parking, tolls and the costs nobody counts">
+<meta name="twitter:description" content="One week of tolls, parking and small car costs, tallied and annualized.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/the-costs-nobody-counts.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Seven-day tally diary: a diary page per day, a tally-mark board, then an annualizing table. */
+  .tallylog-day{background:var(--card); border:1px solid var(--line); border-left:5px solid var(--amber); border-radius:4px 10px 10px 4px; padding:14px 16px 10px; margin:0 0 16px}
+  .tallylog-date{display:flex; justify-content:space-between; align-items:baseline; gap:10px; font-family:var(--disp); font-size:22px; margin:0 0 6px; line-height:1.3}
+  .tallylog-date span{font-family:var(--mono); font-size:14px; color:var(--muted)}
+  .tallylog-entry{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:0 12px; font-size:15.5px; line-height:1.5; padding:6px 0; border-bottom:1px solid var(--line); margin:0}
+  .tallylog-entry em{font-style:normal; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--sky); margin-right:6px}
+  .tallylog-entry b{font-family:var(--mono); font-weight:500; font-size:14.5px}
+  .tallylog-thought{font-size:14.5px; color:var(--muted); font-style:italic; line-height:1.5; margin:8px 0 4px}
+  .tallylog-board{border:2px solid var(--ink); border-radius:10px; padding:14px 16px; margin:28px 0}
+  .tallylog-board h2{margin:0 0 10px; font-size:24px}
+  .tallylog-row{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; align-items:center; padding:8px 0; border-bottom:1px dashed var(--line-2)}
+  .tallylog-row:last-child{border-bottom:0}
+  .tallylog-cat{font-weight:600; font-size:15.5px}
+  .tallylog-amt{font-family:var(--mono); font-size:15px; text-align:right}
+  .tallylog-marks{grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:12px}
+  .tallylog-five{position:relative; display:inline-flex; gap:5px; padding:0 3px}
+  .tallylog-five i{display:block; width:2.5px; height:22px; background:var(--ink); border-radius:2px}
+  .tallylog-five.is-full::after{content:""; position:absolute; left:-3px; right:-3px; top:10px; height:2.5px; background:var(--amber); transform:rotate(-22deg); border-radius:2px}
+  .tallylog-sum{display:flex; justify-content:space-between; font-family:var(--mono); font-weight:600; font-size:17px; border-top:2px solid var(--ink); padding-top:10px; margin-top:6px}
+  .tallylog-annual{min-width:470px}
+  .tallylog-annual td:nth-child(n+2),.tallylog-annual th:nth-child(n+2){text-align:right; font-family:var(--mono)}
+  .tallylog-annual th:nth-child(n+2){font-family:var(--body)}
+  .tallylog-annual tfoot td{font-weight:600; border-top:2px solid var(--ink); border-bottom:0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Parking, tolls and the costs nobody counts","description":"One week of tolls, parking and small car costs, tallied and annualized.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/the-costs-nobody-counts/",
+  "image":"https://budgetpilot.fun/articles/og/the-costs-nobody-counts.jpg",
+  "articleSection":"Running Costs",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Running Costs","item":"https://budgetpilot.fun/articles/running-costs/"},
+  {"@type":"ListItem","position":4,"name":"Parking, tolls and the costs nobody counts"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/running-costs/">Running Costs</a>
+  </div>
+
+  <div class="kicker">Running Costs</div>
+  <h1>Parking, tolls and the costs nobody counts</h1>
+  <p class="standfirst">A composite household wrote down every small car charge for a week. Nineteen of them, none large, and an annual total nobody had ever seen.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Monday started with a toll.</p>
+
+  <p>That is how the diary below opens — a record of one illustrative week in which every car cost that wasn't fuel, insurance or a loan payment got written down on the day it happened. The household is a composite, not a real family, and every amount is a round placeholder rather than a typical price. What's real is the pattern: small charges that never reach a budget because none of them feels big enough to count.</p>
+
+  <p>Each entry is tagged by category. The tally and the annual figure come at the end.</p>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Monday <span>$11.50</span></div>
+    <p class="tallylog-entry"><span><em>Toll</em>Bridge, morning</span><b>$2.75</b></p>
+    <p class="tallylog-entry"><span><em>Parking</em>Meter near the office</span><b>$6.00</b></p>
+    <p class="tallylog-entry"><span><em>Toll</em>Bridge, evening</span><b>$2.75</b></p>
+    <p class="tallylog-thought">Didn't notice either toll. The transponder just beeps.</p>
+  </div>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Tuesday <span>$23.50</span></div>
+    <p class="tallylog-entry"><span><em>Toll</em>Bridge, both ways</span><b>$5.50</b></p>
+    <p class="tallylog-entry"><span><em>Parking</em>Meter near the office</span><b>$6.00</b></p>
+    <p class="tallylog-entry"><span><em>Upkeep</em>Automatic car wash</span><b>$12.00</b></p>
+    <p class="tallylog-thought">The wash was an impulse at a gas station. It's once a month, roughly.</p>
+  </div>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Wednesday <span>$4.00</span></div>
+    <p class="tallylog-entry"><span><em>Upkeep</em>Washer fluid, one jug</span><b>$4.00</b></p>
+    <p class="tallylog-thought">Worked from home. The car barely moved and still cost something.</p>
+  </div>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Thursday <span>$46.50</span></div>
+    <p class="tallylog-entry"><span><em>Toll</em>Bridge, both ways</span><b>$5.50</b></p>
+    <p class="tallylog-entry"><span><em>Parking</em>Meter near the office</span><b>$6.00</b></p>
+    <p class="tallylog-entry"><span><em>Fine</em>Ticket — meter ran out during a long meeting</span><b>$35.00</b></p>
+    <p class="tallylog-thought">The ticket was more than the whole week of meters. Didn't set a phone reminder.</p>
+  </div>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Friday <span>$26.50</span></div>
+    <p class="tallylog-entry"><span><em>Toll</em>Bridge, both ways</span><b>$5.50</b></p>
+    <p class="tallylog-entry"><span><em>Parking</em>Meter near the office</span><b>$6.00</b></p>
+    <p class="tallylog-entry"><span><em>Parking</em>Garage, dinner downtown</span><b>$15.00</b></p>
+    <p class="tallylog-thought">The garage went on the card with dinner, so it'll look like a restaurant bill later.</p>
+  </div>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Saturday <span>$27.00</span></div>
+    <p class="tallylog-entry"><span><em>Upkeep</em>Air machine for a soft tire</span><b>$2.00</b></p>
+    <p class="tallylog-entry"><span><em>Parking</em>Lot at a game</span><b>$25.00</b></p>
+    <p class="tallylog-thought">Event parking cost more than the tickets for one of the kids.</p>
+  </div>
+
+  <div class="tallylog-day">
+    <div class="tallylog-date">Sunday <span>$10.00</span></div>
+    <p class="tallylog-entry"><span><em>Parking</em>Pay lot at the park</span><b>$10.00</b></p>
+    <p class="tallylog-thought">Seven days, no day at zero.</p>
+  </div>
+
+  <div class="tallylog-board">
+    <h2>The week's tally</h2>
+
+    <div class="tallylog-row">
+      <span class="tallylog-cat">Tolls · 8 crossings</span><span class="tallylog-amt">$22.00</span>
+      <span class="tallylog-marks" aria-hidden="true"><span class="tallylog-five is-full"><i></i><i></i><i></i><i></i></span><span class="tallylog-five"><i></i><i></i><i></i></span></span>
+    </div>
+    <div class="tallylog-row">
+      <span class="tallylog-cat">Parking · 7 times</span><span class="tallylog-amt">$74.00</span>
+      <span class="tallylog-marks" aria-hidden="true"><span class="tallylog-five is-full"><i></i><i></i><i></i><i></i></span><span class="tallylog-five"><i></i><i></i></span></span>
+    </div>
+    <div class="tallylog-row">
+      <span class="tallylog-cat">Upkeep · 3 purchases</span><span class="tallylog-amt">$18.00</span>
+      <span class="tallylog-marks" aria-hidden="true"><span class="tallylog-five"><i></i><i></i><i></i></span></span>
+    </div>
+    <div class="tallylog-row">
+      <span class="tallylog-cat">Fines · 1</span><span class="tallylog-amt">$35.00</span>
+      <span class="tallylog-marks" aria-hidden="true"><span class="tallylog-five"><i></i></span></span>
+    </div>
+    <div class="tallylog-sum"><span>19 charges</span><span>$149.00</span></div>
+  </div>
+
+  <p>Nineteen separate charges in seven days, none larger than $35, adding up to $149. Nothing on the list would make anyone rethink a car, and that is the point: these costs escape budgets not because they're hidden but because each one is too small to register.</p>
+
+  <h2>Why each category slips through</h2>
+
+  <p><strong>Tolls</strong> are the most invisible of the four because they're automated. A transponder account tops itself up from a card when the balance runs low, so what reaches your bank statement is an occasional round-number refill, not eight crossings. The charges happened on Monday through Friday; the evidence arrives weeks later, lumped together. Some toll systems also price differently depending on how you pay or the time of day, so the per-crossing figure on your account statement is worth reading at least once.</p>
+
+  <p><strong>Parking</strong> hides by scattering. Meters, apps, garages and event lots each go through a different channel, and apps may add a convenience charge on top of the posted rate. Friday's garage in the diary is the classic case: charged alongside dinner, it will be remembered as the cost of going out rather than the cost of driving there.</p>
+
+  <p><strong>Fines</strong> hide by being treated as bad luck. One ticket feels like an accident, but a routine that depends on a meter outlasting a meeting will produce tickets on some schedule. A phone reminder or a longer-duration spot is often cheaper than the occasional fine.</p>
+
+  <p><strong>Upkeep</strong> — washes, fluid, air — hides by being tiny. Individually these are the least important line. They are on the list mainly because a budget that forgets them will be short by exactly that much, every month.</p>
+
+  <h2>Annualizing without fooling yourself</h2>
+
+  <p>The tempting move is to multiply the week by 52. That gives $7,748 a year, and it's wrong, because not every week looks like this one. The ticket was unusual. The game was unusual. The car wash is monthly. Multiplying a single week treats the week's accidents as a lifestyle.</p>
+
+  <p>The better method sorts each category by how often it really recurs, then annualizes at that rate. The frequencies here are assumptions made for this composite household:</p>
+
+  <div class="tscroll">
+    <table class="tallylog-annual">
+      <thead><tr><th>Line</th><th>Amount</th><th>How often</th><th>Per year</th></tr></thead>
+      <tbody>
+        <tr><td>Weekday tolls</td><td>$22.00</td><td>48 working weeks</td><td>$1,056</td></tr>
+        <tr><td>Weekday parking</td><td>$24.00</td><td>48 working weeks</td><td>$1,152</td></tr>
+        <tr><td>Evening and weekend parking</td><td>$50.00</td><td>Every other week (26)</td><td>$1,300</td></tr>
+        <tr><td>Car wash</td><td>$12.00</td><td>Monthly (12)</td><td>$144</td></tr>
+        <tr><td>Washer fluid and tire air</td><td>$6.00</td><td>Quarterly (4)</td><td>$24</td></tr>
+        <tr><td>Parking ticket</td><td>$35.00</td><td>Once a year</td><td>$35</td></tr>
+      </tbody>
+      <tfoot><tr><td>Total</td><td></td><td></td><td>$3,711</td></tr></tfoot>
+    </table>
+  </div>
+
+  <p>$3,711 a year is about $309 a month. That's less than half the lazy estimate, and still a figure most households have never seen written down, because it's spread across a transponder account, a parking app, a debit card and a restaurant receipt. For comparison, it can rival a car payment or an insurance premium — lines that do get budgeted, because they arrive as single bills.</p>
+
+  <p>It also changes the arithmetic of other decisions. If a job goes remote, the $2,208 in weekday tolls and parking disappears along with the commute; <a href="/articles/when-you-stop-commuting/">when you stop commuting</a> follows what else shifts over the first year. And any honest monthly total, like the one built in <a href="/articles/what-a-car-really-costs-per-month/">what a car really costs per month</a>, needs a line for this category or it will run short every month without anyone knowing why.</p>
+
+  <h2>Running your own week</h2>
+
+  <p>Keep a note on your phone for seven days and log every car-related charge that isn't fuel, insurance or a loan payment: tolls, meters, garages, apps, washes, fluids, air, fines, even the vending-machine ice scraper. At the end, tally by category, decide honestly how often each recurs, and annualize the way the table does. Check the transponder statement and the parking app's history as well; they'll catch what you forgot to write down.</p>
+
+  <p>One week of noticing, one table, and a number goes into the budget that was always being spent anyway. For this household, the number is $309 a month.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/a-car-budget-spreadsheet/">Setting up a car budget spreadsheet</a></li>
+      <li><a href="/articles/what-a-gas-price-change-does/">What a gas price change does to your month</a></li>
+      <li><a href="/articles/going-down-to-one-car/">Going down to one car</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

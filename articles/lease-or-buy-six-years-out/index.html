@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lease or buy, six years out | Budget Pilot</title>
+<meta name="description" content="Two illustrative households, one leasing twice and one buying once, tracked side by side for six years with yearly outlays, running totals and what is left.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/lease-or-buy-six-years-out/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Lease or buy, six years out">
+<meta property="og:description" content="Leasing twice vs buying once, tracked year by year for six years, illustrative figures.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/lease-or-buy-six-years-out/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/lease-or-buy-six-years-out.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/lease-or-buy-six-years-out.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Lease or buy, six years out">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Leasing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lease or buy, six years out">
+<meta name="twitter:description" content="Leasing twice vs buying once, tracked year by year for six years, illustrative figures.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/lease-or-buy-six-years-out.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: two parallel year-by-year columns with running totals, then a closing tally. */
+  .lob-assume{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:8px 0 34px}
+  .lob-assume div{border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--card); font-size:14.5px; line-height:1.55}
+  .lob-assume b{display:block; font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:6px}
+  .lob-assume .lob-l b{color:var(--sky)}
+  .lob-assume .lob-b b{color:var(--amber-ink)}
+  .lob-assume ul{margin:0; padding-left:18px}
+  .lob-heads, .lob-year{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .lob-heads{position:sticky; top:0; background:var(--paper); padding:8px 0; z-index:1; border-bottom:2px solid var(--line-2)}
+  .lob-heads span{font-family:var(--disp); font-size:22px}
+  .lob-heads span:first-child{color:var(--sky)}
+  .lob-heads span:last-child{color:var(--amber-ink)}
+  .lob-yr-label{
+    grid-column:1 / -1; font-size:12px; font-weight:600; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--faint); margin:18px 0 0;
+  }
+  .lob-cell{border-radius:10px; padding:10px 12px; background:var(--card); border:1px solid var(--line)}
+  .lob-year .lob-cell:nth-of-type(1){border-left:4px solid var(--sky)}
+  .lob-year .lob-cell:nth-of-type(2){border-left:4px solid var(--amber)}
+  .lob-spent{font-family:var(--mono); font-size:17px; font-weight:600; display:block}
+  .lob-run{font-family:var(--mono); font-size:13px; color:var(--faint); display:block}
+  .lob-what{font-size:13.5px; color:var(--muted); line-height:1.45; display:block; margin-top:4px}
+  .lob-tally{margin:30px 0; display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .lob-tally div{border:2px solid var(--line-2); border-radius:10px; padding:12px 14px; font-size:14.5px}
+  .lob-tally .lob-net{font-family:var(--mono); font-size:20px; font-weight:600; display:block; margin-top:4px}
+  @media (max-width:520px){ .lob-assume{grid-template-columns:1fr} .lob-heads span{font-size:18px} .lob-spent{font-size:15px} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Lease or buy, six years out","description":"Leasing twice vs buying once, tracked year by year for six years, illustrative figures.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/lease-or-buy-six-years-out/",
+  "image":"https://budgetpilot.fun/articles/og/lease-or-buy-six-years-out.jpg",
+  "articleSection":"Leasing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Leasing","item":"https://budgetpilot.fun/articles/leasing/"},
+  {"@type":"ListItem","position":4,"name":"Lease or buy, six years out"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/leasing/">Leasing</a>
+  </div>
+
+  <div class="kicker">Leasing</div>
+  <h1>Lease or buy, six years out</h1>
+  <p class="standfirst">Comparing a lease and a loan by their monthly payments settles nothing. Comparing them over six years, with what each leaves behind, settles quite a lot, at least for one set of assumptions.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Two households need a car for the next six years. One leases, then leases again when the first term ends. The other buys the same kind of car with a five-year loan and keeps it. Every figure below is illustrative, chosen to be plausible and easy to follow, not to represent any market, lender or lessor. Taxes are treated as already folded into the prices; insurance, fuel and routine servicing are left out on the assumption that they would be similar for both.</p>
+
+<div class="lob-assume">
+  <div class="lob-l"><b>The lease household</b>
+    <ul>
+      <li>Lease 1: $2,000 at signing, $400/month, 36 months</li>
+      <li>Lease 2: $2,000 at signing, $420/month, 36 months</li>
+      <li>$400 turn-in fee at the end of each lease</li>
+      <li>Stays within miles; no damage charges</li>
+    </ul>
+  </div>
+  <div class="lob-b"><b>The buying household</b>
+    <ul>
+      <li>$32,000 all-in, $4,000 down</li>
+      <li>$28,000 at 6% APR for 60 months = $541.32/month</li>
+      <li>Out-of-warranty repairs, years 4–6: $1,400, $900, $1,200</li>
+      <li>Car worth about $14,000 at the end of year 6</li>
+    </ul>
+  </div>
+</div>
+
+<div class="lob-heads"><span>Lease</span><span>Buy</span></div>
+
+<div class="lob-year">
+  <p class="lob-yr-label">Year 1</p>
+  <div class="lob-cell"><span class="lob-spent">$6,800</span><span class="lob-run">total $6,800</span><span class="lob-what">$2,000 at signing + 12 × $400</span></div>
+  <div class="lob-cell"><span class="lob-spent">$10,496</span><span class="lob-run">total $10,496</span><span class="lob-what">$4,000 down + 12 × $541.32</span></div>
+</div>
+<div class="lob-year">
+  <p class="lob-yr-label">Year 2</p>
+  <div class="lob-cell"><span class="lob-spent">$4,800</span><span class="lob-run">total $11,600</span><span class="lob-what">Payments only</span></div>
+  <div class="lob-cell"><span class="lob-spent">$6,496</span><span class="lob-run">total $16,992</span><span class="lob-what">Payments only</span></div>
+</div>
+<div class="lob-year">
+  <p class="lob-yr-label">Year 3</p>
+  <div class="lob-cell"><span class="lob-spent">$5,200</span><span class="lob-run">total $16,800</span><span class="lob-what">Payments + $400 turn-in fee; car goes back</span></div>
+  <div class="lob-cell"><span class="lob-spent">$6,496</span><span class="lob-run">total $23,487</span><span class="lob-what">Payments; warranty coverage ending, depending on the car</span></div>
+</div>
+<div class="lob-year">
+  <p class="lob-yr-label">Year 4</p>
+  <div class="lob-cell"><span class="lob-spent">$7,040</span><span class="lob-run">total $23,840</span><span class="lob-what">New lease: $2,000 at signing + 12 × $420</span></div>
+  <div class="lob-cell"><span class="lob-spent">$7,896</span><span class="lob-run">total $31,383</span><span class="lob-what">Payments + $1,400 tires and repairs</span></div>
+</div>
+<div class="lob-year">
+  <p class="lob-yr-label">Year 5</p>
+  <div class="lob-cell"><span class="lob-spent">$5,040</span><span class="lob-run">total $28,880</span><span class="lob-what">Payments only</span></div>
+  <div class="lob-cell"><span class="lob-spent">$7,396</span><span class="lob-run">total $38,779</span><span class="lob-what">Final 12 payments + $900 repairs</span></div>
+</div>
+<div class="lob-year">
+  <p class="lob-yr-label">Year 6</p>
+  <div class="lob-cell"><span class="lob-spent">$5,440</span><span class="lob-run">total $34,320</span><span class="lob-what">Payments + $400 turn-in fee; car goes back</span></div>
+  <div class="lob-cell"><span class="lob-spent">$1,200</span><span class="lob-run">total $39,979</span><span class="lob-what">No payment. $1,200 repairs</span></div>
+</div>
+
+<div class="lob-tally">
+  <div>Lease: spent $34,320, owns nothing.<span class="lob-net">net $34,320</span></div>
+  <div>Buy: spent $39,979, owns a car worth ~$14,000.<span class="lob-net">net $25,979</span></div>
+</div>
+
+<p>Yearly figures are rounded to the dollar from exact payments; the running totals are built from the unrounded numbers, which is why a column may not add to the last dollar by eye.</p>
+
+<h2>What the columns show</h2>
+
+<p>Read down the left and the lease is cheaper in cash every single year until the last one. It is cheaper in cumulative cash at every point too. After six years the lease household has paid out $5,659 less than the buyers.</p>
+
+<p>Then the tally turns it over. The buyers have a car, and if it really is worth around $14,000, their net cost falls to $25,979. The lease household's net cost is simply what it paid. Under these assumptions buying comes out $8,341 ahead over six years.</p>
+
+<p>Notice where that advantage comes from. It is not the monthly payment, which was higher for the buyers in five years out of six. It is year six, when the loan is gone and the car is still there, plus the value sitting in the driveway at the end. The purchase wins by outlasting its own loan. Stop the comparison at year three and the buyers have spent $6,687 more with a car that is worth something but has not yet had time to justify itself.</p>
+
+<h2>Where the assumptions could flip it</h2>
+
+<p><strong>The resale value.</strong> The $14,000 is the single largest number in the buyers' favor and the least certain one in the model. At $10,000, their net rises to $29,979 and the gap shrinks to $4,341. What a six-year-old car fetches depends on the model, the miles and the market that year. The mechanism is covered in <a href="/articles/depreciation-the-silent-bill/">depreciation, the bill that never arrives</a>.</p>
+
+<p><strong>The repairs.</strong> We gave the buyers $3,500 of repairs across years four to six. A single major failure could double that. If year six had brought a $4,200 repair instead of $1,200, the buyers' net would be $28,979, still $5,341 ahead, but with a much worse year to live through. The lease household, driving a car under three years old for the whole period, largely sidesteps that variance.</p>
+
+<p><strong>The lease side's own risks.</strong> This model assumes no excess miles and no wear charges at either turn-in. A household that drives more than its allowance, or returns a car with curb-rashed wheels and a cracked windshield, adds real money to the left column at years three and six.</p>
+
+<p><strong>The lease prices themselves.</strong> We raised the second lease's payment by $20 a month, a guess and nothing more. Lease payments move with the car's price, its residual and the money factor, all of which can shift in three years. If the second lease had cost $480 a month instead of $420, the left column would carry another $2,160 over years four to six, and the buyers' lead would grow to $10,501. The pieces that drive that number are taken apart in <a href="/articles/how-a-lease-payment-is-calculated/">how a lease payment is calculated</a>.</p>
+
+<p><strong>The down payment's alternative use.</strong> The buyers put $4,000 down against the lessees' $2,000. The extra $2,000 could have earned something elsewhere. That opportunity cost is real but, at most savings yields, small next to the gaps above.</p>
+
+<p><strong>What happens in year seven.</strong> This is the quiet argument for buying. The lease household enters year seven with a new payment and a new signing cost. The buyers enter it with repairs and nothing else. Extend the comparison and, absent a catastrophic repair, the right-hand column keeps pulling away.</p>
+
+<h2>Running your own</h2>
+
+<p>The method transfers even if the numbers do not. Get real quotes for both sides: a lease with its due-at-signing, payment and end-of-lease fees, and a purchase with its price, down payment and loan terms. Decide how long you will actually keep a car, not how long you intend to. Fill in the same two columns year by year, with a realistic repair allowance for the owned car after warranty, and then put an honest resale estimate at the bottom of the right-hand column. The side that wins is the answer for that set of numbers, and nothing more general than that.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/leasing-when-you-drive-a-lot/">Leasing when you drive a lot</a></li>
+      <li><a href="/articles/new-or-three-years-old/">New or three years old: the money</a></li>
+      <li><a href="/articles/loan-terms-side-by-side/">36, 48, 60, 72, 84 months</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selling a car you still owe on | Budget Pilot</title>
+<meta name="description" content="A flowchart for selling or trading a car with a loan on it: getting the payoff, comparing it with the value, and what to do when you owe more than it is worth.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/selling-a-car-you-still-owe-on/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Selling a car you still owe on">
+<meta property="og:description" content="A flowchart for selling a financed car, including the branch where you owe more than it's worth.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/selling-a-car-you-still-owe-on/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/selling-a-car-you-still-owe-on.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/selling-a-car-you-still-owe-on.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Selling a car you still owe on">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Buying &amp; Selling">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Selling a car you still owe on">
+<meta name="twitter:description" content="A flowchart for selling a financed car, including the branch where you owe more than it's worth.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/selling-a-car-you-still-owe-on.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+/* Form: a flowchart drawn with HTML boxes and CSS arrows, splitting on equity. */
+  .sf-chart{margin:28px 0 30px; font-size:15px; line-height:1.5}
+  .sf-node{background:var(--card); border:1.5px solid var(--line-2); border-radius:10px;
+    padding:12px 14px; position:relative}
+  .sf-node b{display:block; font-size:15.5px; margin-bottom:2px}
+  .sf-node span{color:var(--muted); font-size:14px}
+  .sf-node--start{border-radius:999px; text-align:center; background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  .sf-node--start span{color:var(--paper); opacity:.8}
+  .sf-node--ask{border:2px solid var(--amber); background:var(--paper-2); text-align:center}
+  .sf-node--ask b{font-size:16.5px}
+  .sf-node--end{border:2px solid var(--good); text-align:center}
+  .sf-node--warn{border:2px dashed var(--bad)}
+  .sf-arrow{height:30px; position:relative; margin:0 auto; width:2px; background:var(--line-2)}
+  .sf-arrow::after{content:""; position:absolute; left:50%; bottom:-1px; transform:translateX(-50%);
+    border:7px solid transparent; border-top:9px solid var(--line-2); border-bottom:0}
+  .sf-split{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:0}
+  .sf-branch{border-top:2px solid var(--line-2); padding-top:0; display:flex; flex-direction:column}
+  .sf-branch-label{align-self:center; font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    padding:3px 10px; border-radius:999px; margin:10px 0 0}
+  .sf-branch--yes .sf-branch-label{background:var(--sky-soft); color:var(--sky)}
+  .sf-branch--no .sf-branch-label{background:var(--paper-2); color:var(--bad); border:1px solid var(--bad)}
+  .sf-branch .sf-arrow{height:22px}
+  .sf-stack{display:flex; flex-direction:column; gap:8px}
+  .sf-or{text-align:center; font-size:12px; color:var(--faint); letter-spacing:.1em; text-transform:uppercase}
+  .sf-join{margin-top:0}
+  @media (max-width:600px){
+    .sf-split{grid-template-columns:1fr; gap:4px}
+    .sf-branch{border-top:0; border-left:2px solid var(--line-2); padding-left:12px; margin-left:8px}
+    .sf-branch-label{align-self:flex-start}
+  }
+  .sf-leg{border-left:3px solid var(--amber); padding-left:16px; margin:0 0 26px}
+  .sf-leg h3{margin:0 0 6px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Selling a car you still owe on","description":"A flowchart for selling a financed car, including the branch where you owe more than it's worth.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/selling-a-car-you-still-owe-on/",
+  "image":"https://budgetpilot.fun/articles/og/selling-a-car-you-still-owe-on.jpg",
+  "articleSection":"Buying & Selling",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Buying & Selling","item":"https://budgetpilot.fun/articles/buying-selling/"},
+  {"@type":"ListItem","position":4,"name":"Selling a car you still owe on"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+  </div>
+
+  <div class="kicker">Buying &amp; Selling</div>
+  <h1>Selling a car you still owe on</h1>
+  <p class="standfirst">A loan does not lock you into a car. It adds a step, and sometimes a gap, between you and the sale. Follow the boxes.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Owing money on a car does not stop you from selling it. What it changes is who gets paid first. Until the loan is cleared, the lender usually holds the title, or at least has its name recorded on it as lienholder, and a buyer cannot become the owner until that name comes off. Every route below is a way of arranging that handoff, and one question splits them into two families.</p>
+
+<div class="sf-chart" role="figure" aria-label="Flowchart for selling a car with a loan on it">
+  <div class="sf-node sf-node--start"><b>You want to sell or trade a financed car</b><span>Start here</span></div>
+  <div class="sf-arrow" aria-hidden="true"></div>
+  <div class="sf-node"><b>1. Get the payoff amount</b><span>Ask the lender for the figure to close the loan, the date it is good through, and how they release the title.</span></div>
+  <div class="sf-arrow" aria-hidden="true"></div>
+  <div class="sf-node"><b>2. Get real value figures</b><span>A private-sale estimate and at least two written trade-in or purchase offers.</span></div>
+  <div class="sf-arrow" aria-hidden="true"></div>
+  <div class="sf-node sf-node--ask"><b>3. Is the car worth more than the payoff?</b><span>Use the offers you can actually take, not the most hopeful estimate.</span></div>
+
+  <div class="sf-split">
+    <div class="sf-branch sf-branch--yes">
+      <span class="sf-branch-label">Yes: you have equity</span>
+      <div class="sf-arrow" aria-hidden="true"></div>
+      <div class="sf-stack">
+        <div class="sf-node"><b>4a. Sell to a dealer or trade in</b><span>The dealer pays the lender and the difference goes to you, or toward the next car.</span></div>
+        <div class="sf-or">or</div>
+        <div class="sf-node"><b>4b. Sell privately</b><span>The buyer's money clears the loan first; you keep the rest.</span></div>
+      </div>
+    </div>
+    <div class="sf-branch sf-branch--no">
+      <span class="sf-branch-label">No: you owe more</span>
+      <div class="sf-arrow" aria-hidden="true"></div>
+      <div class="sf-node sf-node--ask"><b>5. Can you cover the gap in cash?</b><span>Payoff minus sale price.</span></div>
+      <div class="sf-arrow" aria-hidden="true"></div>
+      <div class="sf-stack">
+        <div class="sf-node"><b>5a. Yes: pay the gap at the sale</b><span>Then follow 4a or 4b.</span></div>
+        <div class="sf-or">or</div>
+        <div class="sf-node"><b>5b. No: wait and pay it down</b><span>Keep the car while the balance falls toward the value.</span></div>
+        <div class="sf-or">last resort</div>
+        <div class="sf-node sf-node--warn"><b>5c. Carry the gap into the next loan</b><span>Possible, costly, and it follows you.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sf-arrow" aria-hidden="true"></div>
+  <div class="sf-node sf-node--end sf-join"><b>6. Loan closed, lien released, title transferred</b><span>Then cancel or move your insurance and handle plates as your state requires.</span></div>
+</div>
+
+<h2>Walking the chart</h2>
+
+<div class="sf-leg">
+<h3>The payoff is not the balance</h3>
+<p>Your monthly statement shows a principal balance. The payoff amount is usually a little different, because interest keeps accruing daily until the money arrives, and the lender will quote a figure good through a specific date. Ask how long title release takes after payoff and whether the lender sends the title to you, to the buyer or electronically to the state. Those answers shape everything downstream, and they vary by lender and by state.</p>
+</div>
+
+<div class="sf-leg">
+<h3>Value means an offer you could take today</h3>
+<p>Online estimates are useful for orientation and poor as a basis for decisions. What counts at box 3 is a number someone will actually pay: a written dealer offer, a quote from a car-buying service, or a private-sale price you have evidence buyers would meet. If the answer at box 3 is "roughly the same," treat it as a yes but budget for a small shortfall.</p>
+</div>
+
+<div class="sf-leg">
+<h3>The equity routes</h3>
+<p>Trading in or selling to a dealer is the simplest version: the dealer handles the payoff and the paperwork. Check that the payoff figure on your contract matches the lender's quote, and keep making your payments until the lender confirms the loan is closed. A dealer who has agreed to pay off your loan still has to actually do it.</p>
+<p>A private sale can bring more money and needs more care, because the buyer is paying for a car whose title is not yet in your hands. The cleanest arrangement is to complete the sale at a branch of your lender, if it has one, where the buyer's payment closes the loan on the spot. Otherwise the buyer pays the lender directly for the payoff amount and pays you the rest, with a signed bill of sale recording both. Many buyers are wary of this, reasonably, so expect questions. The safest ways to receive the money are ranked in <a href="/articles/getting-paid-safely-selling-privately/">getting paid safely when you sell privately</a>.</p>
+</div>
+
+<div class="sf-leg">
+<h3>The branch where you owe more than it is worth</h3>
+<p>This is negative equity, and it is common with small down payments, long loan terms, or cars that lost value quickly. It does not prevent the sale. It means the sale proceeds cannot close the loan on their own, and the difference has to come from somewhere.</p>
+<p><strong>5a</strong> is the clean answer: pay the difference from savings at the sale, and walk away owing nothing. If the gap is modest, this often costs less than any alternative.</p>
+<p><strong>5b</strong> is the patient one. Every payment reduces the balance, and on most loans the balance eventually falls faster than the car's value. Paying extra toward principal, where your contract allows it, speeds that up. Waiting is not glamorous, but a gap that closes on its own costs nothing to borrow.</p>
+<p><strong>5c</strong> is the one dealers may offer first: add the leftover balance to the loan on your next car. It works, in the narrow sense that the old loan disappears. But the debt does not; it becomes part of a bigger new loan, with interest on it, on a car that starts its own life already underwater. Why that tends to compound is laid out in <a href="/articles/rolling-negative-equity-forward/">rolling negative equity into the next loan</a>.</p>
+<p>One route is missing on purpose. Handing the car back to the lender, sometimes called voluntary surrender, does not generally erase what you owe. The lender sells the car, and the remaining balance plus costs can still be yours to pay, with a mark on your credit besides. Your contract and your state's rules decide the details.</p>
+</div>
+
+<h2>Before you start</h2>
+
+<p>Three calls save most of the trouble: one to the lender for the payoff and title process, one to your state's motor vehicle agency for what the seller must file after the sale, and one to your insurer, timed for after the car has changed hands. Keep the car insured until then. If anything goes wrong between signature and title release, the car is still legally yours, and so is the risk.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/when-to-trade-in/">When to trade in</a></li>
+      <li><a href="/articles/loan-to-value-on-a-car/">Loan-to-value on a car loan</a></li>
+      <li><a href="/articles/if-you-miss-a-car-payment/">What happens if you miss a car payment</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

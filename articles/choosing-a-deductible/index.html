@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Choosing a deductible | Budget Pilot</title>
+<meta name="description" content="How to choose a car insurance deductible with one division: extra out-of-pocket at a claim over premium saved, turned into years to break even.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/choosing-a-deductible/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Choosing a deductible: the break-even arithmetic">
+<meta property="og:description" content="Premium saved per year against extra cost at a claim, worked out as years to break even.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/choosing-a-deductible/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/choosing-a-deductible.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/choosing-a-deductible.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Choosing a deductible: the break-even arithmetic">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Insurance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Choosing a deductible: the break-even arithmetic">
+<meta name="twitter:description" content="Premium saved per year against extra cost at a claim, worked out as years to break even.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/choosing-a-deductible.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Break-even arithmetic: a formula plate, then one strip per deductible gap with a years-to-break-even bar. */
+  .dedx-formula{
+    background:var(--card); border:1px solid var(--line-2); border-radius:10px;
+    padding:18px 20px; margin:26px 0; font-family:var(--mono); font-size:15px; line-height:1.6;
+  }
+  .dedx-formula b{display:block; font-family:var(--body); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-weight:600; margin-bottom:6px}
+  .dedx-formula .dedx-eq{display:flex; flex-wrap:wrap; gap:6px 10px; align-items:baseline}
+  .dedx-formula .dedx-eq span{white-space:nowrap}
+  .dedx-formula .dedx-op{color:var(--amber-ink)}
+  .dedx-strips{list-style:none; margin:24px 0 28px; padding:0}
+  .dedx-strip{border-top:1px solid var(--line); padding:16px 0 14px}
+  .dedx-strip:last-child{border-bottom:1px solid var(--line)}
+  .dedx-head{display:flex; flex-wrap:wrap; justify-content:space-between; gap:4px 14px; font-size:15px}
+  .dedx-move{font-weight:600}
+  .dedx-sum{font-family:var(--mono); font-size:14px; color:var(--muted)}
+  .dedx-track{position:relative; height:12px; background:var(--line); border-radius:6px; margin:10px 0 6px}
+  .dedx-fill{position:absolute; left:0; top:0; bottom:0; border-radius:6px; background:var(--amber)}
+  .dedx-ruler{display:flex; justify-content:space-between; font-size:11px; color:var(--faint); font-family:var(--mono)}
+  .dedx-yrs{font-family:var(--disp); font-size:26px; line-height:1; color:var(--ink)}
+  .dedx-yrs small{font-family:var(--body); font-size:13px; color:var(--muted); margin-left:4px}
+  .dedx-ten td:last-child{font-family:var(--mono); text-align:right}
+  .dedx-ten .dedx-pos{color:var(--good)} .dedx-ten .dedx-neg{color:var(--bad)}
+  .dedx-blank{display:inline-block; min-width:90px; border-bottom:1.5px solid var(--line-2); margin:0 4px}
+  .dedx-yours{background:var(--sky-soft); border-radius:10px; padding:18px 20px; margin:26px 0; font-size:16px}
+  .dedx-yours p:last-child{margin:0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Choosing a deductible: the break-even arithmetic","description":"Premium saved per year against extra cost at a claim, worked out as years to break even.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/choosing-a-deductible/",
+  "image":"https://budgetpilot.fun/articles/og/choosing-a-deductible.jpg",
+  "articleSection":"Insurance",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Insurance","item":"https://budgetpilot.fun/articles/insurance/"},
+  {"@type":"ListItem","position":4,"name":"Choosing a deductible: the break-even arithmetic"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/insurance/">Insurance</a>
+  </div>
+
+  <div class="kicker">Insurance</div>
+  <h1>Choosing a deductible</h1>
+  <p class="standfirst">A higher deductible is a trade: a smaller bill every year for a bigger one on a bad day. One division tells you whether the trade is any good.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Every deductible choice has the same shape. The insurer charges you less each year, and in return you promise to cover more of the damage yourself when a claim happens. Stated that way, it stops being a question of courage or caution and becomes a question of time: how many cheap years does it take to pay for one expensive day?</p>
+
+<div class="dedx-formula">
+  <b>The one division</b>
+  <div class="dedx-eq"><span>years to break even</span><span class="dedx-op">=</span><span>extra out-of-pocket per claim</span><span class="dedx-op">÷</span><span>premium saved per year</span></div>
+</div>
+
+<p>If you tend to go longer than that between claims on your own car, the higher deductible wins. If you tend to claim sooner, the lower one was worth its price. The method is that small. The work is in feeding it real numbers instead of hopeful ones.</p>
+
+<h2>Four illustrative gaps</h2>
+
+<p>The savings figures here are invented for the arithmetic. Insurers price a deductible change in their own ways, and the difference on your policy could be much bigger or much smaller. The only reliable source is a quote for the same policy at two deductibles, which most insurers or agents will give you on request.</p>
+
+<ul class="dedx-strips">
+  <li class="dedx-strip">
+    <div class="dedx-head"><span class="dedx-move">A · $250 → $500</span><span class="dedx-sum">$250 more at a claim · saves $40/yr</span></div>
+    <div class="dedx-track"><div class="dedx-fill" style="width:62.5%"></div></div>
+    <div class="dedx-ruler"><span>0</span><span>5 yrs</span><span>10 yrs</span></div>
+    <div class="dedx-yrs">6.3<small>years to break even ($250 ÷ $40 = 6.25)</small></div>
+  </li>
+  <li class="dedx-strip">
+    <div class="dedx-head"><span class="dedx-move">B · $500 → $1,000</span><span class="dedx-sum">$500 more at a claim · saves $90/yr</span></div>
+    <div class="dedx-track"><div class="dedx-fill" style="width:55.6%"></div></div>
+    <div class="dedx-ruler"><span>0</span><span>5 yrs</span><span>10 yrs</span></div>
+    <div class="dedx-yrs">5.6<small>years ($500 ÷ $90 = 5.56)</small></div>
+  </li>
+  <li class="dedx-strip">
+    <div class="dedx-head"><span class="dedx-move">C · $500 → $1,000</span><span class="dedx-sum">$500 more at a claim · saves $150/yr</span></div>
+    <div class="dedx-track"><div class="dedx-fill" style="width:33.3%"></div></div>
+    <div class="dedx-ruler"><span>0</span><span>5 yrs</span><span>10 yrs</span></div>
+    <div class="dedx-yrs">3.3<small>years ($500 ÷ $150 = 3.33)</small></div>
+  </li>
+  <li class="dedx-strip">
+    <div class="dedx-head"><span class="dedx-move">D · $1,000 → $2,000</span><span class="dedx-sum">$1,000 more at a claim · saves $110/yr</span></div>
+    <div class="dedx-track"><div class="dedx-fill" style="width:90.9%"></div></div>
+    <div class="dedx-ruler"><span>0</span><span>5 yrs</span><span>10 yrs</span></div>
+    <div class="dedx-yrs">9.1<small>years ($1,000 ÷ $110 = 9.09)</small></div>
+  </li>
+</ul>
+
+<p>B and C are the same move priced two ways, and the difference is stark. At $150 a year, the extra $500 of exposure pays for itself in a little over three years. At $90, it needs more than five and a half. Nothing about the deductible changed; only the price of the promise did. That is why two households can reach opposite answers to the same question and both be right.</p>
+
+<p>D shows something else worth testing on your own quotes. In this illustration, doubling from $1,000 to $2,000 adds $1,000 of exposure but saves only $110, so each dollar of extra risk earns about 11 cents a year, where C earned 30. Whether your insurer's pricing flattens out like that at the high end is exactly the sort of thing a pair of quotes will show you.</p>
+
+<h2>Ten years, played out</h2>
+
+<p>Break-even years can feel abstract, so here is gap B run across a decade. The higher deductible saves $90 a year, or $900 over ten years. Each claim on your own car during that decade costs you $500 more than it would have.</p>
+
+<div class="tscroll">
+<table class="dedx-ten">
+  <thead><tr><th>Own-damage claims in ten years</th><th>Premium saved</th><th>Extra paid at claims</th><th>Net result</th></tr></thead>
+  <tbody>
+    <tr><td>None</td><td>$900</td><td>$0</td><td class="dedx-pos">+$900</td></tr>
+    <tr><td>One</td><td>$900</td><td>$500</td><td class="dedx-pos">+$400</td></tr>
+    <tr><td>Two</td><td>$900</td><td>$1,000</td><td class="dedx-neg">−$100</td></tr>
+    <tr><td>Three</td><td>$900</td><td>$1,500</td><td class="dedx-neg">−$600</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The line crosses between one claim and two. That squares with the 5.6-year figure: ten years holds fewer than two break-even periods, so a second claim tips it. Be honest about your own history here. A household with a long commute, street parking and a new driver is not planning around the same claim rate as a retiree with a garage.</p>
+
+<h2>What the division leaves out</h2>
+
+<p><strong>Whether you can actually pay it.</strong> A $1,000 deductible is only cheaper if $1,000 is sitting somewhere when the body shop wants it. If it would go on a card that carries a balance, the interest belongs in the calculation, and it can erase years of savings. A dedicated cushion for the car changes the picture; we go through how to size one in <a href="/articles/sizing-a-car-repair-fund/">how big a car repair fund should be</a>.</p>
+
+<p><strong>Collision and comprehensive can differ.</strong> Many policies carry a separate deductible for each, and they need not match. Comprehensive tends to cover things like theft, weather, animals and glass, and some drivers keep that one lower while raising collision. Your declarations page shows how yours is set, and your insurer can quote the combinations.</p>
+
+<p><strong>Small damage stops being a claim.</strong> At a higher deductible, a scraped bumper that costs a few hundred dollars to fix is something you pay for and never report. That changes your claim rate, and possibly your claim history, which is part of what gets priced at renewal. <a href="/articles/what-moves-your-premium/">What moves your premium at renewal</a> covers the rest of that list.</p>
+
+<p><strong>Someone else may set a ceiling.</strong> If the car is financed or leased, the contract may cap how high your deductible can go. Check the insurance section of the paperwork before you raise it, because a deductible above the permitted maximum can put you out of compliance with the agreement.</p>
+
+<p><strong>Liability sits outside all of this.</strong> The deductible applies to damage to your own vehicle. The coverage that pays other people when you are at fault usually works differently, and it is not where you save money by raising a number.</p>
+
+<h2>Your own version</h2>
+
+<div class="dedx-yours">
+  <p>Extra out-of-pocket per claim <span class="dedx-blank">&nbsp;</span> ÷ premium saved per year <span class="dedx-blank">&nbsp;</span> = <span class="dedx-blank">&nbsp;</span> years.</p>
+  <p>Claims on my own car in the last ten years: <span class="dedx-blank">&nbsp;</span>. Cash I could hand over tomorrow without borrowing: <span class="dedx-blank">&nbsp;</span>.</p>
+</div>
+
+<p>If the break-even period is shorter than your usual gap between claims and the cash line covers the new deductible, raise it. If either condition fails, the lower deductible is buying you something real. A deductible you cannot pay on the day is not a saving. It is a loan you have agreed to take out later, on worse terms, at the worst possible time.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/when-to-drop-collision/">When dropping collision makes sense</a></li>
+      <li><a href="/articles/the-once-a-year-car-bills/">The car bills that arrive once a year</a></li>
+      <li><a href="/articles/what-a-car-really-costs-per-month/">What a car really costs per month</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

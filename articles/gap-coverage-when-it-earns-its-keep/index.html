@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gap coverage, and when it earns its keep | Budget Pilot</title>
+<meta name="description" content="Gap coverage pays the difference between what a totaled car is worth and what you still owe. A chart shows when that gap opens, and when it closes for good.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/gap-coverage-when-it-earns-its-keep/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Gap coverage, and when it earns its keep">
+<meta property="og:description" content="A loan balance and a car value drawn on one chart, with the stretch where gap coverage matters shaded in.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/gap-coverage-when-it-earns-its-keep/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/gap-coverage-when-it-earns-its-keep.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/gap-coverage-when-it-earns-its-keep.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Gap coverage, and when it earns its keep">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Insurance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gap coverage, and when it earns its keep">
+<meta name="twitter:description" content="A loan balance and a car value drawn on one chart, with the stretch where gap coverage matters shaded in.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/gap-coverage-when-it-earns-its-keep.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Inline SVG line chart: loan balance vs car value over 60 months, the gap window shaded, with buy/drop markers. */
+  .gapc-fig{margin:28px 0 30px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 10px 12px}
+  .gapc-fig svg{display:block; width:100%; height:auto}
+  .gapc-grid{stroke:var(--line); stroke-width:1}
+  .gapc-axis{fill:var(--faint); font-family:var(--body); font-size:13px}
+  .gapc-bal{fill:none; stroke:var(--bad); stroke-width:3; stroke-linejoin:round}
+  .gapc-val{fill:none; stroke:var(--sky); stroke-width:3; stroke-dasharray:7 5; stroke-linejoin:round}
+  .gapc-zone{fill:var(--amber); fill-opacity:.28}
+  .gapc-mark{stroke:var(--amber-ink); stroke-width:1.5; stroke-dasharray:3 3}
+  .gapc-flag{fill:var(--amber-ink); font-family:var(--body); font-size:14px; font-weight:600}
+  .gapc-key{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13.5px; color:var(--muted); padding:10px 8px 0}
+  .gapc-key i{display:inline-block; width:22px; height:0; vertical-align:middle; margin-right:6px; border-top:3px solid var(--bad)}
+  .gapc-key i.gapc-k-val{border-top:3px dashed var(--sky)}
+  .gapc-key i.gapc-k-zone{height:10px; border:0; background:var(--amber); opacity:.45}
+  .gapc-fig figcaption{font-size:13px; color:var(--faint); padding:8px 8px 0}
+  .gapc-readings{display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:8px; margin:0 0 26px}
+  .gapc-readings div{border-left:3px solid var(--amber); padding:4px 0 4px 10px}
+  .gapc-readings b{display:block; font-family:var(--mono); font-size:15px; font-weight:500}
+  .gapc-readings span{font-size:12.5px; color:var(--faint)}
+  .gapc-flaghead{display:inline-block; font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--paper); background:var(--amber-ink); padding:3px 9px; border-radius:4px; margin:36px 0 0}
+  .gapc-flaghead + h2{margin-top:10px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Gap coverage, and when it earns its keep","description":"A loan balance and a car value drawn on one chart, with the stretch where gap coverage matters shaded in.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/gap-coverage-when-it-earns-its-keep/",
+  "image":"https://budgetpilot.fun/articles/og/gap-coverage-when-it-earns-its-keep.jpg",
+  "articleSection":"Insurance",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Insurance","item":"https://budgetpilot.fun/articles/insurance/"},
+  {"@type":"ListItem","position":4,"name":"Gap coverage, and when it earns its keep"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/insurance/">Insurance</a>
+  </div>
+
+  <div class="kicker">Insurance</div>
+  <h1>Gap coverage, and when it earns its keep</h1>
+  <p class="standfirst">Gap coverage has a shelf life. It matters a great deal for a stretch of the loan and then not at all, and a single chart shows where that stretch begins and ends.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <figure class="gapc-fig">
+<svg viewBox="0 0 480 300" role="img" aria-labelledby="gapc-t gapc-d">
+  <title id="gapc-t">Illustrative loan balance versus car value over five years</title>
+  <desc id="gapc-d">A $30,000 loan at 7% over 60 months falls from $30,000 to zero. The car's illustrative value falls from $25,000 to $12,000. The balance sits above the value until about month 27, and the space between is shaded.</desc>
+  <line class="gapc-grid" x1="56" y1="16" x2="464" y2="16"/>
+  <line class="gapc-grid" x1="56" y1="96" x2="464" y2="96"/>
+  <line class="gapc-grid" x1="56" y1="176" x2="464" y2="176"/>
+  <line class="gapc-grid" x1="56" y1="256" x2="464" y2="256"/>
+  <text class="gapc-axis" x="48" y="20" text-anchor="end">$30k</text>
+  <text class="gapc-axis" x="48" y="100" text-anchor="end">$20k</text>
+  <text class="gapc-axis" x="48" y="180" text-anchor="end">$10k</text>
+  <text class="gapc-axis" x="48" y="260" text-anchor="end">$0</text>
+  <text class="gapc-axis" x="56" y="278" text-anchor="middle">0</text>
+  <text class="gapc-axis" x="137.6" y="278" text-anchor="middle">12</text>
+  <text class="gapc-axis" x="219.2" y="278" text-anchor="middle">24</text>
+  <text class="gapc-axis" x="300.8" y="278" text-anchor="middle">36</text>
+  <text class="gapc-axis" x="382.4" y="278" text-anchor="middle">48</text>
+  <text class="gapc-axis" x="464" y="278" text-anchor="middle">60</text>
+  <text class="gapc-axis" x="260" y="296" text-anchor="middle">months into the loan</text>
+  <polygon class="gapc-zone" points="56.0,16.0 96.8,36.4 137.6,57.5 178.4,79.4 219.2,102.1 242.6,115.6 219.2,109.6 178.4,98.4 137.6,86.4 96.8,72.0 56.0,56.0"/>
+  <polyline class="gapc-val" points="56.0,56.0 96.8,72.0 137.6,86.4 178.4,98.4 219.2,109.6 260.0,120.0 300.8,129.6 341.6,138.4 382.4,146.4 423.2,153.6 464.0,160.0"/>
+  <polyline class="gapc-bal" points="56.0,16.0 96.8,36.4 137.6,57.5 178.4,79.4 219.2,102.1 260.0,125.6 300.8,149.9 341.6,175.0 382.4,201.1 423.2,228.1 464.0,256.0"/>
+  <line class="gapc-mark" x1="56" y1="16" x2="56" y2="256"/>
+  <line class="gapc-mark" x1="242.6" y1="115.6" x2="242.6" y2="256"/>
+  <text class="gapc-flag" x="62" y="244">buy here</text>
+  <text class="gapc-flag" x="248" y="244">drop here</text>
+</svg>
+<div class="gapc-key"><span><i></i>loan balance</span><span><i class="gapc-k-val"></i>car value (illustrative)</span><span><i class="gapc-k-zone"></i>the gap</span></div>
+<figcaption>Illustrative only: $30,000 financed at 7% APR for 60 months ($594.04 a month), and an invented depreciation path starting at $25,000.</figcaption>
+</figure>
+
+<p>Two lines, both falling. The solid one is what you owe; it starts at the amount financed and reaches zero on the last payment. The dashed one is what the car would fetch; it starts lower than the loan, because taxes, fees and any add-ons were financed but don't make the car worth more, and it keeps sliding for as long as you own it. Where the solid line sits above the dashed one, a total loss leaves you owing money on a car you no longer have. That shaded wedge is the only thing gap coverage exists to pay for.</p>
+
+<p>Read at six-month intervals, the illustrative gap shrinks like this:</p>
+
+<div class="gapc-readings">
+  <div><b>$5,000</b><span>month 0</span></div>
+  <div><b>$4,449</b><span>month 6</span></div>
+  <div><b>$3,607</b><span>month 12</span></div>
+  <div><b>$2,371</b><span>month 18</span></div>
+  <div><b>$939</b><span>month 24</span></div>
+  <div><b>none</b><span>from ~month 27</span></div>
+</div>
+
+<p>Each figure is the balance after that many payments minus the made-up value at the same point: $30,000 − $25,000 at the start, $19,239 − $18,300 at two years. Somewhere between months 24 and 30 the lines cross, around month 27 if you draw a straight line between the two readings. After that, the insurer's payout for the car would cover the loan by itself.</p>
+
+<span class="gapc-flaghead">Marker one</span>
+<h2>Buy here</h2>
+
+<p>The wedge is widest on the first day, which is also when gap coverage is typically offered. Whether it opens wide on your loan depends on a few things you can see at signing.</p>
+
+<p><strong>How much went down.</strong> A small down payment, or none, starts the balance close to or above the price. A large one can start it below the car's value, and then there is no wedge to insure.</p>
+
+<p><strong>What was rolled in.</strong> Taxes, fees, service contracts and other products financed along with the car all raise the solid line without lifting the dashed one. Carried-over debt from a previous car does the same, more sharply; <a href="/articles/rolling-negative-equity-forward/">rolling negative equity forward</a> shows how that compounds.</p>
+
+<p><strong>How long the term is.</strong> Longer terms repay principal more slowly in the early years, so the solid line stays high while the car's value keeps falling. The crossing point moves to the right.</p>
+
+<p><strong>How fast this model loses value.</strong> Nobody can promise that in advance, but a car that tends to hold its value flattens the dashed line and narrows the wedge.</p>
+
+<p>To see how much the first of those matters, run the same car with $5,000 more down, so $25,000 is financed at the same 7% over 60 months ($495.03 a month). The balance starts at $25,000, level with the car's illustrative value, and after six payments it is $22,874 against a value of $23,000. At twelve months it is $20,673 against $21,200; at eighteen, $18,393 against $19,700. The solid line never climbs above the dashed one, so there is no wedge at all. Same car, same rate, same depreciation, and the coverage goes from useful to pointless on the strength of one number at signing.</p>
+
+<p>If none of those point to a wedge, you may be buying protection against a hole that isn't there. If several do, the case for it is strong.</p>
+
+<span class="gapc-flaghead">Marker two</span>
+<h2>Drop here</h2>
+
+<p>Once the balance falls below what the car would be valued at in a total loss, the coverage has nothing left to do. Past that point you are paying for an empty wedge. The trouble is that nobody sends you a notice when the lines cross; you have to check.</p>
+
+<p>Once a year is enough. Ask your lender for the payoff amount, then look up a realistic value for the car in its actual condition and mileage. If the payoff is comfortably below the value, the coverage has probably done its job. The comparison is the same idea as loan-to-value, which <a href="/articles/loan-to-value-on-a-car/">we cover separately</a>.</p>
+
+<p>How you stop it depends on where it came from. Gap bought as an add-on to the loan is usually a separate contract, and many such contracts allow cancellation with a partial refund of the unused portion; the contract says how, and the refund often goes toward the loan rather than to you. Gap sold by an auto insurer, sometimes under a name like loan or lease payoff coverage, can often be removed at renewal. Leases are their own case, since some already build it in.</p>
+
+<p>One more reason to put a date in the calendar: the crossing point on a real loan is rarely where anyone guessed at signing. Prices for used cars move with the market, and a car that has held its value unusually well can pull the dashed line up and bring the drop point forward by months. The reverse happens too. The only way to know which side of the line you are on is to look.</p>
+
+<h2>Things the chart can't show</h2>
+
+<p>The price of the coverage varies a great deal by where you buy it, and a version financed into the loan also collects interest for the whole term. Some products cover your insurance deductible and some don't. Most pay only the difference between the car's value and the loan's principal, so overdue payments, late fees or financed extras may be excluded. What a total loss actually pays you in the first place is set by how the insurer values the car, walked through in <a href="/articles/what-a-total-loss-pays/">what your insurer pays when your car is totaled</a>. The wedge is only as accurate as that number.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/is-gap-in-your-lease/">Is gap coverage already in your lease?</a></li>
+      <li><a href="/articles/add-ons-inside-your-loan/">The add-ons that end up inside your loan</a></li>
+      <li><a href="/articles/reading-a-retail-installment-contract/">Reading a retail installment contract</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

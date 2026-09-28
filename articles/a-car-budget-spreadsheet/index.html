@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Setting up a car budget spreadsheet | Budget Pilot</title>
+<meta name="description" content="A step-by-step tutorial for a four-tab car budget spreadsheet: a cost log, a fuel sheet, a monthly summary and an annual-bills fund, with every formula shown.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/a-car-budget-spreadsheet/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Setting up a car budget spreadsheet">
+<meta property="og:description" content="Four tabs, every column and every formula, row by row — a car budget you build once and keep for years.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/a-car-budget-spreadsheet/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/a-car-budget-spreadsheet.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/a-car-budget-spreadsheet.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Setting up a car budget spreadsheet">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Budgeting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Setting up a car budget spreadsheet">
+<meta name="twitter:description" content="Four tabs, every column and every formula, row by row — a car budget you build once and keep for years.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/a-car-budget-spreadsheet.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: a spreadsheet tutorial — each tab shown as a grid with column letters, row numbers and =FORMULAS in monospace. */
+  .sheet-step{display:flex; gap:12px; align-items:baseline; margin:44px 0 10px}
+  .sheet-step span{flex:none; font-family:var(--mono); font-size:13px; font-weight:600; color:var(--paper); background:var(--sky); border-radius:5px; padding:2px 8px}
+  .sheet-step h2{margin:0}
+  .sheet-grid{margin:18px 0 24px; border:1px solid var(--line-2); border-radius:8px; overflow-x:auto; -webkit-overflow-scrolling:touch; background:var(--card)}
+  .sheet-grid table{font-size:13.5px; min-width:520px}
+  .sheet-grid th, .sheet-grid td{border:1px solid var(--line); padding:6px 9px; white-space:nowrap}
+  .sheet-grid thead th{background:var(--paper-2); text-align:center; letter-spacing:0; text-transform:none; font-family:var(--mono); font-size:12px}
+  .sheet-grid tbody th{background:var(--paper-2); width:34px; text-align:center; font-family:var(--mono); font-size:12px; letter-spacing:0; color:var(--faint)}
+  .sheet-grid tr.sheet-hdr td{font-weight:600}
+  .sheet-grid code, .sheet-f{font-family:var(--mono); font-size:12.5px; color:var(--sky)}
+  .sheet-tabname{display:inline-block; font-family:var(--mono); font-size:12.5px; border:1px solid var(--line-2); border-bottom:0; border-radius:6px 6px 0 0; padding:3px 12px; margin:0 0 -19px 10px; background:var(--card); position:relative}
+  .sheet-explain{font-size:15.5px; color:var(--muted); border-left:2px solid var(--line-2); padding-left:14px}
+  .sheet-explain code{font-family:var(--mono); font-size:13.5px; color:var(--ink)}
+  .body p code{font-family:var(--mono); font-size:14.5px; color:var(--sky)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Setting up a car budget spreadsheet","description":"Four tabs, every column and every formula, row by row \u2014 a car budget you build once and keep for years.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/a-car-budget-spreadsheet/",
+  "image":"https://budgetpilot.fun/articles/og/a-car-budget-spreadsheet.jpg",
+  "articleSection":"Budgeting",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Budgeting","item":"https://budgetpilot.fun/articles/budgeting/"},
+  {"@type":"ListItem","position":4,"name":"Setting up a car budget spreadsheet"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/budgeting/">Budgeting</a>
+  </div>
+
+  <div class="kicker">Budgeting</div>
+  <h1>Setting up a car budget spreadsheet</h1>
+  <p class="standfirst">Open a blank workbook. By the end of this page it will have four tabs, a dozen formulas, and an honest answer to what your car costs you each month.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The plan is deliberately plain. One tab where every car expense is written down the day it happens. One tab for fuel, because fuel is the only cost frequent enough to deserve its own. One tab that summarizes by month without you touching it. And one tab that turns the once-a-year bills into a monthly number you can set aside. The formulas below work in both Excel and Google Sheets; where the two differ, we say so.</p>
+
+<div class="sheet-step"><span>TAB 1</span><h2>The log</h2></div>
+
+<p>Name the first tab <code>Log</code>. This is the only tab you type into regularly, so keep it narrow. Row 1 holds headers; data starts in row 2.</p>
+
+<span class="sheet-tabname">Log</span>
+<div class="sheet-grid"><table>
+<thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
+<tbody>
+<tr class="sheet-hdr"><th>1</th><td>Date</td><td>Odometer</td><td>Category</td><td>Note</td><td>Amount</td><td>Month</td></tr>
+<tr><th>2</th><td>01/04/2026</td><td>41,210</td><td>Fuel</td><td>11.2 gal</td><td>38.90</td><td><code>=TEXT(A2,"yyyy-mm")</code></td></tr>
+<tr><th>3</th><td>01/09/2026</td><td>41,388</td><td>Parking</td><td>garage, downtown</td><td>14.00</td><td><code>=TEXT(A3,"yyyy-mm")</code></td></tr>
+<tr><th>4</th><td>01/15/2026</td><td>41,502</td><td>Insurance</td><td>monthly draft</td><td>112.00</td><td><code>=TEXT(A4,"yyyy-mm")</code></td></tr>
+<tr><th>5</th><td>01/15/2026</td><td>41,502</td><td>Loan</td><td>payment</td><td>385.00</td><td><code>=TEXT(A5,"yyyy-mm")</code></td></tr>
+</tbody></table></div>
+
+<p class="sheet-explain">Column F turns each date into a label like <code>2026-01</code>, which is what the summary tab groups on. Type the formula once in F2 and fill it down as far as you like. The amounts above are placeholders to show the shape of the data, not typical costs.</p>
+
+<p>Two habits make this tab work. Use a short, fixed list of categories — Loan, Insurance, Fuel, Maintenance, Repair, Tires, Parking, Tolls, Registration, Wash, Other — and enforce it with a dropdown (Data &rarr; Data validation in either program) so "Gas" and "fuel" never split one category in two. And write the odometer every time, even for a parking receipt. It costs a glance at the dashboard and it is the only way to get cost per mile later.</p>
+
+<div class="sheet-step"><span>TAB 2</span><h2>Fuel</h2></div>
+
+<p>Fuel entries also go in the Log, so the money is counted once. This second tab exists to track efficiency. Log every fill-up, and fill the tank all the way each time, or the math drifts.</p>
+
+<span class="sheet-tabname">Fuel</span>
+<div class="sheet-grid"><table>
+<thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
+<tbody>
+<tr class="sheet-hdr"><th>1</th><td>Date</td><td>Odometer</td><td>Gallons</td><td>Miles since last</td><td>MPG</td><td>Fuel $/mile</td></tr>
+<tr><th>2</th><td>01/04/2026</td><td>41,210</td><td>11.2</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><th>3</th><td>01/13/2026</td><td>41,478</td><td>10.1</td><td><code>=B3-B2</code></td><td><code>=ROUND(D3/C3,1)</code></td><td><code>=ROUND(38.90/D3,3)</code></td></tr>
+</tbody></table></div>
+
+<p class="sheet-explain">Row 3 reads: 268 miles on 10.1 gallons, so <code>=ROUND(D3/C3,1)</code> returns 26.5. The fuel-per-mile cell divides what you paid <em>for the previous tank</em> (the gas you just burned) by the miles it carried you: $38.90 over 268 miles is about $0.145. In practice, add a column for price paid and point the formula at the row above instead of typing a number.</p>
+
+<p>Row 2 has no "since last" because there is no last. That is normal; start computing from row 3.</p>
+
+<div class="sheet-step"><span>TAB 3</span><h2>The monthly summary</h2></div>
+
+<p>This tab is all formulas. Categories run down column A, months run across row 1, and one formula fills the grid.</p>
+
+<span class="sheet-tabname">Summary</span>
+<div class="sheet-grid"><table>
+<thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>N</th><th>O</th></tr></thead>
+<tbody>
+<tr class="sheet-hdr"><th>1</th><td>Category</td><td>'2026-01</td><td>'2026-02</td><td>Year</td><td>Per month</td></tr>
+<tr><th>2</th><td>Loan</td><td><code>=SUMIFS(Log!$E:$E,Log!$C:$C,$A2,Log!$F:$F,B$1)</code></td><td>(fill right)</td><td><code>=SUM(B2:M2)</code></td><td><code>=N2/12</code></td></tr>
+<tr><th>3</th><td>Insurance</td><td>(fill down)</td><td></td><td><code>=SUM(B3:M3)</code></td><td><code>=N3/12</code></td></tr>
+<tr><th>13</th><td>Total</td><td><code>=SUM(B2:B12)</code></td><td></td><td><code>=SUM(N2:N12)</code></td><td><code>=N13/12</code></td></tr>
+</tbody></table></div>
+
+<p class="sheet-explain">The apostrophe in <code>'2026-01</code> forces the header to stay text. Without it, both programs helpfully turn it into a date, and the <code>SUMIFS</code> — which is matching the text labels from Log column F — quietly returns zero. The dollar signs are what let one formula be filled across twelve months and down eleven categories without breaking: <code>$A2</code> locks the column, <code>B$1</code> locks the row.</p>
+
+<p>Mid-year, "per month" in column O understates things, because the empty months count as zero. Swap it for <code>=N2/COUNTIF(B$13:M$13,"&gt;0")</code> to divide only by months that have any spending in them.</p>
+
+<p>Underneath the grid, add the number that matters most:</p>
+
+<span class="sheet-tabname">Summary</span>
+<div class="sheet-grid"><table>
+<thead><tr><th></th><th>A</th><th>B</th></tr></thead>
+<tbody>
+<tr><th>15</th><td>Miles logged</td><td><code>=MAX(Log!B:B)-MIN(Log!B:B)</code></td></tr>
+<tr><th>16</th><td>Cost per mile</td><td><code>=IFERROR(N13/B15,"")</code></td></tr>
+</tbody></table></div>
+
+<p>That second line is the spreadsheet's version of <a href="/articles/your-real-cost-per-mile/">your real cost per mile</a>. Treat the first few months with suspicion: until you have logged a full year, insurance paid annually or a big repair can make it swing hard.</p>
+
+<div class="sheet-step"><span>TAB 4</span><h2>The annual-bills fund</h2></div>
+
+<p>Registration, an insurance premium paid in full, an inspection, a set of tires you can see coming. None of them show up monthly, so they show up as emergencies. This tab turns each one into a monthly set-aside.</p>
+
+<span class="sheet-tabname">Fund</span>
+<div class="sheet-grid"><table>
+<thead><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr></thead>
+<tbody>
+<tr class="sheet-hdr"><th>1</th><td>Bill</td><td>Expected $</td><td>Due date</td><td>Months left</td><td>Set aside / month</td></tr>
+<tr><th>2</th><td>Registration</td><td>(from your notice)</td><td>08/01/2026</td><td><code>=MAX(1,DATEDIF(TODAY(),C2,"m"))</code></td><td><code>=ROUND(B2/D2,2)</code></td></tr>
+<tr><th>3</th><td>Tires</td><td>(a quote)</td><td>04/01/2027</td><td>(fill down)</td><td>(fill down)</td></tr>
+<tr><th>8</th><td>Total</td><td><code>=SUM(B2:B7)</code></td><td></td><td></td><td><code>=SUM(E2:E7)</code></td></tr>
+</tbody></table></div>
+
+<p class="sheet-explain"><code>DATEDIF</code> counts whole months between today and the due date. The <code>MAX(1, …)</code> wrapper stops a division by zero in the month a bill comes due. Because <code>TODAY()</code> moves, column E recalculates itself: a bill you started late demands more each month, which is the honest answer. Fill column B from real paperwork — last year's notice, an actual quote — and not from a guess; fees and premiums vary too much from place to place for anyone else's number to be useful.</p>
+
+<p>Once you pay a bill, roll its due date forward a year (or to whenever it recurs) and the set-aside resets on its own. If you want to see how those bills tend to cluster, <a href="/articles/the-once-a-year-car-bills/">the car bills that arrive once a year</a> lays them out by month.</p>
+
+<h2>Keeping it alive</h2>
+
+<p>A spreadsheet like this dies from friction, not from bad formulas. Keep receipts in one place until the weekend and enter them in one sitting; ten minutes a week is plenty. Freeze row 1 on the Log tab so headers stay visible. And resist adding columns. Every extra field is one more thing to skip on a busy day, and a log with gaps is worse than a short log that is complete.</p>
+
+<p>Look at the Summary tab once a month, the Fund tab whenever you get paid, and the cost-per-mile cell once a year — ideally before you start shopping for the next car.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+            <li><a href="/articles/what-a-car-really-costs-per-month/">What a car really costs per month</a></li>
+      <li><a href="/articles/a-car-fund-in-envelopes/">Building a car fund, envelope by envelope</a></li>
+      <li><a href="/articles/sizing-a-car-repair-fund/">How big a car repair fund should be</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

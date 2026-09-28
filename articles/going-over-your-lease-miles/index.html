@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Going over your lease miles | Budget Pilot</title>
+<meta name="description" content="Project where your lease mileage will land with a small in-page calculator, see the likely overage charge, and decide what to do while there is still time.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/going-over-your-lease-miles/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Going over your lease miles">
+<meta property="og:description" content="A mileage projector for your lease, then what to do with the number it gives you.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/going-over-your-lease-miles/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/going-over-your-lease-miles.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/going-over-your-lease-miles.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Going over your lease miles">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Leasing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Going over your lease miles">
+<meta name="twitter:description" content="A mileage projector for your lease, then what to do with the number it gives you.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/going-over-your-lease-miles.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: an in-page mileage projector (instrument panel), then a response plan keyed to its readout. */
+  .miproj{
+    border:1px solid var(--line-2); border-radius:16px; background:var(--card);
+    padding:20px 18px; margin:6px 0 34px;
+  }
+  .miproj-title{font-family:var(--disp); font-size:24px; margin:0 0 14px}
+  .miproj-inputs{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px 14px}
+  .miproj-inputs label{display:block; font-size:13px; font-weight:600; color:var(--muted); line-height:1.35}
+  .miproj-inputs input{
+    display:block; width:100%; margin-top:5px; padding:9px 10px; font:inherit; font-family:var(--mono);
+    font-size:16px; color:var(--ink); background:var(--paper); border:1px solid var(--line-2); border-radius:8px;
+  }
+  .miproj-inputs input:focus{outline:2px solid var(--sky); outline-offset:1px}
+  .miproj-dial{
+    margin:18px 0 0; padding:16px; border-radius:12px; background:var(--sky-soft);
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px;
+  }
+  .miproj-dial div{min-width:0}
+  .miproj-dial dt{font-size:11.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  .miproj-dial dd{margin:2px 0 0; font-family:var(--mono); font-size:20px; font-weight:600; color:var(--ink); overflow-wrap:anywhere}
+  .miproj-dial .miproj-charge dd{color:var(--bad)}
+  .miproj-dial .miproj-charge.is-under dd{color:var(--good)}
+  .miproj-bar{height:12px; border-radius:6px; background:var(--line); margin:16px 0 6px; overflow:hidden; position:relative}
+  .miproj-bar span{display:block; height:100%; width:100%; background:var(--amber); border-radius:6px; transition:width .2s}
+  .miproj-barlabel{font-size:13px; color:var(--faint); margin:0}
+  .miproj-verdict{font-size:15.5px; margin:12px 0 0; color:var(--ink)}
+  .miproj-note{font-size:13px; color:var(--faint); margin:12px 0 0}
+  .miproj-band{border-left:4px solid var(--line-2); padding:2px 0 2px 16px; margin:0 0 26px}
+  .miproj-band.band-under{border-color:var(--good)}
+  .miproj-band.band-some{border-color:var(--amber)}
+  .miproj-band.band-lots{border-color:var(--bad)}
+  .miproj-band h3{margin-top:0}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Going over your lease miles","description":"A mileage projector for your lease, then what to do with the number it gives you.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/going-over-your-lease-miles/",
+  "image":"https://budgetpilot.fun/articles/og/going-over-your-lease-miles.jpg",
+  "articleSection":"Leasing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Leasing","item":"https://budgetpilot.fun/articles/leasing/"},
+  {"@type":"ListItem","position":4,"name":"Going over your lease miles"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/leasing/">Leasing</a>
+  </div>
+
+  <div class="kicker">Leasing</div>
+  <h1>Going over your lease miles</h1>
+  <p class="standfirst">Go and look at the odometer first. Everything on this page runs on one reading and one date, and the earlier in the lease you take them, the more the answer is worth.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <div class="miproj" id="miproj">
+  <p class="miproj-title">Lease mileage projector</p>
+  <div class="miproj-inputs">
+    <label>Miles driven since the lease began
+      <input type="number" inputmode="numeric" min="0" step="1" id="mp-miles" value="21000"></label>
+    <label>Months elapsed
+      <input type="number" inputmode="numeric" min="1" step="1" id="mp-months" value="18"></label>
+    <label>Lease term (months)
+      <input type="number" inputmode="numeric" min="1" step="1" id="mp-term" value="36"></label>
+    <label>Total miles allowed for the whole lease
+      <input type="number" inputmode="numeric" min="0" step="1" id="mp-allow" value="36000"></label>
+    <label>Charge per excess mile ($)
+      <input type="number" inputmode="decimal" min="0" step="0.01" id="mp-rate" value="0.25"></label>
+  </div>
+
+  <dl class="miproj-dial" aria-live="polite">
+    <div><dt>Your pace</dt><dd id="mp-pace">1,167 mi/mo</dd></div>
+    <div><dt>Projected at turn-in</dt><dd id="mp-proj">42,000 mi</dd></div>
+    <div><dt>Projected overage</dt><dd id="mp-over">6,000 mi</dd></div>
+    <div class="miproj-charge" id="mp-chargebox"><dt>Projected charge</dt><dd id="mp-charge">$1,500</dd></div>
+  </dl>
+  <div class="miproj-bar" aria-hidden="true"><span id="mp-bar" style="width:100%"></span></div>
+  <p class="miproj-barlabel" id="mp-barlabel">Projected miles as a share of the allowance: 117%</p>
+  <p class="miproj-verdict" id="mp-verdict">To finish on the allowance you would need to average 833 miles a month for the remaining 18 months, about 333 fewer than now. Setting the projected charge aside instead means about $83 a month.</p>
+  <p class="miproj-note">The figures shown are for the illustrative example pre-filled above: 21,000 miles after 18 months of a 36-month, 36,000-mile lease, at $0.25 a mile. With JavaScript on, they update as you type. Nothing you enter leaves this page or is saved. The per-mile charge in your own contract is the one that counts; $0.25 is a placeholder, not a typical rate.</p>
+</div>
+
+<p>The projector does one thing: it assumes you keep driving at the average pace you have driven so far, and extends that line to the last month. Real driving is lumpier than that. A summer road trip, a new commute or a job that goes remote will bend the line. Treat the projection as a weather forecast, not a bill, and rerun it every few months.</p>
+
+<p>Two inputs trip people up. "Total miles allowed" means for the whole term: a 12,000-a-year allowance on a 36-month lease is 36,000. And "miles driven since the lease began" is your current odometer minus the reading on your lease paperwork at delivery, which was rarely zero. Your contract states both the allowance and the per-mile rate; they are usually in the same section.</p>
+
+<h2>What to do with the number</h2>
+
+<p>The answer falls into one of three bands, and each calls for something different.</p>
+
+<div class="miproj-band band-under">
+  <h3>The charge reads $0: you are under</h3>
+  <p>Good, but check what that means for you. Many lease contracts do not pay you back for unused miles, so a low-mileage lease can mean you paid for miles you never drove. Where a contract does offer a credit, it will say so; do not assume one.</p>
+  <p>Well-under mileage can also leave the car worth more than its buyout price at the end, since low miles help resale. If that is your situation, <a href="/articles/lease-equity-explained/">when your leased car is worth more than the payoff</a> walks through how to tell, and whether the value can be captured.</p>
+  <p>If you have plenty of room, there may be no reason to ration driving in the final months. Leave a little cushion for the unexpected trip.</p>
+</div>
+
+<div class="miproj-band band-some">
+  <h3>A modest overage: a few hundred to a couple of thousand miles</h3>
+  <p><strong>Slow down a little.</strong> The projector's last line tells you how many fewer miles a month would land you on the allowance. If that is a hundred or two, it may be one skipped weekend drive a month, or shifting some trips to another household car.</p>
+  <p><strong>Price the alternatives.</strong> Some lessors let you buy additional miles during the lease, sometimes at a different rate from the end-of-lease charge. Whether yours does, and at what price, is a question for the leasing company, not something to assume either way.</p>
+  <p><strong>Set it aside.</strong> If you would rather drive than ration, divide the projected charge by the months remaining and move that amount into savings each month. At turn-in, the bill is already paid. The projector does that division for you.</p>
+</div>
+
+<div class="miproj-band band-lots">
+  <h3>A large overage: many thousands of miles</h3>
+  <p>This is where the choice of exit starts to matter more than driving habits.</p>
+  <p><strong>Consider buying the car.</strong> Excess-mileage charges are generally assessed when you return the vehicle. If you buy it at the end instead, the purchase price is set by the contract, not by the odometer, though a high-mileage car will be worth less to you or to the next buyer. Run the numbers in <a href="/articles/should-you-buy-out-your-lease/">should you buy out your lease?</a> before deciding.</p>
+  <p><strong>Look at the other exits.</strong> A transfer, a trade or an early termination each treat mileage differently, and the costs can dwarf the overage or come in under it. Get the early-exit figures from the leasing company in writing and set them beside the projected charge; the cheapest route is not always the obvious one.</p>
+  <p><strong>Do not wait for turn-in day.</strong> The later you discover a big overage, the fewer choices remain. A projection taken at month eighteen gives you eighteen months of options; one taken at month thirty-five gives you a bill.</p>
+</div>
+
+<h2>Keep your own record</h2>
+
+<p>A projection is only as good as the reading behind it, so start a small log. Photograph the odometer on the day you take delivery, next to the delivery paperwork, then again every few months, ideally on the same date. Those photos make the projector quicker to rerun, and they give you something to compare against if the turn-in odometer statement ever looks wrong. If the instrument cluster is replaced under warranty during the lease, keep the repair order that records the mileage at the swap; a new cluster can start from a different number, and the paperwork is how the true total is reconstructed.</p>
+
+<h2>Next time, sizing the allowance</h2>
+
+<p>If you are well over, the lesson carries into your next car. Before signing, take your actual miles over the past couple of years, not the ones you hope to drive, and compare the cost of a higher allowance with the likely overage at your contract's rate. The trade-off between the two, at a few mileage levels, is laid out in <a href="/articles/leasing-when-you-drive-a-lot/">leasing when you drive a lot</a>. Sometimes the honest answer is that a lease is simply the wrong shape for how you drive.</p>
+
+<script>
+(function(){
+  var ids=['mp-miles','mp-months','mp-term','mp-allow','mp-rate'];
+  var el={}; ids.concat(['mp-pace','mp-proj','mp-over','mp-charge','mp-chargebox','mp-bar','mp-barlabel','mp-verdict']).forEach(function(i){el[i]=document.getElementById(i);});
+  function n(v){var x=parseFloat(v);return isFinite(x)?x:NaN;}
+  function fmt(x,d){return x.toLocaleString('en-US',{minimumFractionDigits:d||0,maximumFractionDigits:d||0});}
+  function run(){
+    var miles=n(el['mp-miles'].value), mo=n(el['mp-months'].value), term=n(el['mp-term'].value),
+        allow=n(el['mp-allow'].value), rate=n(el['mp-rate'].value);
+    if(!(miles>=0 && mo>0 && term>0 && allow>=0 && rate>=0)){
+      el['mp-verdict'].textContent='Enter a number in every box to see a projection.'; return;
+    }
+    if(mo>term){ el['mp-verdict'].textContent='Months elapsed is longer than the lease term. Check the two figures.'; return; }
+    var pace=miles/mo, proj=pace*term, over=Math.max(0,proj-allow), charge=over*rate, left=term-mo;
+    el['mp-pace'].textContent=fmt(pace)+' mi/mo';
+    el['mp-proj'].textContent=fmt(proj)+' mi';
+    el['mp-over'].textContent=fmt(over)+' mi';
+    el['mp-charge'].textContent='$'+fmt(charge);
+    el['mp-chargebox'].className='miproj-charge'+(over>0?'':' is-under');
+    var share=allow>0?proj/allow*100:0;
+    el['mp-bar'].style.width=Math.min(100,share)+'%';
+    el['mp-barlabel'].textContent='Projected miles as a share of the allowance: '+fmt(share)+'%';
+    var msg;
+    if(left<=0){
+      msg=over>0?'The lease is at its end: the overage shown is what the contract rate would apply to.':'The lease is at its end and within the allowance.';
+    } else {
+      var room=allow-miles;
+      if(room<=0){
+        msg='The allowance is already used up. Every further mile would be charged at the contract rate; setting aside the projected charge means about $'+fmt(charge/left)+' a month for the remaining '+fmt(left)+' months.';
+      } else {
+        var need=room/left;
+        if(over>0){
+          msg='To finish on the allowance you would need to average '+fmt(need)+' miles a month for the remaining '+fmt(left)+' months, about '+fmt(pace-need)+' fewer than now. Setting the projected charge aside instead means about $'+fmt(charge/left)+' a month.';
+        } else {
+          msg='You could average up to '+fmt(need)+' miles a month for the remaining '+fmt(left)+' months and still finish within the allowance.';
+        }
+      }
+    }
+    el['mp-verdict'].textContent=msg;
+  }
+  ids.forEach(function(i){el[i].addEventListener('input',run);});
+  run();
+})();
+</script>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/the-lease-payoff-call/">The call to your leasing company</a></li>
+      <li><a href="/articles/ending-a-lease-early/">Ending a lease early</a></li>
+      <li><a href="/articles/your-options-at-lease-end/">Your options at lease end</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

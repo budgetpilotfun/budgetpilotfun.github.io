@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rolling negative equity into the next loan | Budget Pilot</title>
+<meta name="description" content="Rolling negative equity into a new car loan, drawn as a staircase: three illustrative cars, the carried balance climbing at every step, and how to get off it.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/rolling-negative-equity-forward/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Rolling negative equity into the next car loan">
+<meta property="og:description" content="Three cars, one carried balance, climbing a step at every trade. An illustrated staircase.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/rolling-negative-equity-forward/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/rolling-negative-equity-forward.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/rolling-negative-equity-forward.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Rolling negative equity into the next car loan">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Borrowing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rolling negative equity into the next car loan">
+<meta name="twitter:description" content="Three cars, one carried balance, climbing a step at every trade. An illustrated staircase.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/rolling-negative-equity-forward.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* An inline SVG staircase of carried balances (car 1 → car 2 → car 3), each step narrated in turn. */
+.ne-fig{margin:6px 0 30px; padding:16px 12px 12px; border:1px solid var(--line); border-radius:14px; background:var(--card)}
+  .ne-svg{display:block; width:100%; height:auto}
+  .ne-svg .ne-step{fill:var(--amber)}
+  .ne-svg .ne-step2{fill:var(--amber); opacity:.8}
+  .ne-svg .ne-ghost{fill:none; stroke:var(--faint); stroke-width:1.5; stroke-dasharray:5 4}
+  .ne-svg .ne-ground{stroke:var(--line-2); stroke-width:1.5}
+  .ne-svg .ne-trail{fill:none; stroke:var(--sky); stroke-width:2; stroke-dasharray:2 5; stroke-linecap:round}
+  .ne-svg .ne-dot{fill:var(--sky)}
+  .ne-svg text{font-family:var(--body); font-size:12px; fill:var(--muted)}
+  .ne-svg .ne-amt{font-family:var(--mono); font-size:13px; font-weight:600; fill:var(--ink)}
+  .ne-svg .ne-q{font-family:var(--disp); font-size:26px; fill:var(--faint)}
+  .ne-fig figcaption{font-size:14px; color:var(--muted); margin-top:8px; line-height:1.55}
+  .body > .ne-steps, .ne-steps{list-style:none; margin:0; padding:0; counter-reset:ne}
+  .ne-steps > li{position:relative; margin:0 0 28px; padding:0 0 0 58px}
+  .ne-steps > li::before{counter-increment:ne; content:counter(ne); position:absolute; left:0; top:2px; width:40px; height:40px; display:grid; place-items:center; background:var(--amber); color:#1A1206; font-family:var(--disp); font-size:22px; border-radius:6px 6px 0 0}
+  .ne-steps > li:nth-child(2)::before{height:48px}
+  .ne-steps > li:nth-child(3)::before{height:58px}
+  .ne-steps h2{margin:0 0 10px; font-size:clamp(22px,4vw,27px)}
+  .ne-ledger{display:grid; grid-template-columns:1fr auto; gap:3px 16px; font-size:14.5px; background:var(--sky-soft); border-radius:10px; padding:12px 14px; margin:0 0 14px}
+  .ne-ledger dt{color:var(--muted)}
+  .ne-ledger dd{margin:0; font-family:var(--mono); text-align:right}
+  .ne-ledger .ne-carry{font-weight:600; color:var(--bad); border-top:1px solid var(--line-2); padding-top:4px; margin-top:2px}
+  @media (max-width:440px){ .ne-steps > li{padding-left:0; padding-top:56px} .ne-steps > li::before{top:0} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Rolling negative equity into the next car loan","description":"Three cars, one carried balance, climbing a step at every trade. An illustrated staircase.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/rolling-negative-equity-forward/",
+  "image":"https://budgetpilot.fun/articles/og/rolling-negative-equity-forward.jpg",
+  "articleSection":"Borrowing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Borrowing","item":"https://budgetpilot.fun/articles/borrowing/"},
+  {"@type":"ListItem","position":4,"name":"Rolling negative equity into the next car loan"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/borrowing/">Borrowing</a>
+  </div>
+
+  <div class="kicker">Borrowing</div>
+  <h1>Rolling negative equity into the next loan</h1>
+  <p class="standfirst">Negative equity doesn't vanish when you trade the car. It moves into the next loan, where it earns interest and makes the next shortfall likelier. One illustrative household, three cars, drawn as the staircase it becomes.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <figure class="ne-fig">
+  <svg class="ne-svg" viewBox="0 0 400 280" role="img" aria-labelledby="ne-t ne-d">
+    <title id="ne-t">The carried balance climbing with each trade</title>
+    <desc id="ne-d">Three rising steps. Carried into car 2: $4,500. Carried into car 3: $5,038.76. Carried out of car 3: $6,679.47. A dashed fourth step marked with a question mark.</desc>
+    <line class="ne-ground" x1="8" y1="240" x2="392" y2="240"/>
+    <rect class="ne-step"  x="20"  y="159"   width="100" height="81"/>
+    <rect class="ne-step"  x="120" y="149.3" width="100" height="90.7"/>
+    <rect class="ne-step"  x="220" y="119.8" width="100" height="120.2"/>
+    <rect class="ne-ghost" x="320" y="84"    width="66"  height="156"/>
+    <polyline class="ne-trail" points="30,150 110,150 130,140 210,140 230,110 310,110 330,76"/>
+    <circle class="ne-dot" cx="30" cy="150" r="4"/>
+    <text class="ne-amt" x="70"  y="150" text-anchor="middle" dy="-8">$4,500</text>
+    <text class="ne-amt" x="170" y="140" text-anchor="middle" dy="-8">$5,039</text>
+    <text class="ne-amt" x="270" y="110" text-anchor="middle" dy="-8">$6,679</text>
+    <text class="ne-q" x="353" y="170" text-anchor="middle">?</text>
+    <text x="70"  y="258" text-anchor="middle">car 1 → 2</text>
+    <text x="170" y="258" text-anchor="middle">car 2 → 3</text>
+    <text x="270" y="258" text-anchor="middle">car 3 → 4</text>
+    <text x="353" y="258" text-anchor="middle">next</text>
+    <text x="200" y="276" text-anchor="middle">balance carried into the next loan</text>
+  </svg>
+  <figcaption>Illustrative, composite household. Step heights are drawn to scale. Out-the-door prices, car values and terms are invented for the example; the loan arithmetic is exact at 7.9% APR.</figcaption>
+</figure>
+
+<ol class="ne-steps">
+  <li>
+    <h2>The first step: a trade that doesn't cover the loan</h2>
+    <dl class="ne-ledger">
+      <dt>Still owed on car 1</dt><dd>$21,500.00</dd>
+      <dt>Trade-in value offered</dt><dd>$17,000.00</dd>
+      <dt class="ne-carry">Carried forward</dt><dd class="ne-carry">$4,500.00</dd>
+    </dl>
+    <p>The household wants a different car before the first loan is paid down. The loan is bigger than the trade-in offer, a position that is common early in a long loan: the balance falls slowly at first while the car's value falls quickly. The dealer offers to "take care of" the difference. What that usually means is adding the $4,500 to the new loan.</p>
+    <p>Nothing has been forgiven. The shortfall from car 1 has just been moved somewhere less visible.</p>
+  </li>
+
+  <li>
+    <h2>The second step: the old debt, now with interest</h2>
+    <dl class="ne-ledger">
+      <dt>Car 2, out the door</dt><dd>$29,000.00</dd>
+      <dt>Plus carried from car 1</dt><dd>$4,500.00</dd>
+      <dt>Financed, 72 months at 7.9%</dt><dd>$33,500.00</dd>
+      <dt>Payment (without the carry: $507.05)</dt><dd>$585.73</dd>
+      <dt>Owed after 24 payments</dt><dd>$24,038.76</dd>
+      <dt>Car 2's value then</dt><dd>$19,000.00</dd>
+      <dt class="ne-carry">Carried forward</dt><dd class="ne-carry">$5,038.76</dd>
+    </dl>
+    <p>The carried $4,500 adds $78.68 to every payment for six years, and on its own would cost $1,164.96 in interest over the full term. Worse, it means the loan starts $4,500 underwater before the car has been driven a mile. Taxes and fees in the out-the-door price don't hold resale value either, so the gap between what's owed and what the car is worth is wide from day one.</p>
+    <p>Two years later the household wants out again. The balance has come down, but so has the car's value, and the difference is now bigger than the one they started with.</p>
+  </li>
+
+  <li>
+    <h2>The third step: stretching to keep the payment level</h2>
+    <dl class="ne-ledger">
+      <dt>Car 3, out the door</dt><dd>$31,000.00</dd>
+      <dt>Plus carried from car 2</dt><dd>$5,038.76</dd>
+      <dt>Financed, 84 months at 7.9%</dt><dd>$36,038.76</dd>
+      <dt>Payment (without the carry: $481.63)</dt><dd>$559.91</dd>
+      <dt>Owed after 24 payments</dt><dd>$27,679.47</dd>
+      <dt>Car 3's value then</dt><dd>$21,000.00</dd>
+      <dt class="ne-carry">Carried forward</dt><dd class="ne-carry">$6,679.47</dd>
+    </dl>
+    <p>To keep the monthly figure tolerable, the term goes from 72 to 84 months. That works on the payment, which actually falls a little, and does damage everywhere else: a longer term pays the balance down more slowly, which widens the next gap. The bar chart in <a href="/articles/how-a-loan-payment-is-built/">how an auto loan payment is built</a> makes the reason visible: early payments on a long loan clear very little principal.</p>
+    <p>If this household trades again, a $33,000 car would start life as a $39,679.47 loan. Each car has been a fairly normal purchase. It's the carry that turns three normal purchases into a staircase.</p>
+  </li>
+</ol>
+
+<h2>Why each step is taller than the last</h2>
+
+<p>Nothing in the example is unusual on its own. The climb comes from three forces pushing the same way at once.</p>
+
+<p>The first is what gets financed. An out-the-door price includes sales tax, registration and dealer fees, none of which you can sell back. The moment the loan is signed, part of the balance is backed by nothing. Add a carried shortfall on top and the new loan begins further underwater than the old one ever was.</p>
+
+<p>The second is timing. Trading every two years means always leaving a loan during its heaviest-interest stretch, when payments have done the least to the balance, and while the car is shedding value fastest.</p>
+
+<p>The third is the term. Stretching from 72 to 84 months to hold the payment steady slows the paydown further, so at the next trade there is more balance left against a car whose price was never going to wait for the loan. Each of the three would be survivable alone. Together, they set the height of the next step before the current one has been paid for.</p>
+
+<h2>Getting off the stairs</h2>
+
+<p>There isn't a trick that makes the carried balance disappear. There are only ways to stop adding to it, and ways to pay it down.</p>
+
+<p><strong>Keep the current car longer.</strong> The simplest and usually the cheapest. Every on-time payment narrows the gap, and at some point the loan balance drops below the car's value. Knowing roughly where you stand, what you owe against what it's worth, is the starting point; <a href="/articles/loan-to-value-on-a-car/">loan-to-value on a car loan</a> explains how to work it out.</p>
+
+<p><strong>Pay the shortfall in cash if you must change cars.</strong> If a car truly has to go, covering the difference out of savings at the time of the trade stops it from compounding inside the next loan. <a href="/articles/selling-a-car-you-still-owe-on/">Selling a car you still owe on</a> covers the mechanics of clearing a loan when the car is sold.</p>
+
+<p><strong>Buy less car next time.</strong> If negative equity does get carried, a cheaper next car keeps the total borrowed closer to what the car is worth. The carry is less likely to grow when the new car isn't also adding its own gap.</p>
+
+<p><strong>Send extra principal.</strong> Even small principal-only payments in the early part of the loan work against exactly the slow early paydown that produces these gaps.</p>
+
+<p>One caution on insurance: if the car is totaled while you are underwater, the payout is generally based on the car's value, not your loan balance. Gap products may or may not cover carried-over negative equity; that depends entirely on the product's terms, so read them rather than assuming. A totaled car at the top of this staircase can leave a household owing thousands on a car that no longer exists.</p>
+
+<p>The staircase is built one reasonable-sounding step at a time, which is why it's worth recognizing from the first one. When a trade-in doesn't cover the loan, the question that matters isn't what the new payment will be. It's where the missing money is going, and how many more cars it's going to follow you through.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/gap-coverage-when-it-earns-its-keep/">Gap coverage, and when it earns its keep</a></li>
+      <li><a href="/articles/when-to-trade-in/">When to trade in</a></li>
+      <li><a href="/articles/loan-terms-side-by-side/">36, 48, 60, 72, 84 months</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

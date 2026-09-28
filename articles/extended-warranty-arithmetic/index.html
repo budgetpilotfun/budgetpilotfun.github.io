@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Extended warranty arithmetic | Budget Pilot</title>
+<meta name="description" content="An expected-value calculation for a vehicle service contract, worked through with plainly illustrative inputs, then a blank worksheet for your own numbers.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/extended-warranty-arithmetic/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Extended warranty arithmetic">
+<meta property="og:description" content="What an extended warranty is worth on average, worked out line by line.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/extended-warranty-arithmetic/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/extended-warranty-arithmetic.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/extended-warranty-arithmetic.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Extended warranty arithmetic">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Running Costs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Extended warranty arithmetic">
+<meta name="twitter:description" content="What an extended warranty is worth on average, worked out line by line.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/extended-warranty-arithmetic.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Expected-value working: lettered lines of calculation, an outcomes table, a blank worksheet to fill. */
+  .evwork{margin:26px 0 30px; border-left:3px solid var(--sky); padding-left:0}
+  .evwork-line{display:grid; grid-template-columns:34px minmax(0,1fr); gap:2px 12px; padding:10px 0 10px 12px; border-bottom:1px solid var(--line)}
+  .evwork-line:last-child{border-bottom:0}
+  .evwork-l{font-family:var(--disp); font-size:22px; line-height:1; color:var(--sky); grid-row:1 / span 2}
+  .evwork-say{font-size:15.5px}
+  .evwork-calc{font-family:var(--mono); font-size:14px; color:var(--ink); background:var(--paper-2); border-radius:6px; padding:5px 8px; overflow-wrap:anywhere}
+  .evwork-calc b{font-weight:700}
+  .evwork-line.is-result .evwork-calc{background:color-mix(in srgb, var(--amber) 26%, var(--card))}
+  .evodds{min-width:420px}
+  .evodds td,.evodds th{text-align:right}
+  .evodds td:first-child,.evodds th:first-child{text-align:left}
+  .evodds tfoot td{font-weight:600; border-top:2px solid var(--ink); border-bottom:0}
+  .evodds td{font-family:var(--mono); font-size:14px}
+  .evodds td:first-child{font-family:var(--body); font-size:15px}
+  .evblank{min-width:460px; background:var(--card); border:1px solid var(--line-2)}
+  .evblank td{height:44px}
+  .evblank td.evblank-fill{border-bottom:1px solid var(--line-2); background:repeating-linear-gradient(90deg, transparent 0 8px, var(--line) 8px 9px) bottom/100% 1px no-repeat}
+  .evblank td.evblank-op{font-family:var(--mono); color:var(--faint); text-align:center; width:34px}
+  .evblank caption{caption-side:top; text-align:left; font-size:13px; color:var(--faint); padding:0 0 8px}
+  .evwork-say,.evwork-calc{grid-column:2}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Extended warranty arithmetic","description":"What an extended warranty is worth on average, worked out line by line.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/extended-warranty-arithmetic/",
+  "image":"https://budgetpilot.fun/articles/og/extended-warranty-arithmetic.jpg",
+  "articleSection":"Running Costs",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Running Costs","item":"https://budgetpilot.fun/articles/running-costs/"},
+  {"@type":"ListItem","position":4,"name":"Extended warranty arithmetic"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/running-costs/">Running Costs</a>
+  </div>
+
+  <div class="kicker">Running Costs</div>
+  <h1>Extended warranty arithmetic</h1>
+  <p class="standfirst">Price, deductible, the repairs it might cover and the odds of each. Put them in one calculation and the offer looks different.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>What is a vehicle service contract worth, on average? Not what it might pay out on the worst day — what it is worth across every way the next few years could go. That question has a precise shape in arithmetic, called expected value, and working it through is the clearest way to see what you're buying when you're offered an "extended warranty."</p>
+
+  <p>A note on the words first. A true warranty comes with the car, from the manufacturer, at no separate charge. What's sold as an extended warranty is usually a service contract: a separate agreement, sold for a price, promising to pay for certain repairs under certain conditions. The <a href="https://consumer.ftc.gov/articles/auto-warranties-and-auto-service-contracts">FTC's guide to auto warranties and service contracts</a> explains the difference and what to read before signing.</p>
+
+  <h2>The inputs, all illustrative</h2>
+
+  <p>Every number below is a placeholder chosen for readable arithmetic. The probabilities in particular are <strong>not</strong> estimates of how often any car breaks — we don't have those for your car, and neither does a round number in an article. They exist to show the method. The final section tells you how to replace them.</p>
+
+  <ul>
+    <li>Contract price: <strong>$2,400</strong></li>
+    <li>Deductible per covered repair visit: <strong>$100</strong></li>
+    <li>Four possible outcomes over the contract's life, each assumed to be the only covered event if it happens: no covered repair, a minor one ($600), a major one ($2,500) or a severe one ($5,000)</li>
+  </ul>
+
+  <div class="tscroll">
+    <table class="evodds">
+      <thead><tr><th>Outcome</th><th>Chance (placeholder)</th><th>Repair cost</th><th>Contract pays</th><th>Chance × pays</th></tr></thead>
+      <tbody>
+        <tr><td>No covered repair</td><td>50%</td><td>$0</td><td>$0</td><td>$0</td></tr>
+        <tr><td>Minor covered repair</td><td>30%</td><td>$600</td><td>$500</td><td>$150</td></tr>
+        <tr><td>Major covered repair</td><td>15%</td><td>$2,500</td><td>$2,400</td><td>$360</td></tr>
+        <tr><td>Severe covered repair</td><td>5%</td><td>$5,000</td><td>$4,900</td><td>$245</td></tr>
+      </tbody>
+      <tfoot><tr><td>Total</td><td>100%</td><td></td><td></td><td>$755</td></tr></tfoot>
+    </table>
+  </div>
+
+  <h2>Walking the calculation</h2>
+
+  <div class="evwork">
+    <div class="evwork-line"><span class="evwork-l">A</span><span class="evwork-say">For each outcome, find what the contract actually pays: the repair cost minus the deductible.</span><span class="evwork-calc">$600 − $100 = $500 · $2,500 − $100 = $2,400 · $5,000 − $100 = $4,900</span></div>
+    <div class="evwork-line"><span class="evwork-l">B</span><span class="evwork-say">Weight each payout by its chance of happening.</span><span class="evwork-calc">0.30 × $500 = $150 · 0.15 × $2,400 = $360 · 0.05 × $4,900 = $245</span></div>
+    <div class="evwork-line"><span class="evwork-l">C</span><span class="evwork-say">Add the weighted payouts. This is the expected value of the coverage.</span><span class="evwork-calc">$0 + $150 + $360 + $245 = <b>$755</b></span></div>
+    <div class="evwork-line"><span class="evwork-l">D</span><span class="evwork-say">Subtract the price to get the expected result of buying.</span><span class="evwork-calc">$755 − $2,400 = <b>−$1,645</b></span></div>
+    <div class="evwork-line is-result"><span class="evwork-l">E</span><span class="evwork-say">Express it as a return: what each dollar of price is expected to pay back.</span><span class="evwork-calc">$755 ÷ $2,400 ≈ <b>31¢ per dollar</b></span></div>
+  </div>
+
+  <p>On these placeholder inputs, the buyer pays $2,400 for coverage whose average payout is $755. The difference is the seller's costs, commissions and margin, plus a charge for carrying the risk. That gap isn't sinister; it's how every insurance-like product works. The question is only whether what you get for it — protection against the bad outcomes — is worth that much to you.</p>
+
+  <h2>Stress-testing the placeholders</h2>
+
+  <p>The obvious objection: the probabilities were made up. Fair. So be generous. Double the chance of every covered repair — 60% minor, 30% major, 10% severe, leaving no chance at all of a clean run.</p>
+
+  <div class="evwork">
+    <div class="evwork-line is-result"><span class="evwork-l">F</span><span class="evwork-say">Expected payout with every repair twice as likely.</span><span class="evwork-calc">0.60 × $500 + 0.30 × $2,400 + 0.10 × $4,900 = $300 + $720 + $490 = <b>$1,510</b></span></div>
+  </div>
+
+  <p>Still under the $2,400 price. For the average to break even here, the contract would need to be priced near $1,510 — or the covered repairs would have to be larger, or more frequent than one per outcome, than we've assumed.</p>
+
+  <p>Now go the other way, toward what is often overlooked. Real contracts carry exclusions, wear-item carve-outs, maintenance-record requirements and claim reviews. If you believe a share of the claims you'd make would not be paid, multiply line C by the share you expect to be paid. At a placeholder 90%, $755 becomes $679.50. The contract's terms, not the brochure, decide what goes in that slot.</p>
+
+  <h2>Why people still buy them, reasonably</h2>
+
+  <p>Expected value describes the average over many possible futures. You will live exactly one. If the severe outcome — a $5,000 bill — would mean missing rent or taking on high-interest debt, then the arithmetic above understates what the coverage is worth to you, because a dollar lost in a crisis costs more than a dollar lost in a calm month. That is the legitimate case for any insurance: paying a predictable premium to avoid an unaffordable loss.</p>
+
+  <p>The competing option is to insure yourself. Put the $2,400 into a dedicated repair fund on day one. In the first two outcomes above, the fund pays the whole bill with money to spare; the major repair nearly empties it, leaving $100 to find; the severe one it covers about half. Our piece on <a href="/articles/sizing-a-car-repair-fund/">sizing a repair fund</a> works out a target from your own car's facts. The fund is only a real alternative if you would genuinely leave it alone.</p>
+
+  <p>Two practical traps change the numbers further. If the contract is folded into a car loan, you pay interest on the price for years; <a href="/articles/add-ons-inside-your-loan/">the add-ons that end up inside your loan</a> computes what that does. And check who stands behind the contract, whether it can be canceled for a partial refund, and which shops it lets you use — the last point feeds directly into <a href="/articles/dealer-service-or-independent-shop/">dealer service or independent shop</a>.</p>
+
+  <h2>Your own worksheet</h2>
+
+  <p>To replace the placeholders, you need: the quoted price and deductible, from the contract itself; a list of what is and isn't covered, from the contract's coverage section; the realistic cost of the two or three biggest covered repairs for your car, from a shop quote; and your honest estimate of the chance of each over the contract's term, informed by your car's age, mileage and history. Then fill in the blanks.</p>
+
+  <div class="tscroll">
+    <table class="evblank">
+      <caption>Fill in by hand. One row per covered outcome you think is plausible.</caption>
+      <thead><tr><th>Outcome</th><th>Repair cost</th><th class="evblank-op"></th><th>Deductible</th><th class="evblank-op"></th><th>Chance</th><th class="evblank-op"></th><th>Weighted</th></tr></thead>
+      <tbody>
+        <tr><td class="evblank-fill"></td><td class="evblank-fill"></td><td class="evblank-op">−</td><td class="evblank-fill"></td><td class="evblank-op">×</td><td class="evblank-fill"></td><td class="evblank-op">=</td><td class="evblank-fill"></td></tr>
+        <tr><td class="evblank-fill"></td><td class="evblank-fill"></td><td class="evblank-op">−</td><td class="evblank-fill"></td><td class="evblank-op">×</td><td class="evblank-fill"></td><td class="evblank-op">=</td><td class="evblank-fill"></td></tr>
+        <tr><td class="evblank-fill"></td><td class="evblank-fill"></td><td class="evblank-op">−</td><td class="evblank-fill"></td><td class="evblank-op">×</td><td class="evblank-fill"></td><td class="evblank-op">=</td><td class="evblank-fill"></td></tr>
+        <tr><td colspan="7">Sum of weighted payouts × share of claims you expect paid</td><td class="evblank-fill"></td></tr>
+        <tr><td colspan="7">Minus the contract price</td><td class="evblank-fill"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>If the last box is far below zero, you're paying mainly for peace of mind, and the size of that number is its price. Decide whether it's worth it with the figure in front of you, not the salesperson's worst-case story.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/every-line-on-a-buyers-order/">Every line on a buyer's order</a></li>
+      <li><a href="/articles/maintenance-as-a-car-ages/">Budgeting maintenance as a car ages</a></li>
+      <li><a href="/articles/when-a-cheap-car-turns-expensive/">When a cheap car turns out expensive</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

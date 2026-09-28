@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your real cost per mile | Budget Pilot</title>
+<meta name="description" content="A fill-in worksheet for working out what each mile in your car really costs, line by line, with a fully worked illustrative example in the margin.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/your-real-cost-per-mile/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Your real cost per mile">
+<meta property="og:description" content="A fill-in worksheet for your car&#x27;s true cost per mile, with a worked example beside every line.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/your-real-cost-per-mile/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/your-real-cost-per-mile.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/your-real-cost-per-mile.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Your real cost per mile">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Budgeting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your real cost per mile">
+<meta name="twitter:description" content="A fill-in worksheet for your car&#x27;s true cost per mile, with a worked example beside every line.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/your-real-cost-per-mile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: a fill-in worksheet with blank boxes, a worked example running alongside in a margin column. */
+  .ws-sheet{border:1.5px solid var(--ink); border-radius:4px; background:var(--card); margin:6px 0 34px}
+  .ws-top{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 16px; padding:12px 16px; border-bottom:1.5px solid var(--ink)}
+  .ws-top b{font-family:var(--disp); font-weight:400; font-size:21px}
+  .ws-top span{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); align-self:center}
+  .ws-colhead{display:grid; grid-template-columns:1fr 38%; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); border-bottom:1px solid var(--line)}
+  .ws-colhead div{padding:8px 16px}
+  .ws-colhead div + div{border-left:1px dashed var(--line-2); color:var(--amber-ink)}
+  .ws-row{display:grid; grid-template-columns:1fr 38%; border-bottom:1px solid var(--line)}
+  .ws-row:last-child{border-bottom:0}
+  .ws-fill{padding:14px 16px}
+  .ws-code{display:inline-block; font-family:var(--mono); font-size:12px; font-weight:600; color:var(--sky); border:1px solid var(--sky); border-radius:3px; padding:0 5px; margin-right:6px}
+  .ws-fill b{font-weight:600}
+  .ws-fill p{font-size:15px; margin:6px 0 10px; color:var(--muted)}
+  .ws-blank{display:flex; align-items:flex-end; gap:8px; font-size:14px; color:var(--muted); flex-wrap:wrap}
+  .ws-box{display:inline-block; min-width:110px; height:30px; border:1.5px solid var(--line-2); border-radius:3px; background:var(--paper)}
+  .ws-line{display:inline-block; min-width:70px; border-bottom:1.5px solid var(--line-2); height:22px}
+  .ws-margin{padding:14px 14px 14px 16px; border-left:1px dashed var(--line-2); font-family:var(--mono); font-size:13px; line-height:1.55; color:var(--muted); background:var(--paper-2)}
+  .ws-margin b{display:block; color:var(--ink); font-size:15px; margin-top:4px}
+  .ws-row.ws-total{border-top:1.5px solid var(--ink)}
+  .ws-row.ws-total .ws-fill b{font-family:var(--disp); font-weight:400; font-size:20px}
+  .ws-row.ws-total .ws-margin b{font-size:18px; color:var(--amber-ink)}
+  @media (max-width:560px){
+    .ws-colhead{display:none}
+    .ws-row{grid-template-columns:1fr}
+    .ws-margin{border-left:0; border-top:1px dashed var(--line-2); padding:10px 16px}
+    .ws-margin::before{content:"Worked example"; display:block; font-family:var(--body); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--amber-ink)}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Your real cost per mile","description":"A fill-in worksheet for your car's true cost per mile, with a worked example beside every line.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/your-real-cost-per-mile/",
+  "image":"https://budgetpilot.fun/articles/og/your-real-cost-per-mile.jpg",
+  "articleSection":"Budgeting",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Budgeting","item":"https://budgetpilot.fun/articles/budgeting/"},
+  {"@type":"ListItem","position":4,"name":"Your real cost per mile"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/budgeting/">Budgeting</a>
+  </div>
+
+  <div class="kicker">Budgeting</div>
+  <h1>Your real cost per mile</h1>
+  <p class="standfirst">Print this page, or copy the lines onto the back of an envelope. Fill in the boxes on the left from your own paperwork; the margin shows one illustrative car worked through, so you can check your method against ours.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Cost per mile is the most portable number in car budgeting. It lets you compare a commute against a transit pass, price a road trip honestly, or decide whether a second car earns its keep. Most people only ever see the fuel part of it. The sheet below gathers everything else and divides by the same miles.</p>
+
+<p>Use one year as the period. Where a cost is lumpy &mdash; tires, a big repair &mdash; spread it over the years it covers. The worked example is an invented car and household with round numbers; none of its figures are averages or typical costs, just inputs for the arithmetic.</p>
+
+<div class="ws-sheet" role="group" aria-label="Cost per mile worksheet">
+  <div class="ws-top"><b>Cost-per-mile worksheet</b><span>One year &middot; one car</span></div>
+  <div class="ws-colhead"><div>Your figures</div><div>Worked example</div></div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">A</span><b>Miles driven in a year</b>
+      <p>Odometer now minus odometer a year ago. Service receipts and inspection records usually print the reading.</p>
+      <div class="ws-blank">miles <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">Odometer difference<b>12,000 mi</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">B</span><b>Fuel or charging</b>
+      <p>A &divide; your real mpg &times; your average price per gallon. For an EV: A &divide; 100 &times; kWh per 100 miles &times; your rate. Official ratings for most models are on <a href="https://www.fueleconomy.gov/">fueleconomy.gov</a>; your own receipts are better.</p>
+      <div class="ws-blank"><span class="ws-line"></span> &divide; <span class="ws-line"></span> mpg &times; $<span class="ws-line"></span> = <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">12,000 &divide; 30 mpg<br>= 400 gal &times; $3.40<b>$1,360</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">C</span><b>Insurance</b>
+      <p>The annual premium for this car from your declarations page. On a multi-car policy, use the per-vehicle breakdown, not the total.</p>
+      <div class="ws-blank">$ <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">$140 &times; 12<b>$1,680</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">D</span><b>Registration, inspection, local fees</b>
+      <p>Last renewal notice. If you renew every two years, halve it. Amounts vary by state; your motor vehicle agency's site lists yours.</p>
+      <div class="ws-blank">$ <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">From the notice<b>$220</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">E</span><b>Maintenance and repairs</b>
+      <p>Every service and repair receipt from the year. If last year had one unusual big repair, consider averaging two or three years instead.</p>
+      <div class="ws-blank">$ <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">Receipts, summed<b>$600</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">F</span><b>Tires</b>
+      <p>Price of a set &divide; the miles a set lasts you &times; A.</p>
+      <div class="ws-blank">$<span class="ws-line"></span> &divide; <span class="ws-line"></span> mi &times; A = <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">$800 &divide; 50,000 mi<br>= $0.016/mi &times; 12,000<b>$192</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">G</span><b>Depreciation</b>
+      <p>What the car is worth today minus what you expect it to be worth a year from now. Look up comparable listings now, and for the same car one model year older; the gap is a fair estimate.</p>
+      <div class="ws-blank">$<span class="ws-line"></span> &minus; $<span class="ws-line"></span> = <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">$15,400 &minus; $13,000<b>$2,400</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">H</span><b>Loan interest</b>
+      <p>Interest paid this year, not the full payment &mdash; the principal is already counted inside G. Your lender's year-end statement shows it. Zero if you own the car outright.</p>
+      <div class="ws-blank">$ <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">Year-end statement<b>$780</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">I</span><b>Parking, tolls, washes</b>
+      <p>Card statements are the only reliable record. Skim twelve months.</p>
+      <div class="ws-blank">$ <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">$30 &times; 12<b>$360</b></div>
+  </div>
+
+  <div class="ws-row ws-total">
+    <div class="ws-fill">
+      <span class="ws-code">J</span><b>Total: B through I</b>
+      <div class="ws-blank">$ <span class="ws-box"></span></div>
+    </div>
+    <div class="ws-margin">1,360 + 1,680 + 220 + 600<br>+ 192 + 2,400 + 780 + 360<b>$7,592</b></div>
+  </div>
+
+  <div class="ws-row ws-total">
+    <div class="ws-fill">
+      <span class="ws-code">K</span><b>Cost per mile: J &divide; A</b>
+      <div class="ws-blank">$ <span class="ws-box"></span> per mile</div>
+    </div>
+    <div class="ws-margin">7,592 &divide; 12,000<b>$0.63 / mi</b></div>
+  </div>
+
+  <div class="ws-row">
+    <div class="ws-fill">
+      <span class="ws-code">L</span><b>The cost of one more mile: (B + E + F) &divide; A</b>
+      <p>Only the costs that rise when you drive more.</p>
+      <div class="ws-blank">$ <span class="ws-box"></span> per mile</div>
+    </div>
+    <div class="ws-margin">(1,360 + 600 + 192)<br>= 2,152 &divide; 12,000<b>$0.18 / mi</b></div>
+  </div>
+</div>
+
+<h2>Two numbers, two jobs</h2>
+
+<p>The sheet ends with two answers on purpose. Line K is the <em>average</em> cost: everything the car consumed in a year, divided across every mile. In the example it's about 63 cents. Line L is the <em>marginal</em> cost: what an extra mile adds, given that the car is already sitting in the driveway, insured and registered. In the example it's about 18 cents.</p>
+
+<p>Use K when the question is whether to own this car at all. If a household could cover its 12,000 miles another way for less than $7,592 a year, the car is costing more than its job is worth. Use L when the car is a settled fact and the question is a single trip: driving 300 miles to a family event costs this household roughly $54 in wear and fuel ($0.18 &times; 300 is $53.80), not the $190 that the average figure would suggest.</p>
+
+<p>The two figures get confused all the time, usually in the direction that flatters the car. Comparing a train fare to fuel alone uses a marginal cost that ignores wear. Comparing a rideshare bill to the full 63 cents overstates what you'd save by leaving the car at home once, because insurance and depreciation carry on regardless. Pick the number that matches the decision.</p>
+
+<h2>Where the sheet bends</h2>
+
+<p><strong>Depreciation is partly per-mile.</strong> A car loses value with age and with miles. Treating all of G as fixed, as line L does, slightly understates the marginal cost of a high-mileage year. If you drive far more than usual, move some of G into L.</p>
+
+<p><strong>Maintenance is partly fixed.</strong> Some services fall due by the calendar rather than the odometer. The owner's manual says which.</p>
+
+<p><strong>The IRS rate is a different animal.</strong> The IRS publishes a standard mileage rate each year for business, medical and some other uses of a personal car. It's set for tax purposes across all vehicles and is not a measurement of <em>your</em> car. For its current value and the rules on using it, see <a href="https://www.irs.gov/">irs.gov</a>; for how car costs interact with taxes more broadly, <a href="/articles/car-expenses-and-taxes/">car expenses and taxes: the basics</a> points to where to confirm the details.</p>
+
+<p><strong>Two cars, two sheets.</strong> A household with two cars should fill in one sheet per car. Averaging them together hides the fact that one car is often far more expensive per mile than the other, which is exactly the fact that tells you which one to drive for the long trips.</p>
+
+<p>Filled in once, the sheet is a snapshot. Filled in each year on the same date, it becomes a record of how the car's economics shift as it ages &mdash; depreciation shrinking, maintenance growing &mdash; which is the evidence you'll want when deciding <a href="/articles/when-to-trade-in/">when to trade in</a>.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+            <li><a href="/articles/what-a-car-really-costs-per-month/">What a car really costs per month</a></li>
+      <li><a href="/articles/rideshare-driving-real-cost/">The real per-mile cost of driving for a rideshare app</a></li>
+      <li><a href="/articles/what-a-gas-price-change-does/">What a gas price change does to your month</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

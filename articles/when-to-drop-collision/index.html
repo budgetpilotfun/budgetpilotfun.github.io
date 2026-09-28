@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>When dropping collision makes sense | Budget Pilot</title>
+<meta name="description" content="A simple rule for deciding when to drop collision coverage on an older car, tested against three illustrative car values with the arithmetic shown in full.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/when-to-drop-collision/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="When dropping collision coverage makes sense">
+<meta property="og:description" content="One rule for deciding when collision coverage has outlived its use, tested on three cars of different values.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/when-to-drop-collision/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/when-to-drop-collision.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/when-to-drop-collision.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - When dropping collision coverage makes sense">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Insurance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="When dropping collision coverage makes sense">
+<meta name="twitter:description" content="One rule for deciding when collision coverage has outlived its use, tested on three cars of different values.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/when-to-drop-collision.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* A rule stated up front on a plate, then three trials: each car's numbers, a bar against the five-year line, and a verdict stamp. */
+  .dropc-rule{margin:24px 0 30px; padding:22px 22px 18px; border:2px solid var(--ink); border-radius:4px; position:relative}
+  .dropc-rule::before{content:"The rule"; position:absolute; top:-11px; left:16px; background:var(--paper); padding:0 8px; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--amber-ink)}
+  .dropc-rule p{font-family:var(--disp); font-size:clamp(21px,4.2vw,26px); line-height:1.3; margin:0 0 12px}
+  .dropc-rule code{display:block; font-family:var(--mono); font-size:14px; color:var(--muted); line-height:1.6}
+  .dropc-trial{margin:34px 0 10px; border-top:1px solid var(--line-2); padding-top:18px}
+  .dropc-trial h2{margin:0 0 12px; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px}
+  .dropc-trial h2 small{font-family:var(--mono); font-size:14px; color:var(--faint)}
+  .dropc-in{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:0 0 16px}
+  .dropc-in div{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:8px 10px}
+  .dropc-in span{display:block; font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint)}
+  .dropc-in b{font-family:var(--mono); font-weight:500; font-size:15.5px}
+  .dropc-bar{position:relative; height:16px; background:var(--line); border-radius:3px; margin:6px 0 4px}
+  .dropc-fill{position:absolute; left:0; top:0; bottom:0; background:var(--sky); border-radius:3px}
+  .dropc-line{position:absolute; top:-6px; bottom:-6px; left:20%; border-left:2px solid var(--bad)}
+  .dropc-scale{position:relative; height:18px; font-family:var(--mono); font-size:11px; color:var(--faint); margin-bottom:14px}
+  .dropc-scale span{position:absolute; top:0}
+  .dropc-scale span:nth-child(1){left:0}
+  .dropc-scale span:nth-child(2){left:20%; transform:translateX(-50%); color:var(--bad)}
+  .dropc-scale span:nth-child(3){right:0}
+  .dropc-verdict{display:inline-block; transform:rotate(-2deg); border:2px solid currentColor; padding:4px 12px; font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin:0 0 14px}
+  .dropc-keep{color:var(--good)} .dropc-drop{color:var(--bad)}
+  @media (max-width:400px){ .dropc-in{grid-template-columns:1fr 1fr} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"When dropping collision coverage makes sense","description":"One rule for deciding when collision coverage has outlived its use, tested on three cars of different values.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/when-to-drop-collision/",
+  "image":"https://budgetpilot.fun/articles/og/when-to-drop-collision.jpg",
+  "articleSection":"Insurance",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Insurance","item":"https://budgetpilot.fun/articles/insurance/"},
+  {"@type":"ListItem","position":4,"name":"When dropping collision coverage makes sense"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/insurance/">Insurance</a>
+  </div>
+
+  <div class="kicker">Insurance</div>
+  <h1>When dropping collision makes sense</h1>
+  <p class="standfirst">Here is the rule first, then three cars to try it on. If it holds up for all three, you can try it on yours.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <div class="dropc-rule">
+  <p>Collision is worth keeping while the most it could ever pay you is more than five years of what it costs.</p>
+  <code>ceiling = car's value − deductible<br>years of premium = ceiling ÷ annual collision premium<br>under 5 → give dropping it a serious look</code>
+</div>
+
+<p>The logic is that collision coverage has a hard ceiling. If the car is wrecked, the insurer pays roughly what the car was worth before the crash, less your deductible, and not a dollar more. As the car ages, that ceiling falls every year. The premium usually falls too, but more slowly, because repair costs don't shrink with the car's value. At some point you are paying a large share of the ceiling each year for the right to claim it.</p>
+
+<p>Five years is our choice of threshold, not an industry standard. It reflects a plain judgment: if you would need five or more claim-free years of premiums to fund one worst case yourself, the insurance is still doing a job that is hard to do alone. Below that, a disciplined savings cushion starts to compete. Choose a different number if your own circumstances argue for it; the method still works.</p>
+
+<p>Two conditions sit ahead of the rule and override it. First, if the car is financed or leased, the contract will usually require collision coverage (check yours), and the rule doesn't apply until the lender is paid. Second, if losing the car with no payout would leave you unable to get to work, keep the coverage regardless of what the arithmetic says. The rule is for people who could absorb the loss.</p>
+
+<p>Now the trials. The car values, premiums and the $1,000 deductible are all illustrative, chosen to show the rule at different points in a car's life. Your insurer can tell you exactly what your collision coverage costs as a separate line; it is itemized on the declarations page.</p>
+
+<section class="dropc-trial">
+  <h2>Car one <small>a few years old</small></h2>
+  <div class="dropc-in">
+    <div><span>Value</span><b>$16,000</b></div>
+    <div><span>Collision / yr</span><b>$660</b></div>
+    <div><span>Deductible</span><b>$1,000</b></div>
+  </div>
+  <p>Ceiling: $16,000 − $1,000 = $15,000. Years of premium: $15,000 ÷ $660 = 22.7.</p>
+  <div class="dropc-bar"><div class="dropc-fill" style="width:90.8%"></div><div class="dropc-line"></div></div>
+  <div class="dropc-scale"><span>0</span><span>5 yrs</span><span>25 yrs</span></div>
+  <span class="dropc-verdict dropc-keep">Keep</span>
+  <p>Not close. It would take more than two decades of premiums to add up to the one payout the coverage could make. Even a household with a healthy emergency fund would be taking on a large risk to save $660 a year. The coverage is doing exactly what insurance is for: turning a large, unlikely loss into a small, certain cost.</p>
+</section>
+
+<section class="dropc-trial">
+  <h2>Car two <small>getting older</small></h2>
+  <div class="dropc-in">
+    <div><span>Value</span><b>$6,500</b></div>
+    <div><span>Collision / yr</span><b>$520</b></div>
+    <div><span>Deductible</span><b>$1,000</b></div>
+  </div>
+  <p>Ceiling: $6,500 − $1,000 = $5,500. Years of premium: $5,500 ÷ $520 = 10.6.</p>
+  <div class="dropc-bar"><div class="dropc-fill" style="width:42.4%"></div><div class="dropc-line"></div></div>
+  <div class="dropc-scale"><span>0</span><span>5 yrs</span><span>25 yrs</span></div>
+  <span class="dropc-verdict dropc-keep">Keep, and recheck yearly</span>
+  <p>The car has lost more than half its value since trial one, while the premium dropped by only about a fifth, from $660 to $520. That mismatch is the pattern the rule is designed to catch. Ten years is still well above the line, so collision stays. But this is the stage where the check becomes an annual habit, because the number is now falling fast.</p>
+</section>
+
+<section class="dropc-trial">
+  <h2>Car three <small>old and paid off</small></h2>
+  <div class="dropc-in">
+    <div><span>Value</span><b>$2,800</b></div>
+    <div><span>Collision / yr</span><b>$450</b></div>
+    <div><span>Deductible</span><b>$1,000</b></div>
+  </div>
+  <p>Ceiling: $2,800 − $1,000 = $1,800. Years of premium: $1,800 ÷ $450 = 4.0.</p>
+  <div class="dropc-bar"><div class="dropc-fill" style="width:16%"></div><div class="dropc-line"></div></div>
+  <div class="dropc-scale"><span>0</span><span>5 yrs</span><span>25 yrs</span></div>
+  <span class="dropc-verdict dropc-drop">Consider dropping</span>
+  <p>Now the rule fires. Four years of premium, $1,800, equals the most the coverage could ever pay out on this car. Put another way, if you set aside the $450 each year instead, after four claim-free years you would be holding the whole payout yourself, and every year after that is money the insurer would never have returned. If you have a crash in year two instead, you would be $900 into your own fund and $900 short of what the coverage would have paid, a real but bounded loss on a car worth $2,800.</p>
+  <p>Lowering the deductible doesn't rescue it. At a $500 deductible the ceiling rises to $2,300, but the premium rises as well; at an illustrative $540 a year, $2,300 ÷ $540 is still only 4.3 years.</p>
+</section>
+
+<h2>When to run it</h2>
+
+<p>Once a year, when the renewal arrives, is enough. The two inputs that matter both change on roughly that schedule: the car's value slides a little further, and the renewal shows the new collision premium on its own line. Write the result on the renewal notice itself. After a few years the numbers form a short series, and you can watch the figure approach five instead of discovering one day that it passed it long ago.</p>
+
+<h2>What the trials leave out</h2>
+
+<p><strong>Comprehensive is a separate decision.</strong> It covers theft, weather, glass and animal strikes, is often cheaper than collision, and can be kept after collision goes. Run the same rule on its own premium.</p>
+
+<p><strong>Your own car's value, honestly.</strong> Use what the car would actually sell for in its present condition, not what you paid or what you hope. What a total loss would pay out depends on how the insurer arrives at actual cash value, which <a href="/articles/what-a-total-loss-pays/">what your insurer pays when your car is totaled</a> walks through.</p>
+
+<p><strong>The money has to go somewhere.</strong> Dropping collision only works if the saved premium lands in a fund you won't touch. That fund is the thing you are replacing the insurance with, and <a href="/articles/sizing-a-car-repair-fund/">sizing a car repair fund</a> covers how large to make it. Without it, you haven't self-insured; you've just uninsured.</p>
+
+<p><strong>Liability stays.</strong> None of this touches the coverage that pays other people. An old car can cause a very expensive crash, and dropping collision is not a reason to lower liability limits. The deductible arithmetic in <a href="/articles/choosing-a-deductible/">choosing a deductible</a> is the other lever on an aging car's bill, and it is often worth pulling first.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/maintenance-as-a-car-ages/">Budgeting maintenance as a car ages</a></li>
+      <li><a href="/articles/depreciation-the-silent-bill/">Depreciation, the bill that never arrives</a></li>
+      <li><a href="/articles/the-true-cost-of-a-free-car/">The true cost of a free car</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

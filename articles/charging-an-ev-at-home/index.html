@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What charging an EV at home costs | Budget Pilot</title>
+<meta name="description" content="A small calculator for the cost of charging an electric car at home, with the formula worked step by step and where to find your efficiency and power rate.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/charging-an-ev-at-home/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="What charging an EV at home costs">
+<meta property="og:description" content="Work out the monthly cost of charging an EV at home, step by step.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/charging-an-ev-at-home/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/charging-an-ev-at-home.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/charging-an-ev-at-home.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - What charging an EV at home costs">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Running Costs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What charging an EV at home costs">
+<meta name="twitter:description" content="Work out the monthly cost of charging an EV at home, step by step.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/charging-an-ev-at-home.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* A no-network calculator with the formula derived step by step beside it. */
+  .evcalc{display:grid; grid-template-columns:1fr; gap:18px; margin:30px 0}
+  @media (min-width:640px){ .evcalc{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)} }
+  .evcalc-panel{background:var(--card); border:1px solid var(--line-2); border-radius:14px; padding:18px}
+  .evcalc-panel h2{font-size:22px; margin:0 0 12px}
+  .evcalc-field{display:block; margin:0 0 14px}
+  .evcalc-field span{display:block; font-size:13.5px; font-weight:600; color:var(--muted); margin-bottom:4px}
+  .evcalc-field input{width:100%; font:inherit; font-family:var(--mono); font-size:16px; color:var(--ink); background:var(--paper); border:1px solid var(--line-2); border-radius:8px; padding:9px 10px}
+  .evcalc-field input:focus{outline:2px solid var(--sky); outline-offset:1px}
+  .evcalc-field small{display:block; font-size:12.5px; color:var(--faint); line-height:1.45; margin-top:4px}
+  .evcalc-out{border-top:2px solid var(--amber); margin-top:6px; padding-top:12px}
+  .evcalc-out .evcalc-big{font-family:var(--disp); font-size:40px; line-height:1.05; color:var(--ink)}
+  .evcalc-out .evcalc-sub{font-size:14px; color:var(--muted)}
+  .evcalc-steps{list-style:none; counter-reset:evstep; margin:0; padding:0}
+  .evcalc-steps li{counter-increment:evstep; position:relative; padding:0 0 14px 40px; margin:0 0 14px; border-bottom:1px dashed var(--line)}
+  .evcalc-steps li:last-child{border-bottom:0; margin-bottom:0}
+  .evcalc-steps li::before{content:counter(evstep); position:absolute; left:0; top:2px; width:26px; height:26px; border-radius:50%; background:var(--sky-soft); color:var(--sky); font-weight:600; font-size:14px; display:grid; place-items:center}
+  .evcalc-steps .evcalc-eq{display:block; font-family:var(--mono); font-size:14px; color:var(--ink); background:var(--paper-2); border-radius:6px; padding:6px 8px; margin:4px 0 6px; overflow-wrap:anywhere}
+  .evcalc-steps .evcalc-why{font-size:14.5px; color:var(--muted); line-height:1.55}
+  .evcalc-steps b{font-weight:600}
+  .evcalc-noscript{margin:10px 0 0}
+  .evcalc-src{font-size:13px; color:var(--faint); margin:-6px 0 26px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"What charging an EV at home costs","description":"Work out the monthly cost of charging an EV at home, step by step.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/charging-an-ev-at-home/",
+  "image":"https://budgetpilot.fun/articles/og/charging-an-ev-at-home.jpg",
+  "articleSection":"Running Costs",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Running Costs","item":"https://budgetpilot.fun/articles/running-costs/"},
+  {"@type":"ListItem","position":4,"name":"What charging an EV at home costs"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/running-costs/">Running Costs</a>
+  </div>
+
+  <div class="kicker">Running Costs</div>
+  <h1>What charging an EV at home costs</h1>
+  <p class="standfirst">Three inputs and one multiplication, with a fourth for honesty. The calculator does the arithmetic; the steps beside it show every line of it.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Efficiency times distance times price: that is the entire calculation, and it fits on one line. What makes home charging confusing is not the math but the three inputs, each of which hides a small complication. The calculator below does the arithmetic; the steps beside it show exactly what it is doing, so you can check it with a pencil.</p>
+
+  <p>The figures already filled in are an illustrative example, not a typical car or a typical electricity rate. Replace them with your own.</p>
+
+  <form class="evcalc" id="evcalc" onsubmit="return false" aria-label="Home charging cost calculator">
+    <div class="evcalc-panel">
+      <h2>Your numbers</h2>
+      <label class="evcalc-field"><span>Efficiency (kWh per 100 miles)</span>
+        <input id="ev-eff" type="number" inputmode="decimal" min="1" step="0.1" value="30">
+        <small>From the car's efficiency label or its trip computer.</small></label>
+      <label class="evcalc-field"><span>Miles per month</span>
+        <input id="ev-miles" type="number" inputmode="decimal" min="0" step="10" value="1000">
+        <small>Only the miles charged at home.</small></label>
+      <label class="evcalc-field"><span>Electricity price ($ per kWh)</span>
+        <input id="ev-rate" type="number" inputmode="decimal" min="0" step="0.01" value="0.16">
+        <small>Your all-in price per kWh, from your bill.</small></label>
+      <label class="evcalc-field"><span>Charging overhead (%)</span>
+        <input id="ev-loss" type="number" inputmode="decimal" min="0" max="60" step="1" value="10">
+        <small>A placeholder for energy lost between the outlet and the battery. Set to 0 to ignore.</small></label>
+      <div class="evcalc-out" aria-live="polite">
+        <div class="evcalc-big" id="ev-month">$52.80</div>
+        <div class="evcalc-sub">per month · <span id="ev-year">$633.60</span> per year · <span id="ev-cpm">5.3¢</span> per mile</div>
+      </div>
+      <noscript><p class="evcalc-sub evcalc-noscript">Scripts are off, so the figures above are the fixed worked example. The steps alongside show how to redo them by hand.</p></noscript>
+    </div>
+
+    <div class="evcalc-panel">
+      <h2>The formula, one step at a time</h2>
+      <ol class="evcalc-steps">
+        <li><b>Turn the efficiency figure into kWh per mile.</b>
+          <span class="evcalc-eq"><span id="ev-s1a">30</span> kWh ÷ 100 mi = <span id="ev-s1b">0.3</span> kWh per mile</span>
+          <span class="evcalc-why">Labels quote energy per 100 miles, the way fuel is quoted per gallon. Dividing by 100 gives the energy one mile uses. Lower is better.</span></li>
+        <li><b>Multiply by the month's miles.</b>
+          <span class="evcalc-eq"><span id="ev-s2a">0.3</span> × <span id="ev-s2b">1,000</span> mi = <span id="ev-s2c">300</span> kWh into the battery</span>
+          <span class="evcalc-why">This is the energy the car needs to cover the distance.</span></li>
+        <li><b>Allow for charging overhead.</b>
+          <span class="evcalc-eq"><span id="ev-s3a">300</span> × (1 + <span id="ev-s3b">10</span>%) = <span id="ev-s3c">330</span> kWh from the wall</span>
+          <span class="evcalc-why">The meter counts what leaves the outlet, and a share of that becomes heat along the way. How large a share varies with the equipment, the charging speed and the weather; the 10% here is a round placeholder, not a measurement.</span></li>
+        <li><b>Price it.</b>
+          <span class="evcalc-eq"><span id="ev-s4a">330</span> kWh × $<span id="ev-s4b">0.16</span> = <span id="ev-s4c">$52.80</span></span>
+          <span class="evcalc-why">That is the monthly cost. Twelve of them make the yearly figure.</span></li>
+        <li><b>Divide back down to a per-mile cost.</b>
+          <span class="evcalc-eq"><span id="ev-s5a">$52.80</span> ÷ <span id="ev-s5b">1,000</span> mi = <span id="ev-s5c">5.3¢</span> per mile</span>
+          <span class="evcalc-why">The per-mile figure is the one to compare with anything else you drive.</span></li>
+      </ol>
+    </div>
+  </form>
+  <p class="evcalc-src">Worked example: 30 kWh/100 mi, 1,000 miles, $0.16 per kWh, 10% overhead. Illustrative inputs only.</p>
+
+  <h2>Where each number actually comes from</h2>
+
+  <p><strong>Efficiency.</strong> The official figure for an electric model is published on its window label and at <a href="https://www.fueleconomy.gov/">fueleconomy.gov</a>, in kWh per 100 miles. It is a standardized result. Your own figure will wander with speed, temperature and terrain; many cars show a running average on the dash, and that number, taken over a few weeks, is better than the label for your purposes. Expect it to shift between seasons. Cold weather in particular tends to raise consumption, partly from heating the cabin and partly from the battery itself.</p>
+
+  <p><strong>Price per kWh.</strong> This is the input most people get wrong. An electric bill usually splits into a supply or generation charge and a delivery charge, and both are billed per kWh. The number you want is the two added together, plus any per-kWh taxes and riders, divided out to a single rate. The simplest honest method: take a recent bill, subtract the fixed monthly customer charge (you pay that whether or not you own an EV), and divide what is left by the kWh used.</p>
+
+  <p>Two structures complicate this. With <em>tiered</em> pricing, the price rises once your monthly use crosses a threshold, and the EV's energy lands in the most expensive tier because it is added on top of everything else. With <em>time-of-use</em> pricing, the rate depends on the hour, and overnight charging may sit at a different rate from the evening peak. In both cases, use the rate that will actually apply to the car's kWh, not the average across your bill. Your utility's rate schedule, usually posted on its website, lists which plans exist; what is available varies by utility.</p>
+
+  <p><strong>Overhead.</strong> Energy is lost converting household current into what the battery stores. The loss is real but not a fixed percentage — equipment and conditions change it. If your car or charger reports energy delivered, and your utility or a smart plug reports energy drawn, the difference between the two over a month is your own overhead figure, and it is better than any placeholder.</p>
+
+  <h2>What the calculator deliberately ignores</h2>
+
+  <p>It prices only energy charged at home. Public fast charging is sold on different terms — per kWh in some places, per minute in others, sometimes with a session fee or a membership — and the per-mile cost can land far from the home figure in either direction. If a real share of your miles are charged away from home, run those miles separately at the price you actually pay there.</p>
+
+  <p>It also leaves out equipment. A dedicated home charger and any electrical work to support it are a one-time cost, and the fairest way to include them is to spread them over the miles or months you expect to use them — the same approach as <a href="/articles/tires-as-a-line-item/">treating tires as a line item</a>. Some households manage with an ordinary outlet and slower charging; whether that works depends on how far you drive between nights at home.</p>
+
+  <p>And it does not compare anything. To set the result next to a gasoline car, convert both to cents per mile. A car doing 25 mpg on $3.50 gas spends 14¢ a mile on fuel; the sensitivity grid in <a href="/articles/what-a-gas-price-change-does/">what a gas price change does to your month</a> shows how that figure moves. Whether an electric car comes out ahead for you depends on your rate, your efficiency and your mix of home and public charging — which is exactly why the inputs above are yours to change.</p>
+
+  <p>One small check before trusting any result: multiply your monthly kWh from step three by twelve and look at a year of your electric bills. If the car's energy would be a large share of what the house already uses, ask your utility whether the added use pushes you into a different tier or makes a different plan cheaper.</p>
+
+<script>
+(function(){
+  var f=document.getElementById('evcalc'); if(!f) return;
+  function n(id){var v=parseFloat(document.getElementById(id).value); return isFinite(v)&&v>=0?v:0;}
+  function set(id,t){var e=document.getElementById(id); if(e) e.textContent=t;}
+  function num(x,d){return x.toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:d});}
+  function usd(x){return '$'+x.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});}
+  function cents(x){return (Math.round(x*1000)/10).toLocaleString('en-US',{maximumFractionDigits:1})+'¢';}
+  function run(){
+    var eff=n('ev-eff'), mi=n('ev-miles'), rate=n('ev-rate'), loss=n('ev-loss');
+    var perMile=eff/100, kwh=perMile*mi, wall=kwh*(1+loss/100), cost=wall*rate;
+    var cpm=mi>0?cost/mi:0;
+    set('ev-s1a',num(eff,2)); set('ev-s1b',num(perMile,4));
+    set('ev-s2a',num(perMile,4)); set('ev-s2b',num(mi,0)); set('ev-s2c',num(kwh,1));
+    set('ev-s3a',num(kwh,1)); set('ev-s3b',num(loss,1)); set('ev-s3c',num(wall,1));
+    set('ev-s4a',num(wall,1)); set('ev-s4b',num(rate,3)); set('ev-s4c',usd(cost));
+    set('ev-s5a',usd(cost)); set('ev-s5b',num(mi,0)); set('ev-s5c',cents(cpm));
+    set('ev-month',usd(cost)); set('ev-year',usd(cost*12)); set('ev-cpm',cents(cpm));
+  }
+  f.addEventListener('input',run); run();
+})();
+</script>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/leasing-an-ev/">Leasing vs buying an electric car</a></li>
+      <li><a href="/articles/your-real-cost-per-mile/">Your real cost per mile</a></li>
+      <li><a href="/articles/the-state-fees-on-a-car/">Registration, title and the other state fees</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

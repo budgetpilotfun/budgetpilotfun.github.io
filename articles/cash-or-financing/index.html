@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paying cash or financing a car | Budget Pilot</title>
+<meta name="description" content="Is it smarter to pay cash for a car or finance it and keep your savings invested? Worked opportunity-cost arithmetic across nine rate combinations.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/cash-or-financing/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Paying cash or financing a car">
+<meta property="og:description" content="Cash or a car loan? Nine illustrative combinations of savings yield and loan rate, worked out properly.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/cash-or-financing/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/cash-or-financing.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/cash-or-financing.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Paying cash or financing a car">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Buying &amp; Selling">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paying cash or financing a car">
+<meta name="twitter:description" content="Cash or a car loan? Nine illustrative combinations of savings yield and loan rate, worked out properly.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/cash-or-financing.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+/* Form: opportunity-cost arithmetic - a 3x3 rate grid, one worked cell, and the sum shown longhand. */
+  .oc-grid{display:grid; grid-template-columns:minmax(76px,.9fr) repeat(3,minmax(0,1fr)); gap:6px; margin:24px 0 8px;
+    font-variant-numeric:tabular-nums}
+  .oc-grid > div{border-radius:8px; padding:10px 8px; text-align:center; font-size:15px; line-height:1.3}
+  .oc-corner{font-size:11.5px !important; color:var(--faint); text-align:left !important; align-self:end}
+  .oc-colh,.oc-rowh{font-size:12px !important; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+  .oc-colh{background:var(--paper-2)}
+  .oc-rowh{background:var(--paper-2); display:flex; align-items:center; justify-content:center}
+  .oc-cell{font-family:var(--mono); font-weight:600; border:1px solid var(--line)}
+  .oc-cell small{display:block; font-family:var(--body); font-weight:400; font-size:11.5px; color:var(--muted); margin-top:2px}
+  .oc-cash{background:var(--sky-soft); color:var(--ink)}
+  .oc-tie{background:var(--card); color:var(--ink)}
+  .oc-fin{background:var(--card); color:var(--bad); border-color:var(--bad)}
+  .oc-pick{outline:3px solid var(--amber); outline-offset:1px}
+  .oc-gridnote{font-size:13px; color:var(--faint); margin:0 0 28px}
+  .oc-long{font-family:var(--mono); font-size:14px; line-height:1.7; background:var(--card);
+    border:1px solid var(--line-2); border-radius:12px; padding:16px; margin:22px 0}
+  .oc-long h3{font-family:var(--body); margin:0 0 8px; font-size:16px}
+  .oc-long h3 + .oc-line{margin-top:0}
+  .oc-line{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+  .oc-line span:last-child{white-space:nowrap}
+  .oc-long hr{margin:10px 0; border-top:1px dashed var(--line-2)}
+  .oc-sum{font-weight:600}
+  .oc-pair{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px}
+  .oc-pair .oc-long{margin:0}
+  @media (max-width:420px){ .oc-grid > div{padding:8px 4px; font-size:13.5px} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Paying cash or financing a car","description":"Cash or a car loan? Nine illustrative combinations of savings yield and loan rate, worked out properly.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/cash-or-financing/",
+  "image":"https://budgetpilot.fun/articles/og/cash-or-financing.jpg",
+  "articleSection":"Buying & Selling",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Buying & Selling","item":"https://budgetpilot.fun/articles/buying-selling/"},
+  {"@type":"ListItem","position":4,"name":"Paying cash or financing a car"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+  </div>
+
+  <div class="kicker">Buying &amp; Selling</div>
+  <h1>Paying cash or financing a car: the opportunity cost, worked out</h1>
+  <p class="standfirst">"Keep your money earning and let the bank's money buy the car" sounds shrewd. Whether it is depends on two rates and a piece of arithmetic that the shorthand usually gets wrong.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The usual shorthand goes like this: your savings earn interest, a car loan charges interest, so if the savings rate is high enough, borrow and keep the cash working. It is a reasonable instinct with a flaw in the middle. It compares the interest you would earn on an untouched pile of money with the interest you would pay on a loan, and forgets that the person who pays cash does not stop saving. They simply start rebuilding the pile with the money they are not sending to a lender.</p>
+
+<p>Once you count both households fairly, the answer becomes surprisingly tidy. Here it is for one illustrative car across nine combinations of rates.</p>
+
+<h2>The setup</h2>
+
+<p>A $25,000 car. Two households, each with at least $25,000 in savings and the same monthly budget. Neither situation is real; both exist to make the arithmetic honest.</p>
+
+<ul>
+  <li><strong>The financing household</strong> borrows $25,000 over 60 months and leaves its savings alone. It pays the loan from its monthly budget.</li>
+  <li><strong>The cash household</strong> pays $25,000 from savings. Every month, it deposits into savings exactly what the other household is paying the lender.</li>
+</ul>
+
+<p>After five years both own the same car outright and both have spent the same amount from their monthly budgets. The only difference left is the size of their savings. That difference is the opportunity cost, and it is the number in each cell below. Interest is compounded monthly and taxes are ignored for now; more on that at the end.</p>
+
+<h2>The grid</h2>
+
+<div class="oc-grid" role="table" aria-label="Five-year advantage of paying cash, by loan rate and savings yield">
+  <div class="oc-corner" role="columnheader">Loan APR ↓ / Savings yield →</div>
+  <div class="oc-colh" role="columnheader">2%</div>
+  <div class="oc-colh" role="columnheader">4%</div>
+  <div class="oc-colh" role="columnheader">5%</div>
+
+  <div class="oc-rowh" role="rowheader">4%</div>
+  <div class="oc-cell oc-cash" role="cell">+$1,401<small>cash ahead</small></div>
+  <div class="oc-cell oc-tie" role="cell">$0<small>dead even</small></div>
+  <div class="oc-cell oc-fin" role="cell">&minus;$773<small>loan ahead</small></div>
+
+  <div class="oc-rowh" role="rowheader">7%</div>
+  <div class="oc-cell oc-cash" role="cell">+$3,583<small>cash ahead</small></div>
+  <div class="oc-cell oc-cash" role="cell">+$2,295<small>cash ahead</small></div>
+  <div class="oc-cell oc-cash oc-pick" role="cell">+$1,581<small>cash ahead</small></div>
+
+  <div class="oc-rowh" role="rowheader">10%</div>
+  <div class="oc-cell oc-cash" role="cell">+$5,862<small>cash ahead</small></div>
+  <div class="oc-cell oc-cash" role="cell">+$4,692<small>cash ahead</small></div>
+  <div class="oc-cell oc-cash" role="cell">+$4,039<small>cash ahead</small></div>
+</div>
+<p class="oc-gridnote">Cash household's savings minus financing household's savings after 60 months, rounded to the dollar. Illustrative rates, not offers or forecasts. The outlined cell is worked below.</p>
+
+<p>The pattern is the whole lesson. Along the diagonal where the two rates are equal, the households finish exactly level. Wherever the loan rate is higher than the savings rate, paying cash comes out ahead; only where savings earn more than the loan costs does financing win. Seven of the nine cells favor cash, but that count means nothing, because we chose the rates. The rule does not depend on the choice.</p>
+
+<h2>One cell, longhand</h2>
+
+<p>Take the outlined cell: a 7% loan against savings earning 5%. On a $25,000, 60-month loan at 7% APR, the payment is $495.03.</p>
+
+<div class="oc-pair">
+<div class="oc-long">
+  <h3>Financing household</h3>
+  <div class="oc-line"><span>Savings kept</span><span>$25,000.00</span></div>
+  <div class="oc-line"><span>Grows at 5% for 60 mo to</span><span>$32,083.97</span></div>
+  <div class="oc-line"><span>Interest earned</span><span>$7,083.97</span></div>
+  <hr>
+  <div class="oc-line"><span>Paid to lender, 60 × $495.03</span><span>$29,701.80</span></div>
+  <div class="oc-line"><span>of which interest</span><span>$4,701.80</span></div>
+</div>
+<div class="oc-long">
+  <h3>Cash household</h3>
+  <div class="oc-line"><span>Savings spent on the car</span><span>$25,000.00</span></div>
+  <div class="oc-line"><span>Deposited back, 60 × $495.03</span><span>$29,701.80</span></div>
+  <div class="oc-line"><span>Deposits grow at 5% to</span><span>$33,665.05</span></div>
+  <hr>
+  <div class="oc-line"><span>Interest earned on deposits</span><span>$3,963.25</span></div>
+</div>
+</div>
+
+<div class="oc-long">
+  <div class="oc-line"><span>Cash household's rebuilt savings</span><span>$33,665.05</span></div>
+  <div class="oc-line"><span>Financing household's savings</span><span>&minus; $32,083.97</span></div>
+  <hr>
+  <div class="oc-line oc-sum"><span>Cash ahead by</span><span>$1,581.08</span></div>
+</div>
+
+<p>Now look at what the shorthand would have said. "My savings earn $7,084, the loan only costs $4,702, so financing wins by $2,382." That leaves out the $3,963.25 the cash household earns on the money it puts back each month. Put it in, and the financing household's real interest advantage shrinks to $3,120.72 ($7,083.97 minus $3,963.25), which is less than the $4,701.80 it paid the lender. The gap between those two, $1,581.08, is the same number the grid shows.</p>
+
+<p>The intuition behind the rule: once you borrow, you are effectively holding savings at one rate while paying another rate on the same amount of money. If the rate you pay is higher, the arrangement loses a little every month, whatever the absolute size of either rate.</p>
+
+<h2>Running your own cell</h2>
+
+<p>You do not need to reproduce the longhand to use this. Find two numbers: the APR on a loan you have actually been offered in writing, and the yield your savings currently earn after any fees. If the first is higher, the grid's rule says paying cash leaves you with more at the end. If they are close, the other considerations below will matter more than the arithmetic. If you want the dollar figure, any spreadsheet's future-value function will produce the two savings balances in a minute.</p>
+
+<h2>What the grid leaves out</h2>
+
+<p><strong>Taxes.</strong> Interest earned on ordinary savings is generally taxable income, which trims the financing household's return and pushes the answer toward cash. Whether any of the loan interest can be deducted depends on current tax law, the vehicle and how it is used, and those rules change, so do not assume it either way. Your own situation depends on your tax bracket and accounts; <a href="https://www.irs.gov/">irs.gov</a> and a tax preparer are the places to confirm it, and our overview of <a href="/articles/car-expenses-and-taxes/">car expenses and taxes</a> covers the basics.</p>
+
+<p><strong>Certainty.</strong> The loan rate is fixed in the contract. The savings rate on most deposit accounts can change at any time, and anything invested in markets can fall. Comparing a guaranteed cost against a hoped-for return is not a like-for-like comparison, even when the rates look close.</p>
+
+<p><strong>The cushion.</strong> This is the part arithmetic cannot price. A household that empties its emergency fund to buy a car has swapped a known interest cost for an unknown risk: the job loss or medical bill that arrives before the fund is rebuilt. If paying cash would leave you without a buffer, a middle path, a large down payment with a smaller loan, keeps most of the benefit and some of the safety. Our piece on <a href="/articles/paying-yourself-a-car-payment/">paying yourself a car payment</a> covers building the pile in the first place.</p>
+
+<p><strong>The rate you are actually offered.</strong> The grid uses illustrative rates. What a borrower is actually charged hinges on their credit history, the vehicle and whoever is lending, and the only figures that belong in this calculation are ones in writing.</p>
+
+<p>So check two rates, keep a buffer, and let the diagonal decide.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/how-rates-change-a-payment/">How interest rate moves change what you pay</a></li>
+      <li><a href="/articles/three-numbers-before-you-shop/">Three numbers to set before you shop</a></li>
+      <li><a href="/articles/cash-or-finance-a-lease-buyout/">Paying cash for a lease buyout, or financing it</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

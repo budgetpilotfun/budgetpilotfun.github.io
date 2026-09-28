@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How interest rate moves change what you pay | Budget Pilot</title>
+<meta name="description" content="One illustrative $28,000 loan at five interest rates, charted as payment and total interest, to show why a rate change looks small and is not.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/how-rates-change-a-payment/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="How interest rate moves change what you pay">
+<meta property="og:description" content="The same $28,000 loan at five rates: the payment bars barely move, the interest bars triple.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/how-rates-change-a-payment/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/how-rates-change-a-payment.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/how-rates-change-a-payment.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - How interest rate moves change what you pay">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Borrowing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How interest rate moves change what you pay">
+<meta name="twitter:description" content="The same $28,000 loan at five rates: the payment bars barely move, the interest bars triple.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/how-rates-change-a-payment.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: a horizontal bar chart in HTML/CSS — one loan at five rates, paired bars for monthly payment and total interest. */
+  .ratebars{margin:28px 0 12px; padding:18px 16px 8px; background:var(--card); border:1px solid var(--line); border-radius:12px}
+  .ratebars-title{font-size:13px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--faint); margin:0 0 14px}
+  .ratebars-group{display:grid; grid-template-columns:52px 1fr; gap:4px 12px; align-items:center; padding:10px 0; border-top:1px solid var(--line)}
+  .ratebars-group:first-of-type{border-top:0}
+  .ratebars-rate{grid-row:span 2; font-family:var(--disp); font-size:24px; line-height:1}
+  .ratebars-line{display:flex; align-items:center; gap:10px; font-size:13.5px; font-variant-numeric:tabular-nums}
+  .ratebars-bar{height:12px; border-radius:0 6px 6px 0; flex:none}
+  .ratebars-pay{background:var(--sky)}
+  .ratebars-int{background:var(--amber)}
+  .ratebars-val{font-family:var(--mono); font-size:12.5px; white-space:nowrap; color:var(--muted)}
+  .ratebars-legend{display:flex; flex-wrap:wrap; gap:6px 18px; font-size:13px; color:var(--muted); margin:6px 0 4px}
+  .ratebars-legend i{display:inline-block; width:14px; height:10px; border-radius:2px; margin-right:6px; vertical-align:0}
+  .ratebars-scale{font-size:12.5px; color:var(--faint); margin:0 0 26px}
+  .ratebars-track{flex:1 1 auto; min-width:0; display:flex}
+  .ratebars-steps{margin:24px 0}
+  .ratebars-steps td:nth-child(n+2), .ratebars-steps th:nth-child(n+2){text-align:right; font-family:var(--mono); font-size:13.5px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"How interest rate moves change what you pay","description":"The same $28,000 loan at five rates: the payment bars barely move, the interest bars triple.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/how-rates-change-a-payment/",
+  "image":"https://budgetpilot.fun/articles/og/how-rates-change-a-payment.jpg",
+  "articleSection":"Borrowing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Borrowing","item":"https://budgetpilot.fun/articles/borrowing/"},
+  {"@type":"ListItem","position":4,"name":"How interest rate moves change what you pay"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/borrowing/">Borrowing</a>
+  </div>
+
+  <div class="kicker">Borrowing</div>
+  <h1>How interest rate moves change what you pay</h1>
+  <p class="standfirst">Why does a couple of percentage points feel like nothing across a desk and like a lot on the final statement? Because the two are measured on different scales. Put them on bars and the gap is obvious.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Here is the setup, identical in every row: an illustrative $28,000 financed for 60 months, paid monthly, simple interest, no fees. Only the annual percentage rate changes. The rates are round numbers picked to show the shape of the effect — they are not quotes, forecasts, or what anyone in particular would be offered.</p>
+
+<div class="ratebars" role="figure" aria-label="Monthly payment and total interest on a $28,000, 60-month loan at 4, 6, 8, 10 and 12 percent APR">
+  <p class="ratebars-title">$28,000 · 60 months · five rates</p>
+  <div class="ratebars-legend"><span><i class="ratebars-pay"></i>monthly payment</span><span><i class="ratebars-int"></i>total interest over the loan</span></div>
+
+  <div class="ratebars-group">
+    <span class="ratebars-rate">4%</span>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-pay" style="width:82.8%"></span></span><span class="ratebars-val">$515.66</span></div>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-int" style="width:31.4%"></span></span><span class="ratebars-val">$2,939.76</span></div>
+  </div>
+  <div class="ratebars-group">
+    <span class="ratebars-rate">6%</span>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-pay" style="width:86.9%"></span></span><span class="ratebars-val">$541.32</span></div>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-int" style="width:47.8%"></span></span><span class="ratebars-val">$4,479.11</span></div>
+  </div>
+  <div class="ratebars-group">
+    <span class="ratebars-rate">8%</span>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-pay" style="width:91.2%"></span></span><span class="ratebars-val">$567.74</span></div>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-int" style="width:64.7%"></span></span><span class="ratebars-val">$6,064.34</span></div>
+  </div>
+  <div class="ratebars-group">
+    <span class="ratebars-rate">10%</span>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-pay" style="width:95.5%"></span></span><span class="ratebars-val">$594.92</span></div>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-int" style="width:82.1%"></span></span><span class="ratebars-val">$7,695.04</span></div>
+  </div>
+  <div class="ratebars-group">
+    <span class="ratebars-rate">12%</span>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-pay" style="width:100%"></span></span><span class="ratebars-val">$622.84</span></div>
+    <div class="ratebars-line"><span class="ratebars-track"><span class="ratebars-bar ratebars-int" style="width:100%"></span></span><span class="ratebars-val">$9,370.67</span></div>
+  </div>
+</div>
+<p class="ratebars-scale">Each bar is scaled to the largest value of its own kind: the blue bars to $622.84, the amber bars to $9,370.67. Both start at zero.</p>
+
+<h2>Read the blue, then the amber</h2>
+
+<p>The blue bars are nearly the same length. Going from 4% to 12% — tripling the rate — raises the payment from $515.66 to $622.84, which is $107.18 a month, or about 21%. Across a desk, that can be made to sound like the price of a couple of lunches a week.</p>
+
+<p>The amber bars are a different story. Total interest goes from $2,939.76 to $9,370.67: more than three times as much, a difference of $6,430.91 on a car whose price never changed. Every bit of that sits inside the payment you were told was only a little higher.</p>
+
+<p>Both sets of bars describe the same five loans. The payment is the view from inside a single month; the interest is the view across all sixty. A rate change is small at monthly resolution and large at loan resolution, and most car conversations happen at monthly resolution.</p>
+
+<h2>The steps between rates</h2>
+
+<div class="tscroll"><table class="ratebars-steps">
+<thead><tr><th>Move</th><th>Payment rises by</th><th>Interest rises by</th></tr></thead>
+<tbody>
+<tr><td>4% &rarr; 6%</td><td>$25.66</td><td>$1,539.35</td></tr>
+<tr><td>6% &rarr; 8%</td><td>$26.42</td><td>$1,585.23</td></tr>
+<tr><td>8% &rarr; 10%</td><td>$27.18</td><td>$1,630.70</td></tr>
+<tr><td>10% &rarr; 12%</td><td>$27.92</td><td>$1,675.63</td></tr>
+</tbody></table></div>
+
+<p>Two things show up. Each two-point step costs slightly more than the one before, because higher rates slow the paydown of principal, so interest is charged on a larger balance for longer. And the interest column is, give or take rounding, the payment column times sixty: an extra $26 a month is an extra $1,500-plus by the end. That multiplication is worth doing out loud every time a payment difference is described as small. On this loan, a single percentage point — 6% to 7% — is about $13.12 a month, or roughly $787 over the full term.</p>
+
+<h2>A rate move, translated into price</h2>
+
+<p>Another way to feel the difference: at 6%, what price would produce the same payment as $28,000 at 8%? The answer is about $29,367. In payment terms, two points of rate on this loan is the same as paying roughly $1,367 more for the car. People will drive across town to save that on the price and then accept it on the rate without a second look.</p>
+
+<h2>Term makes it louder</h2>
+
+<p>The same comparison at other lengths, still $28,000, still 4% versus 12%:</p>
+
+<div class="tscroll"><table class="ratebars-steps">
+<thead><tr><th>Term</th><th>Interest at 4%</th><th>Interest at 12%</th></tr></thead>
+<tbody>
+<tr><td>36 months</td><td>$1,760.18</td><td>$5,480.02</td></tr>
+<tr><td>60 months</td><td>$2,939.76</td><td>$9,370.67</td></tr>
+<tr><td>72 months</td><td>$3,540.69</td><td>$11,413.19</td></tr>
+</tbody></table></div>
+
+<p>A higher rate hurts more the longer you carry it. Stretching the term to soften a high-rate payment therefore does double damage: more months of interest, each at the higher price. <a href="/articles/loan-terms-side-by-side/">36, 48, 60, 72, 84 months</a> puts one loan across five terms if you want the other axis in full.</p>
+
+<h2>When the choice is a rate or a rebate</h2>
+
+<p>Rate differences sometimes arrive disguised as a choice. Some promotions offer either special low-rate financing or a cash rebate, not both. The only way to compare them is to put each into total dollars. Using the same illustrative car, 60 months throughout:</p>
+
+<div class="tscroll"><table class="ratebars-steps">
+<thead><tr><th>Option</th><th>Payment</th><th>Paid over 60 months</th></tr></thead>
+<tbody>
+<tr><td>$28,000 at 0%</td><td>$466.67</td><td>about $28,000</td></tr>
+<tr><td>$2,000 rebate, $26,000 at 6%</td><td>$502.65</td><td>$30,159.00</td></tr>
+<tr><td>$2,000 rebate, $26,000 at 4%</td><td>$478.83</td><td>$28,729.80</td></tr>
+<tr><td>$3,000 rebate, $25,000 at 4%</td><td>$460.41</td><td>$27,624.60</td></tr>
+</tbody></table></div>
+
+<p>With a $2,000 rebate, the zero-rate option wins against either borrowing rate here. With a $3,000 rebate and a 4% loan from elsewhere, the rebate comes out ahead by roughly $375. There is no general winner; the answer turns on the size of the rebate and on the rate you could actually get without the promotion, which you only know if you have shopped for it first. All of these figures are illustrative, and a special rate usually comes with conditions of its own.</p>
+
+<h2>Once the loan is signed</h2>
+
+<p>On a fixed-rate loan — the usual kind for a car — the rate is set in the contract on the day you sign. Rates in the wider economy can rise or fall afterward; your payment doesn't move with them. That cuts both ways, and it is why the moment of signing is the moment the numbers on this page matter. Before it, every point is negotiable in the sense that you can compare, wait or buy less car. After it, the amber bar is simply the cost.</p>
+
+<h2>What to do with this</h2>
+
+<p>When you compare offers, compare the total of payments and the APR, both of which the federal Truth in Lending disclosure on a loan contract is required to show, rather than the monthly figure alone. <a href="/articles/reading-a-retail-installment-contract/">Reading a retail installment contract</a> points out where those boxes are. If two offers differ in payment by an amount that sounds trivial, multiply it by the number of months before deciding it is. And if a payment only works at a long term, the table above is the reason to look at a cheaper car rather than a longer loan.</p>
+
+<p>The rate you're offered depends on things this chart can't know — your credit history, the lender, the car, the term, the market that week. What the chart can do is fix one idea in place: the monthly payment is the least informative way to read an interest rate.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+            <li><a href="/articles/how-a-loan-payment-is-built/">How an auto loan payment is built</a></li>
+      <li><a href="/articles/what-a-preapproval-actually-is/">What a preapproval actually is</a></li>
+      <li><a href="/articles/payment-to-income/">How much of your income a car payment should take</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

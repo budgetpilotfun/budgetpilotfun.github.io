@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liability limits, decoded | Budget Pilot</title>
+<meta name="description" content="Three numbers separated by slashes decide what your policy pays when you cause a crash. Here is 50/100/50 taken apart and tested on a worked example.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/liability-limits-decoded/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Liability limits, decoded">
+<meta property="og:description" content="What each number in 50/100/50 pays for, where it runs out, and who covers the rest.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/liability-limits-decoded/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/liability-limits-decoded.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/liability-limits-decoded.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Liability limits, decoded">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Insurance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Liability limits, decoded">
+<meta name="twitter:description" content="What each number in 50/100/50 pays for, where it runs out, and who covers the rest.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/liability-limits-decoded.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Labeled specimen: one limits notation enlarged, each figure pinned to a numbered label by a leader line. */
+  .lim-spec{margin:30px 0 34px; padding:22px 16px 18px; background:var(--card); border:1px solid var(--line-2); border-radius:14px}
+  .lim-spec figcaption{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-weight:600; margin-bottom:10px; text-align:center}
+  .lim-row{display:grid; grid-template-columns:1fr auto 1fr auto 1fr; align-items:end; text-align:center}
+  .lim-fig{font-family:var(--disp); font-size:clamp(46px,14vw,88px); line-height:1; color:var(--ink)}
+  .lim-sl{font-family:var(--disp); font-size:clamp(36px,10vw,64px); color:var(--faint); padding:0 2px; line-height:1}
+  .lim-leads{display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:6px}
+  .lim-lead{position:relative; padding-top:34px; text-align:center; font-size:13.5px; line-height:1.4; color:var(--muted)}
+  .lim-lead::before{content:""; position:absolute; top:4px; left:50%; height:24px; border-left:1.5px dashed var(--amber)}
+  .lim-lead b{display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:var(--amber); color:var(--paper); font-size:13px; margin-bottom:6px}
+  .lim-lead span{display:block}
+  .lim-pin{display:flex; gap:14px; align-items:flex-start; margin:30px 0 10px}
+  .lim-pin b{flex:none; display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%; background:var(--amber); color:var(--paper); font-family:var(--disp); font-size:19px; font-weight:400}
+  .lim-pin h2{margin:0; font-size:clamp(22px,4vw,28px)}
+  .lim-ledger td:nth-child(n+2){font-family:var(--mono); text-align:right; white-space:nowrap}
+  .lim-ledger th:nth-child(n+2){text-align:right}
+  .lim-ledger .lim-short{color:var(--bad); font-weight:600}
+  .lim-ledger tfoot td{font-weight:600; border-top:1.5px solid var(--line-2)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Liability limits, decoded","description":"What each number in 50/100/50 pays for, where it runs out, and who covers the rest.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/liability-limits-decoded/",
+  "image":"https://budgetpilot.fun/articles/og/liability-limits-decoded.jpg",
+  "articleSection":"Insurance",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Insurance","item":"https://budgetpilot.fun/articles/insurance/"},
+  {"@type":"ListItem","position":4,"name":"Liability limits, decoded"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/insurance/">Insurance</a>
+  </div>
+
+  <div class="kicker">Insurance</div>
+  <h1>Liability limits, decoded</h1>
+  <p class="standfirst">Three numbers and two slashes, printed near the top of your declarations page. They are the most consequential line on the whole policy, and the easiest to skim past.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <figure class="lim-spec">
+  <figcaption>Specimen · as it appears on a declarations page</figcaption>
+  <div class="lim-row">
+    <span class="lim-fig">50</span><span class="lim-sl">/</span><span class="lim-fig">100</span><span class="lim-sl">/</span><span class="lim-fig">50</span>
+  </div>
+  <div class="lim-leads">
+    <div class="lim-lead"><b>1</b><span>Bodily injury, each person</span><span>$50,000</span></div>
+    <div class="lim-lead"><b>2</b><span>Bodily injury, whole accident</span><span>$100,000</span></div>
+    <div class="lim-lead"><b>3</b><span>Property damage, whole accident</span><span>$50,000</span></div>
+  </div>
+</figure>
+
+<p>The figures are thousands of dollars, and they describe ceilings: the most the insurer will pay other people on your behalf when you are legally responsible for a crash. None of the three pays for your own car or your own injuries. Those belong to other parts of the policy. What follows takes the specimen apart one pin at a time, then puts it back together on an illustrative crash.</p>
+
+<p>Fifty over a hundred over fifty is a specimen, not a recommendation. States set their own required minimums and they are not the same everywhere, so we will not quote any. Your state's insurance department or motor vehicle agency publishes the current figure, and your agent can confirm it.</p>
+
+<div class="lim-pin"><b>1</b><h2>The per-person cap</h2></div>
+
+<p>The first number is the most the policy pays for injuries to any single person hurt in a crash you caused. It covers things like medical bills, lost income and, depending on where the claim is brought, pain and suffering. The word to hold on to is <em>any single</em>. If one person's injuries are serious and the rest are minor, this is the number that runs out first, even while the accident as a whole is still under its larger cap.</p>
+
+<div class="lim-pin"><b>2</b><h2>The per-accident cap</h2></div>
+
+<p>The second number is the total for everyone hurt in the same crash, added together. It is always at least as large as the first, and it matters most when several people are injured at once, such as a full car or a crash involving two other vehicles. Each injured person is still limited by pin one. Pin two is the lid on the pot they all draw from.</p>
+
+<div class="lim-pin"><b>3</b><h2>The property cap</h2></div>
+
+<p>The third number pays for things you damage that belong to someone else. Their car is the obvious one, but the category is wider: a fence, a storefront, a utility pole, a traffic signal. Newer vehicles with sensors packed into the bumpers are expensive to repair, and a single crash can involve more than one of them, so this figure deserves more thought than it usually gets.</p>
+
+<h2>The specimen, reassembled</h2>
+
+<p>Here is a composite crash, invented to exercise all three pins. You run a late yellow and hit a car with three people inside, which then glances off a traffic signal pole. The injured people's claims and the property claims come to the amounts below.</p>
+
+<div class="tscroll">
+<table class="lim-ledger">
+  <thead><tr><th>Claim</th><th>Amount</th><th>Policy pays</th><th>Left with you</th></tr></thead>
+  <tbody>
+    <tr><td>Driver's injuries</td><td>$70,000</td><td>$50,000</td><td class="lim-short">$20,000</td></tr>
+    <tr><td>Passenger one</td><td>$30,000</td><td>$30,000</td><td>$0</td></tr>
+    <tr><td>Passenger two</td><td>$20,000</td><td>$20,000</td><td>$0</td></tr>
+    <tr><td>Their car (totaled)</td><td>$38,000</td><td>$38,000</td><td>$0</td></tr>
+    <tr><td>Signal pole</td><td>$15,000</td><td>$12,000</td><td class="lim-short">$3,000</td></tr>
+  </tbody>
+  <tfoot><tr><td>Total</td><td>$173,000</td><td>$150,000</td><td class="lim-short">$23,000</td></tr></tfoot>
+</table>
+</div>
+
+<p>Walk it through. The driver's $70,000 hits pin one at $50,000, so $20,000 of that claim is unpaid. The two passengers are each under $50,000, so they are paid in full. The three injury payments add to $50,000 + $30,000 + $20,000 = $100,000, which lands exactly on pin two. One dollar more in any passenger's claim and the per-accident cap would have bitten too.</p>
+
+<p>On the property side, the car and the pole total $53,000 against a $50,000 cap. The policy pays out the full $50,000; the order in which an insurer applies it across claimants is its own business, and the table simply shows the shortfall landing on the pole. Either way, $3,000 is unpaid. Across the whole crash, $23,000 falls outside the policy and can be pursued from you personally.</p>
+
+<p>Now run the same crash against 100/300/100. The driver's $70,000 fits under a $100,000 per-person cap. The $120,000 injury total fits under $300,000. The $53,000 of property fits under $100,000. Nothing is left with you. The crash did not change; only the ceiling did.</p>
+
+<h2>A few variations on the notation</h2>
+
+<p>Some policies skip the three-number format and show one figure, often called a combined single limit. It is a single pot for all injuries and property together from one accident, without separate per-person or property ceilings. It is not better or worse by nature; it is just shaped differently, and it has to be compared by imagining crashes like the one above.</p>
+
+<p>Legal defense costs are another quiet detail. Whether the insurer's cost of defending you comes out of your limits or sits on top of them is written in the policy wording. It is worth one sentence of your agent's time.</p>
+
+<h2>Choosing your own three numbers</h2>
+
+<p>The limit that fits is less about the car and more about what could be pursued if a claim exceeded it: savings, home equity, future wages. Someone with little to protect and someone with a paid-off house face the same crash with very different consequences. Higher limits often cost less per extra dollar of protection than people expect, and the only way to know on your policy is to ask for quotes at two or three levels. If you are already comparing insurers, the sheet in <a href="/articles/shopping-your-policy-at-renewal/">shopping your policy at renewal</a> has a row for each pin.</p>
+
+<p>People who carry an umbrella policy should also check what underlying auto limits that umbrella expects; the umbrella insurer sets that, and a gap between the two can leave a band of exposure nobody covers. And if you have ever heard the phrase "full coverage" used as if it settled the question, <a href="/articles/full-coverage-isnt-a-policy/">it doesn't</a>: liability limits are the part of the bundle that phrase says nothing about.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/uninsured-motorist-coverage/">Uninsured motorist coverage</a></li>
+      <li><a href="/articles/choosing-a-deductible/">Choosing a deductible</a></li>
+      <li><a href="/articles/what-a-total-loss-pays/">What your insurer pays when your car is totaled</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

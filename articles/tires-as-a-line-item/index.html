@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tires as a line item | Budget Pilot</title>
+<meta name="description" content="One illustrative set of tires turned into a cost per mile and a monthly set-aside, including installation, alignment, rotations and the tires&#x27; age limit.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/tires-as-a-line-item/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Tires as a line item">
+<meta property="og:description" content="Turn one set of tires into a cost per mile and a monthly budget line.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/tires-as-a-line-item/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/tires-as-a-line-item.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/tires-as-a-line-item.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Tires as a line item">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Running Costs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tires as a line item">
+<meta name="twitter:description" content="Turn one set of tires into a cost per mile and a monthly budget line.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/tires-as-a-line-item.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Arithmetic build-up: a stepped ladder of additions with a running total, then division bars. */
+  .tirebuild{margin:28px 0 30px; border:1px solid var(--line-2); border-radius:12px; background:var(--card); overflow:hidden}
+  .tirebuild-row{display:grid; grid-template-columns:28px minmax(0,1fr) auto; gap:4px 12px; align-items:baseline; padding:12px 14px; border-bottom:1px solid var(--line)}
+  .tirebuild-row:last-child{border-bottom:0}
+  .tirebuild-op{font-family:var(--mono); font-size:18px; color:var(--amber-ink); font-weight:600}
+  .tirebuild-what{font-size:15.5px}
+  .tirebuild-what small{display:block; font-size:13px; color:var(--faint); line-height:1.45}
+  .tirebuild-run{font-family:var(--mono); font-size:15px; text-align:right; white-space:nowrap}
+  .tirebuild-run span{display:block; font-size:11.5px; color:var(--faint)}
+  .tirebuild-total{background:var(--sky-soft)}
+  .tirebuild-total .tirebuild-run{font-weight:600; font-size:17px}
+  .tirediv{display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; margin:22px 0; font-family:var(--mono)}
+  .tirediv-frac{display:inline-grid; text-align:center; font-size:15px}
+  .tirediv-frac span:first-child{border-bottom:2px solid var(--ink); padding:0 6px 2px}
+  .tirediv-frac span:last-child{padding:2px 6px 0}
+  .tirediv-eq{font-size:18px; color:var(--faint)}
+  .tirediv-ans{font-size:19px; font-weight:600; background:color-mix(in srgb, var(--amber) 32%, var(--card)); color:var(--ink); border-radius:6px; padding:3px 10px}
+  .tirediv-label{flex-basis:100%; font-family:var(--body); font-size:13px; color:var(--faint); letter-spacing:.08em; text-transform:uppercase; margin-bottom:-4px}
+  .tiredrivers{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:22px 0 28px}
+  .tiredrivers-one{border:1px solid var(--line); border-top:4px solid var(--sky); border-radius:8px; padding:12px 14px; background:var(--card)}
+  .tiredrivers-one h3{margin:0 0 6px; font-size:16px}
+  .tiredrivers-one p{font-size:14.5px; margin:0; line-height:1.55; color:var(--muted)}
+  .tiredrivers-one b{font-family:var(--mono); color:var(--ink); font-weight:600}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Tires as a line item","description":"Turn one set of tires into a cost per mile and a monthly budget line.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/tires-as-a-line-item/",
+  "image":"https://budgetpilot.fun/articles/og/tires-as-a-line-item.jpg",
+  "articleSection":"Running Costs",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Running Costs","item":"https://budgetpilot.fun/articles/running-costs/"},
+  {"@type":"ListItem","position":4,"name":"Tires as a line item"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/running-costs/">Running Costs</a>
+  </div>
+
+  <div class="kicker">Running Costs</div>
+  <h1>Tires as a line item</h1>
+  <p class="standfirst">The bill comes every few years; the cost accrues every mile. Here is the arithmetic that joins the two, built up one line at a time.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>A set of tires arrives as one bill and gets used up a mile at a time. That mismatch is why tires so often land as a surprise: the money leaves all at once, every few years, while the cost itself was accruing quietly the whole time. Turn the bill into a rate, and it becomes an ordinary line in the budget like fuel or insurance.</p>
+
+  <p>What follows builds that rate from the ground up for one illustrative set of tires. Every price below is a round placeholder chosen to make the arithmetic easy to follow — not a typical price, and not a quote. Tire prices vary enormously by size and type, and installation charges vary by shop. Swap in your own numbers at each step; the structure doesn't change.</p>
+
+  <h2>Step one: the real price of the set</h2>
+
+  <p>The price on the tire is only the first line. Everything needed to get the tires onto the car and keep them wearing evenly belongs in the total, because none of it would be spent without the tires.</p>
+
+  <div class="tirebuild" role="table" aria-label="Illustrative tire cost build-up">
+    <div class="tirebuild-row" role="row">
+      <div class="tirebuild-op" role="cell"></div>
+      <div class="tirebuild-what" role="cell">Four tires at $180 each<small>The sticker price, times four.</small></div>
+      <div class="tirebuild-run" role="cell">$720<span>running total</span></div>
+    </div>
+    <div class="tirebuild-row" role="row">
+      <div class="tirebuild-op" role="cell">+</div>
+      <div class="tirebuild-what" role="cell">Mounting, balancing, valve stems, disposal: $25 × 4<small>Often quoted separately; sometimes bundled. Ask for the installed price.</small></div>
+      <div class="tirebuild-run" role="cell">$820</div>
+    </div>
+    <div class="tirebuild-row" role="row">
+      <div class="tirebuild-op" role="cell">+</div>
+      <div class="tirebuild-what" role="cell">Wheel alignment: $120<small>Not always needed, but commonly done with a new set so the tires wear evenly from the start.</small></div>
+      <div class="tirebuild-run" role="cell">$940</div>
+    </div>
+    <div class="tirebuild-row" role="row">
+      <div class="tirebuild-op" role="cell">+</div>
+      <div class="tirebuild-what" role="cell">Rotations over the tires' life: 6 × $20<small>Every 6,000 miles here as a round figure — use the interval in your owner's manual. Some shops include rotation with the purchase.</small></div>
+      <div class="tirebuild-run" role="cell">$1,060</div>
+    </div>
+    <div class="tirebuild-row tirebuild-total" role="row">
+      <div class="tirebuild-op" role="cell">=</div>
+      <div class="tirebuild-what" role="cell"><strong>Lifetime cost of the set</strong></div>
+      <div class="tirebuild-run" role="cell">$1,060</div>
+    </div>
+  </div>
+
+  <p>The rotation count depends on the next step. At one rotation every 6,000 miles over a 40,000-mile life, they fall at 6,000, 12,000, 18,000, 24,000, 30,000 and 36,000 miles: six rotations, with the tires replaced before a seventh would be due.</p>
+
+  <h2>Step two: how many miles you actually get</h2>
+
+  <p>Tires carry a treadwear warranty or a mileage claim from the maker, and it is tempting to divide by that. Don't, or at least not blindly. The claim assumes conditions — regular rotation, correct inflation, an aligned car — and the useful life ends when the tread reaches the replacement depth, not when it disappears. Your own history is the better guide: how many miles did your last set last?</p>
+
+  <p>For this example we'll assume 40,000 usable miles. Now divide.</p>
+
+  <div class="tirediv">
+    <div class="tirediv-label">Cost per mile</div>
+    <span class="tirediv-frac"><span>$1,060</span><span>40,000 mi</span></span>
+    <span class="tirediv-eq">=</span>
+    <span class="tirediv-ans">2.65¢ per mile</span>
+  </div>
+
+  <p>That figure is the one worth carrying around. It is the true running cost of rubber on this car, and it belongs next to fuel in any honest per-mile tally.</p>
+
+  <h2>Step three: the monthly figure</h2>
+
+  <p>A per-mile cost becomes a monthly budget line once you know your monthly mileage. At 12,000 miles a year, or 1,000 a month, the set lasts 40 months.</p>
+
+  <div class="tirediv">
+    <div class="tirediv-label">Monthly cost, driving 12,000 miles a year</div>
+    <span class="tirediv-frac"><span>$1,060</span><span>40 months</span></span>
+    <span class="tirediv-eq">=</span>
+    <span class="tirediv-ans">$26.50 a month</span>
+  </div>
+
+  <p>Check it the other way: 2.65¢ × 1,000 miles is also $26.50. Put $26.50 a month into a tire fund starting the day the set goes on, and the next set is paid for when it's needed. This is exactly the kind of irregular bill that a dedicated envelope handles well — see <a href="/articles/a-car-fund-in-envelopes/">building a car fund, envelope by envelope</a>.</p>
+
+  <h2>Step four: when the calendar wins instead of the odometer</h2>
+
+  <p>Tires age as well as wear. Rubber hardens and can crack over time even on a car that barely moves, and many tire and vehicle makers publish guidance on replacing tires past a certain age regardless of tread. That guidance is not uniform, so check what your tire maker and your owner's manual say; <a href="https://www.nhtsa.gov/equipment/tires">NHTSA's tire pages</a> explain how to read the date code molded into the sidewall.</p>
+
+  <p>For a low-mileage driver, age changes the arithmetic. Here are three illustrative drivers using the same set:</p>
+
+  <div class="tiredrivers">
+    <div class="tiredrivers-one">
+      <h3>12,000 miles a year</h3>
+      <p>Tread runs out first, at 40 months. <b>$26.50</b> a month, <b>2.65¢</b> a mile.</p>
+    </div>
+    <div class="tiredrivers-one">
+      <h3>20,000 miles a year</h3>
+      <p>40,000 miles arrives in 24 months. $1,060 ÷ 24 = <b>$44.17</b> a month. Still <b>2.65¢</b> a mile.</p>
+    </div>
+    <div class="tiredrivers-one">
+      <h3>6,000 miles a year</h3>
+      <p>Suppose the set is replaced for age at six years, at 36,000 miles, after five rotations: $940 + $100 = $1,040. That is <b>$14.44</b> a month but <b>2.89¢</b> a mile.</p>
+    </div>
+  </div>
+
+  <p>The pattern is worth noticing. For drivers limited by tread, the per-mile cost is fixed and the monthly cost follows the odometer. For drivers limited by age, the monthly cost is fixed and the per-mile cost rises, because they discard tread they never used. The six-year figure is purely an assumption for the illustration, not a recommendation.</p>
+
+  <h2>Step five: comparing two sets honestly</h2>
+
+  <p>Rates also settle the recurring question of whether a cheaper tire is a saving. Run a hypothetical cheaper set through the same steps: four at $120 is $480, plus the same $100 installation and $120 alignment, plus four rotations over a 30,000-mile life at $20 each — $780 in all.</p>
+
+  <div class="tirediv">
+    <div class="tirediv-label">The cheaper set, per mile</div>
+    <span class="tirediv-frac"><span>$780</span><span>30,000 mi</span></span>
+    <span class="tirediv-eq">=</span>
+    <span class="tirediv-ans">2.60¢ per mile</span>
+  </div>
+
+  <p>A $60-a-tire difference at the counter shrinks to five hundredths of a cent per mile once life is accounted for. The cheaper set also means an extra installation and alignment sooner, and a replacement bill that arrives ten months earlier for the 12,000-mile driver. Whether it's the better buy then turns on things arithmetic can't settle alone — grip, noise, wet braking, and how much the actual mileage differs from the two assumptions. If the price per mile is roughly equal, those qualities should decide.</p>
+
+  <p>Tires are one of several costs that come due on a slow, predictable schedule while feeling like emergencies. <a href="/articles/the-once-a-year-car-bills/">The car bills that arrive once a year</a> lays out the others on a calendar.</p>
+
+  <p>Copy the whole method onto one line and it fits on a sticky note: <em>(tires + installation + alignment + rotations) ÷ usable miles = cost per mile; × monthly miles = the monthly set-aside.</em></p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/maintenance-as-a-car-ages/">Budgeting maintenance as a car ages</a></li>
+      <li><a href="/articles/your-real-cost-per-mile/">Your real cost per mile</a></li>
+      <li><a href="/articles/lease-wear-and-tear/">Excess wear and tear, and what gets charged</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

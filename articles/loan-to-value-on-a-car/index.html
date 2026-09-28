@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Loan-to-value on a car loan | Budget Pilot</title>
+<meta name="description" content="Loan-to-value compares what you owe with what the car is worth. One number, read on a meter: how to work it out, and what moves it up or down.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/loan-to-value-on-a-car/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Loan-to-value on a car loan">
+<meta property="og:description" content="One ratio, what you owe against what the car is worth, read on a meter with zones marked.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/loan-to-value-on-a-car/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/loan-to-value-on-a-car.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/loan-to-value-on-a-car.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Loan-to-value on a car loan">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Borrowing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loan-to-value on a car loan">
+<meta name="twitter:description" content="One ratio, what you owe against what the car is worth, read on a meter with zones marked.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/loan-to-value-on-a-car.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: one number explained around a CSS meter graphic, zones marked. */
+  .ltv-meter{margin:26px 0 30px; --v:0}
+  .ltv-meter__track{
+    position:relative; display:flex; height:30px; border-radius:8px; overflow:hidden;
+    border:1px solid var(--line-2);
+  }
+  .ltv-zone{position:relative; height:100%}
+  .ltv-zone::before{content:""; position:absolute; inset:0; opacity:.32}
+  .ltv-zone--cush{flex:80}
+  .ltv-zone--cush::before{background:var(--good)}
+  .ltv-zone--thin{flex:20}
+  .ltv-zone--thin::before{background:var(--amber)}
+  .ltv-zone--under{flex:25}
+  .ltv-zone--under::before{background:var(--bad); opacity:.28}
+  .ltv-zone--deep{flex:25}
+  .ltv-zone--deep::before{background:var(--bad); opacity:.5}
+  .ltv-needle{
+    position:absolute; top:-8px; bottom:-8px; width:3px; margin-left:-1.5px;
+    left:calc(var(--v) / 150 * 100%); background:var(--ink); border-radius:2px;
+  }
+  .ltv-needle::after{
+    content:attr(data-read); position:absolute; top:-26px; left:50%; transform:translateX(-50%);
+    font-family:var(--mono); font-size:13px; font-weight:600; white-space:nowrap;
+    background:var(--ink); color:var(--paper); padding:1px 7px; border-radius:4px;
+  }
+  .ltv-meter--big .ltv-meter__track{height:44px}
+  .ltv-meter--big{margin-top:44px}
+  .ltv-scale{
+    display:flex; justify-content:space-between; font-family:var(--mono);
+    font-size:12px; color:var(--faint); margin-top:6px;
+  }
+  .ltv-legend{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:8px 14px;
+    margin:14px 0 0; font-size:14px; color:var(--muted);
+  }
+  .ltv-legend span{display:flex; gap:8px; align-items:baseline}
+  .ltv-legend i{flex:none; width:12px; height:12px; border-radius:3px; position:relative; top:1px; overflow:hidden}
+  .ltv-legend i::before{content:""; position:absolute; inset:0}
+  .ltv-legend .k-c::before{background:var(--good); opacity:.6}
+  .ltv-legend .k-t::before{background:var(--amber); opacity:.7}
+  .ltv-legend .k-u::before{background:var(--bad); opacity:.45}
+  .ltv-legend .k-d::before{background:var(--bad); opacity:.8}
+  .ltv-formula{
+    font-family:var(--mono); font-size:15px; background:var(--card); border:1px solid var(--line);
+    border-radius:10px; padding:14px 16px; margin:22px 0; overflow-wrap:anywhere;
+  }
+  .ltv-caption{font-size:14px; color:var(--faint); margin:-14px 0 26px}
+  .ltv-steps{margin:10px 0 26px}
+  .ltv-steps .ltv-meter{margin:34px 0 4px}
+  .ltv-steps p{font-size:15px; color:var(--muted); margin:0 0 8px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Loan-to-value on a car loan","description":"One ratio, what you owe against what the car is worth, read on a meter with zones marked.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/loan-to-value-on-a-car/",
+  "image":"https://budgetpilot.fun/articles/og/loan-to-value-on-a-car.jpg",
+  "articleSection":"Borrowing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Borrowing","item":"https://budgetpilot.fun/articles/borrowing/"},
+  {"@type":"ListItem","position":4,"name":"Loan-to-value on a car loan"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/borrowing/">Borrowing</a>
+  </div>
+
+  <div class="kicker">Borrowing</div>
+  <h1>Loan-to-value on a car loan</h1>
+  <p class="standfirst">Divide what you owe by what the car would sell for. That single percentage says more about your position than the monthly payment ever will, and it moves every month whether you watch it or not.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <div class="ltv-meter ltv-meter--big" style="--v:108">
+  <div class="ltv-meter__track" role="img" aria-label="Meter from 0 to 150 percent loan-to-value, needle at 108 percent, in the underwater zone">
+    <div class="ltv-zone ltv-zone--cush"></div><div class="ltv-zone ltv-zone--thin"></div><div class="ltv-zone ltv-zone--under"></div><div class="ltv-zone ltv-zone--deep"></div>
+    <div class="ltv-needle" data-read="108%"></div>
+  </div>
+  <div class="ltv-scale"><span>0%</span><span>50%</span><span>100%</span><span>150%</span></div>
+  <div class="ltv-legend">
+    <span><i class="k-c"></i>Cushion, under 80%</span>
+    <span><i class="k-t"></i>Thin, 80 to 100%</span>
+    <span><i class="k-u"></i>Underwater, 100 to 125%</span>
+    <span><i class="k-d"></i>Deep, 125% and up</span>
+  </div>
+</div>
+<p class="ltv-caption">The illustrative loan from this page, on the day it was signed.</p>
+
+<p>That needle is the whole subject. Everything below is about how it gets placed, what the colored bands mean, and what pushes it left or right.</p>
+
+<p>First, the bands. They are our own reading aid, drawn at round numbers so the meter has something to say. They are not any lender's cutoffs. Lenders do look at loan-to-value when they decide how much to lend against a car, and each one draws its own lines; if you want to know where a particular lender draws them, that is a question for the lender. For your own purposes, the bands answer a simpler question: if the car had to be sold or was written off tomorrow, would the money cover the loan?</p>
+
+<p><strong>Cushion</strong> means yes, with room to spare. <strong>Thin</strong> means yes, barely, and a bad dent or a soft market could erase it. <strong>Underwater</strong> means no: selling the car leaves a balance you still owe. <strong>Deep</strong> means that balance is large enough to steer your next several decisions.</p>
+
+<div class="ltv-formula">loan-to-value = loan balance ÷ current market value × 100</div>
+
+<p>Both inputs deserve a second look. The loan balance you want is the payoff amount, not the principal printed on last month's statement; the payoff includes interest accrued since then. The market value you want is what the car would actually fetch, which is usually closer to a dealer's trade-in offer than to an asking price on a listing site. Use the honest version of each and the needle lands honestly.</p>
+
+<h2>Placing the needle, with one illustrative loan</h2>
+
+<p>Take a car priced at $25,000. The buyer puts nothing down and finances $2,000 of taxes and fees along with it, for a loan of $27,000 over 60 months at an illustrative 7% APR. The payment works out to about $534.63 a month.</p>
+
+<p>On day one, suppose the car's market value is the full $25,000. That is generous, since a car usually loses some value the moment it becomes used, but it keeps the example clean. $27,000 ÷ $25,000 × 100 = <strong>108%</strong>. The buyer is underwater before the first payment, purely because the fees were borrowed rather than paid.</p>
+
+<p>Now the same purchase with $5,000 down and the fees paid in cash: the loan is $22,000. $22,000 ÷ $25,000 × 100 = <strong>88%</strong>. Still in the thin band, but on the right side of 100.</p>
+
+<p>The zero-down version is the one worth watching over time. Below, its balance follows the actual amortization of that loan. The car values are illustrative assumptions about depreciation, not a forecast for any real model; your car will follow its own curve.</p>
+
+<div class="ltv-steps">
+  <div class="ltv-meter" style="--v:106.3">
+    <div class="ltv-meter__track" role="img" aria-label="Month 12: needle at 106 percent">
+      <div class="ltv-zone ltv-zone--cush"></div><div class="ltv-zone ltv-zone--thin"></div><div class="ltv-zone ltv-zone--under"></div><div class="ltv-zone ltv-zone--deep"></div>
+      <div class="ltv-needle" data-read="106%"></div>
+    </div>
+  </div>
+  <p><strong>Month 12.</strong> Balance about $22,326; assumed value $21,000. The loan has shrunk by roughly $4,700, but the car has lost $4,000, so the needle has barely moved.</p>
+
+  <div class="ltv-meter" style="--v:96.2">
+    <div class="ltv-meter__track" role="img" aria-label="Month 24: needle at 96 percent">
+      <div class="ltv-zone ltv-zone--cush"></div><div class="ltv-zone ltv-zone--thin"></div><div class="ltv-zone ltv-zone--under"></div><div class="ltv-zone ltv-zone--deep"></div>
+      <div class="ltv-needle" data-read="96%"></div>
+    </div>
+  </div>
+  <p><strong>Month 24.</strong> Balance about $17,315; assumed value $18,000. The needle crosses back over 100 somewhere in the second year.</p>
+
+  <div class="ltv-meter" style="--v:77">
+    <div class="ltv-meter__track" role="img" aria-label="Month 36: needle at 77 percent">
+      <div class="ltv-zone ltv-zone--cush"></div><div class="ltv-zone ltv-zone--thin"></div><div class="ltv-zone ltv-zone--under"></div><div class="ltv-zone ltv-zone--deep"></div>
+      <div class="ltv-needle" data-read="77%"></div>
+    </div>
+  </div>
+  <p><strong>Month 36.</strong> Balance about $11,941; assumed value $15,500. Now there is a cushion, and it grows from here.</p>
+</div>
+
+<p>The shape is typical of any loan that starts above 100%: early payments are interest-heavy, early depreciation is steep, and the two roughly cancel for a while. The needle sits still, then starts to swing left once the payments tilt toward principal and the car's value loss slows. How long the stall lasts depends on the rate, the term and the car. A longer term makes it last longer, because each payment retires less principal. <a href="/articles/how-a-loan-payment-is-built/">How an auto loan payment is built</a> shows the interest-to-principal shift in detail.</p>
+
+<h2>What moves the needle</h2>
+
+<p><strong>Left</strong>, toward safety: a down payment; paying taxes and fees in cash rather than financing them; a shorter term; extra payments toward principal; a car that holds its value well.</p>
+
+<p><strong>Right</strong>, toward trouble: financed add-ons such as service contracts and accessories; negative equity carried over from a previous car; a long term; an accident on the history report, which lowers what the car will fetch; a soft used-car market, which lowers everything.</p>
+
+<p>Rolling old negative equity into a new loan is the fastest way to start deep in the red zone. If the old car was $4,000 underwater, that $4,000 joins the new loan on day one and the new car has to depreciate on top of it. <a href="/articles/rolling-negative-equity-forward/">Rolling negative equity into the next loan</a> follows that staircase across three cars.</p>
+
+<h2>Why the number matters on an ordinary Tuesday</h2>
+
+<p>Most weeks, it doesn't. You make the payment, you drive the car, and nobody asks. Loan-to-value only bites when something forces the car to become money: a total-loss accident, a sudden need to sell, a job move, a change in the household. On those days, the needle is the difference between walking away clean and writing a check for a car you no longer have.</p>
+
+<p>That is also the case for knowing your number in advance. If you are underwater and the car is written off, insurance generally pays the car's actual cash value, not your balance; the gap between them is yours unless you carry gap coverage. If you are underwater and want to sell, the buyer's money won't clear the lien on its own. Neither situation is a crisis if you saw it coming.</p>
+
+<p>Checking takes ten minutes. Ask your lender for a payoff quote. Get a trade-in figure or two for your car's year, mileage and condition. Divide one by the other. If the needle is left of 100, carry on. If it is right of 100, the practical responses are all the same kind of thing: avoid adding to the balance, keep the car longer, and consider sending a little extra toward principal when the budget allows.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/gap-coverage-when-it-earns-its-keep/">Gap coverage, and when it earns its keep</a></li>
+      <li><a href="/articles/selling-a-car-you-still-owe-on/">Selling a car you still owe on</a></li>
+      <li><a href="/articles/add-ons-inside-your-loan/">The add-ons that end up inside your loan</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

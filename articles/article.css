@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Budget Pilot - shared chrome
+   Tokens, masthead, footer and the base reading column. Nothing else.
+   Every article adds its own structural CSS in a local <style> block - the
+   pieces are deliberately not poured into one template.
+   ========================================================================== */
+
+:root{
+  --paper:#F7F3EC;
+  --paper-2:#EFE8DC;
+  --card:#FFFDF8;
+  --ink:#15213A;
+  --muted:#46546C;
+  --faint:#6B7689;
+  --line:rgba(21,33,58,.12);
+  --line-2:rgba(21,33,58,.22);
+  --amber:#D9822B;          /* fills, rules, marks - not small text */
+  --amber-ink:#9A5212;      /* links and small accent text */
+  --sky:#2C6E77;
+  --sky-soft:#DCEBEC;
+  --good:#2F7D4F;
+  --bad:#B3412E;
+  --disp:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --body:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  --gut:20px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#10161F;
+    --paper-2:#161E2A;
+    --card:#1A2331;
+    --ink:#EEE8DC;
+    --muted:#B3BCCA;
+    --faint:#8591A3;
+    --line:rgba(238,232,220,.12);
+    --line-2:rgba(238,232,220,.22);
+    --amber:#E99A45;
+    --amber-ink:#F2B06A;
+    --sky:#79BCC3;
+    --sky-soft:#1D3237;
+    --good:#6CC08E;
+    --bad:#E88A77;
+    color-scheme:dark;
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; overflow-x:clip}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:17.5px; line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+img{display:block; height:auto}
+a{color:var(--amber-ink); text-underline-offset:3px; text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+::selection{background:var(--amber); color:#1A1206}
+
+/* ---------- masthead ---------- */
+.mast{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  max-width:1080px; margin:0 auto; padding:16px var(--gut);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink)}
+.brand svg{width:30px; height:30px; flex:none}
+.brand span{font-family:var(--disp); font-size:23px; letter-spacing:-.01em; line-height:1}
+.mast nav{display:flex; gap:18px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+.mast nav a{font-size:14px; font-weight:500; color:var(--muted); text-decoration:none}
+.mast nav a:hover{color:var(--ink)}
+
+/* ---------- reading column ---------- */
+.wrap{max-width:700px; margin:0 auto; padding:0 var(--gut)}
+.wrap--wide{max-width:1040px}
+
+.crumb{font-size:13px; color:var(--faint); padding:26px 0 0; display:flex; gap:8px; flex-wrap:wrap}
+.crumb a{color:var(--faint); text-decoration:none}
+.crumb a:hover{color:var(--ink)}
+
+.kicker{
+  font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--sky); margin:30px 0 12px;
+}
+h1{
+  font-family:var(--disp); font-weight:400; letter-spacing:-.015em;
+  line-height:1.08; font-size:clamp(34px,6.6vw,54px); margin:0 0 18px;
+}
+h2{
+  font-family:var(--disp); font-weight:400; letter-spacing:-.01em;
+  line-height:1.18; font-size:clamp(25px,4.4vw,32px); margin:46px 0 14px;
+}
+h3{font-family:var(--body); font-weight:600; line-height:1.3; font-size:19px; margin:30px 0 10px}
+
+.standfirst{font-size:clamp(18px,2.6vw,21px); line-height:1.6; color:var(--muted); margin:0 0 24px}
+.byline{
+  display:flex; flex-wrap:wrap; gap:6px 14px; font-size:13px; color:var(--faint);
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  padding:12px 0; margin:0 0 34px;
+}
+
+p{margin:0 0 20px}
+.body > ul, .body > ol{margin:0 0 22px; padding-left:22px}
+.body li{margin-bottom:8px}
+strong{font-weight:600}
+hr{border:0; border-top:1px solid var(--line); margin:40px 0}
+blockquote{
+  margin:28px 0; padding:2px 0 2px 20px; border-left:3px solid var(--amber);
+  font-size:19px; line-height:1.55;
+}
+blockquote p:last-child{margin-bottom:0}
+
+/* a plain table; articles that need a different one override it locally */
+.tscroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:26px 0}
+table{width:100%; border-collapse:collapse; font-size:15px; font-variant-numeric:tabular-nums}
+th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--faint)}
+
+.note{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:16px 18px; font-size:15px; color:var(--muted); margin:28px 0;
+}
+
+/* ---------- related ---------- */
+.more{border-top:1px solid var(--line); margin:54px 0 0; padding:26px 0 0}
+.more h2{font-size:23px; margin:0 0 14px}
+.more ul{list-style:none; margin:0; padding:0}
+.more li{margin:0 0 10px}
+.more a{font-weight:500}
+
+/* ---------- footer ---------- */
+.foot{border-top:1px solid var(--line); margin-top:70px; background:var(--paper-2)}
+.foot .in{max-width:1080px; margin:0 auto; padding:30px var(--gut) 40px}
+.foot .links{display:flex; flex-wrap:wrap; gap:10px 20px; margin:0 0 16px}
+.foot .links a{color:var(--muted); text-decoration:none; font-size:14px}
+.foot .links a:hover{color:var(--ink)}
+.foot p{font-size:13px; color:var(--faint); margin:0; max-width:640px}
+
+@media (max-width:520px){ .mast nav a.opt{display:none} }

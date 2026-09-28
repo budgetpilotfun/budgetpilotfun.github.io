@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asking for the out-the-door price | Budget Pilot</title>
+<meta name="description" content="How an advertised car price climbs to the out-the-door total, shown step by step as a waterfall chart, and how to ask for that single number in writing.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/the-out-the-door-price/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Asking for the out-the-door price">
+<meta property="og:description" content="From the advertised price to the total you pay, one step at a time, and how to get that total in writing.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/the-out-the-door-price/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/the-out-the-door-price.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/the-out-the-door-price.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Asking for the out-the-door price">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Buying &amp; Selling">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Asking for the out-the-door price">
+<meta name="twitter:description" content="From the advertised price to the total you pay, one step at a time, and how to get that total in writing.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/the-out-the-door-price.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+/* Form: a horizontal waterfall chart built from CSS bars, advertised price up to out-the-door. */
+  .ot-fall{margin:30px 0 12px; padding:18px 16px 14px; background:var(--card);
+    border:1px solid var(--line); border-radius:14px}
+  .ot-fall-cap{font-size:13px; color:var(--faint); margin:0 0 14px}
+  .ot-step{display:grid; grid-template-columns:minmax(0,1fr); gap:4px; margin:0 0 12px}
+  .ot-step-top{display:flex; justify-content:space-between; gap:10px; font-size:14px; line-height:1.35}
+  .ot-step-top b{font-weight:600}
+  .ot-step-top span{font-family:var(--mono); font-size:13.5px; white-space:nowrap}
+  .ot-track{position:relative; height:22px; background:var(--paper-2); border-radius:4px}
+  .ot-bar{position:absolute; top:0; bottom:0; border-radius:4px; min-width:3px}
+  .ot-bar--base{background:var(--sky)}
+  .ot-bar--add{background:var(--amber)}
+  .ot-bar--total{background:var(--ink)}
+  .ot-step--total{border-top:1px solid var(--line-2); padding-top:12px; margin-top:4px}
+  .ot-axis{position:relative; height:16px; font-family:var(--mono);
+    font-size:11.5px; color:var(--faint); margin-top:6px}
+  .ot-axis span{position:absolute; top:0; transform:translateX(-50%); white-space:nowrap}
+  .ot-axis span:first-child{transform:none}
+  .ot-legend{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:12.5px; color:var(--muted); margin-top:10px}
+  .ot-legend i{display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:6px; vertical-align:0}
+  .ot-walk{counter-reset:ot; list-style:none; padding:0; margin:24px 0}
+  .ot-walk > li{counter-increment:ot; position:relative; padding:0 0 4px 46px; margin:0 0 22px}
+  .ot-walk > li::before{
+    content:counter(ot); position:absolute; left:0; top:2px; width:30px; height:30px;
+    border:2px solid var(--amber); border-radius:50%; font-size:14px; font-weight:600;
+    display:flex; align-items:center; justify-content:center; color:var(--amber-ink)
+  }
+  .ot-walk h3{margin:0 0 6px; font-size:18px}
+  .ot-walk p{margin:0 0 10px}
+  .ot-script{font-family:var(--mono); font-size:14.5px; background:var(--sky-soft);
+    border-left:3px solid var(--sky); padding:14px 16px; border-radius:0 8px 8px 0; margin:0 0 22px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Asking for the out-the-door price","description":"From the advertised price to the total you pay, one step at a time, and how to get that total in writing.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/the-out-the-door-price/",
+  "image":"https://budgetpilot.fun/articles/og/the-out-the-door-price.jpg",
+  "articleSection":"Buying & Selling",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Buying & Selling","item":"https://budgetpilot.fun/articles/buying-selling/"},
+  {"@type":"ListItem","position":4,"name":"Asking for the out-the-door price"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+  </div>
+
+  <div class="kicker">Buying &amp; Selling</div>
+  <h1>Asking for the out-the-door price</h1>
+  <p class="standfirst">The price in the ad is where the arithmetic starts, not where it ends. Here is one illustrative climb, bar by bar.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>$22,500 is the price in the ad. Nobody who buys that car will pay $22,500 for it. They will pay the advertised price plus whatever the dealership, the state and the county add on the way to the door, and that final figure is the one that matters. It has a name: the out-the-door price.</p>
+
+<p>The chart below follows one illustrative deal from the ad to the total. Every amount in it is invented for the example. Real fees and tax rates depend on where you live and register the car, and on the dealer, so treat the shape as the lesson, not the numbers.</p>
+
+<div class="ot-fall" role="figure" aria-label="Waterfall chart: advertised price $22,500 rising to an out-the-door total of $25,955.64">
+  <p class="ot-fall-cap">Illustrative only. The scale starts at $20,000 so the smaller steps are visible.</p>
+
+  <div class="ot-step">
+    <div class="ot-step-top"><b>Advertised price</b><span>$22,500.00</span></div>
+    <div class="ot-track"><div class="ot-bar ot-bar--base" style="left:0;width:38.46%"></div></div>
+  </div>
+  <div class="ot-step">
+    <div class="ot-step-top"><b>+ Dealer-installed add-ons</b><span>+$1,195.00</span></div>
+    <div class="ot-track"><div class="ot-bar ot-bar--add" style="left:38.46%;width:18.38%"></div></div>
+  </div>
+  <div class="ot-step">
+    <div class="ot-step-top"><b>+ Documentation fee</b><span>+$499.00</span></div>
+    <div class="ot-track"><div class="ot-bar ot-bar--add" style="left:56.85%;width:7.68%"></div></div>
+  </div>
+  <div class="ot-step">
+    <div class="ot-step-top"><b>+ Sales tax (6%, illustrative)</b><span>+$1,451.64</span></div>
+    <div class="ot-track"><div class="ot-bar ot-bar--add" style="left:64.52%;width:22.33%"></div></div>
+  </div>
+  <div class="ot-step">
+    <div class="ot-step-top"><b>+ Title and registration</b><span>+$310.00</span></div>
+    <div class="ot-track"><div class="ot-bar ot-bar--add" style="left:86.86%;width:4.77%"></div></div>
+  </div>
+  <div class="ot-step ot-step--total">
+    <div class="ot-step-top"><b>Out-the-door total</b><span>$25,955.64</span></div>
+    <div class="ot-track"><div class="ot-bar ot-bar--total" style="left:0;width:91.63%"></div></div>
+  </div>
+  <div class="ot-axis" aria-hidden="true"><span style="left:0">$20k</span><span style="left:46.15%">$23k</span><span style="left:92.31%">$26k</span></div>
+  <div class="ot-legend" aria-hidden="true">
+    <span><i style="background:var(--sky)"></i>Starting price</span>
+    <span><i style="background:var(--amber)"></i>Added on the way</span>
+    <span><i style="background:var(--ink)"></i>What you pay</span>
+  </div>
+</div>
+
+<p>Four steps added $3,455.64, a little over 15% on top of the advertised figure. None of those steps is unusual, and none is necessarily improper. But only one of them, the first, appeared in the ad.</p>
+
+<h2>Each step, in order</h2>
+
+<ol class="ot-walk">
+  <li>
+    <h3>The advertised price</h3>
+    <p>The starting bar. Read the ad's small print before treating it as real: some advertised prices assume a rebate you may not qualify for, a trade-in, or financing through the dealer. If the fine print lists conditions, the figure you can actually buy at may be higher before anything else is added.</p>
+  </li>
+  <li>
+    <h3>Dealer-installed add-ons</h3>
+    <p>Things like door-edge guards, wheel locks, nitrogen in the tires, paint protection or window etching, often listed on a second sticker beside the factory one. They are the dealer's own products, priced by the dealer. Some really are already on the car; some can be removed from the paperwork on request. This is usually the most negotiable step on the chart. We go line by line in <a href="/articles/every-line-on-a-buyers-order/">every line on a buyer's order</a>.</p>
+  </li>
+  <li>
+    <h3>Documentation fee</h3>
+    <p>Charged for preparing the paperwork. Some states limit how much a dealer may charge and some do not, and dealers often apply the same fee to every buyer. Even where the fee itself will not move, the vehicle price can move to offset it, which is another reason to negotiate the total rather than the parts.</p>
+  </li>
+  <li>
+    <h3>Sales tax</h3>
+    <p>The biggest added step in this example, and the one set by government rather than the dealer. How it is calculated varies: which items are taxed, whether a trade-in reduces the taxable amount, and how rebates are treated all differ by state. Here, the illustrative 6% is applied to the price plus add-ons plus doc fee ($24,194 × 0.06 = $1,451.64). Your state's revenue department is the place to confirm what applies to you.</p>
+  </li>
+  <li>
+    <h3>Title and registration</h3>
+    <p>State charges for recording you as the owner and putting plates on the car. They vary widely, sometimes by vehicle weight, value, age or county. The dealer collects them and passes them on. You cannot negotiate them, but you can check them: your state's motor vehicle agency publishes its fees, and the figure on your paperwork should match. Our overview of <a href="/articles/the-state-fees-on-a-car/">registration, title and the other state fees</a> lists what to look up.</p>
+  </li>
+</ol>
+
+<p>Notice what the chart leaves out. There is no trade-in, no rebate and no loan. Each of those can move the total, and each can also blur it: a generous trade-in figure can sit beside an inflated price, and a rebate may be applied before or after tax depending on the state. A service contract or gap product added at signing would be one more amber bar, often a large one. Keeping those out of the first conversation is what lets the waterfall stay readable.</p>
+
+<h2>Asking for it</h2>
+
+<p>The out-the-door price is the only number that lets you compare two dealers fairly, because it cannot hide anything. A lower advertised price with higher add-ons can easily finish above a higher advertised price with none. So ask for the total, in writing, before discussing payments or trade-ins. By email is ideal: it leaves a record, and it lets you ask three dealers the same question on the same afternoon.</p>
+
+<div class="ot-script">"I'm interested in stock number ____. Could you send me the out-the-door price, itemized, including every fee, add-on and tax, assuming I register the car at my home address in ____? I'm not trading anything in, and I'll sort out financing separately."</div>
+
+<p>Three things in that message do quiet work. "Itemized" means you can see each step of the waterfall rather than only its top. Naming where you register the car means the tax and state fees should be close to real. And setting the trade-in and financing aside keeps the total clean; either can be discussed afterward, as separate questions with separate answers.</p>
+
+<p>Some dealers will reply with a full breakdown. Others will answer with "come in and we'll talk numbers." That is a reply too, and a useful one. A dealer who will not write down a total before you visit is unlikely to become more forthcoming once you are sitting at a desk.</p>
+
+<h2>When the written quote arrives</h2>
+
+<p>Check it against the chart. Is every step there? Are there lines you did not expect, such as a "reconditioning" or "preparation" charge on top of the price? Is the tax figure plausible for your state? Are the state fees in line with what your motor vehicle agency publishes? Any line you cannot explain is a line to ask about, and any line the dealer cannot explain is a line to ask them to remove.</p>
+
+<p>Then keep the email. When you arrive to sign, the paperwork should match it. If the total on the contract is higher than the total in your inbox, the difference has a name and a reason, and you are entitled to hear both before you pick up the pen.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/three-numbers-before-you-shop/">Three numbers to set before you shop</a></li>
+      <li><a href="/articles/add-ons-inside-your-loan/">The add-ons that end up inside your loan</a></li>
+      <li><a href="/articles/year-end-sales-events/">Year-end sales events: what they're worth</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

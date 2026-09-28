@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reading a retail installment contract | Budget Pilot</title>
+<meta name="description" content="A specimen dealer finance contract, annotated: the federal disclosure box first, then the payment schedule, the itemization and the clauses people skim past.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/reading-a-retail-installment-contract/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Reading a retail installment contract">
+<meta property="og:description" content="A specimen car finance contract with numbered callouts, starting with the federal disclosure box.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/reading-a-retail-installment-contract/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/reading-a-retail-installment-contract.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/reading-a-retail-installment-contract.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Reading a retail installment contract">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Borrowing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reading a retail installment contract">
+<meta name="twitter:description" content="A specimen car finance contract with numbered callouts, starting with the federal disclosure box.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/reading-a-retail-installment-contract.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* An annotated specimen document: a mock contract with numbered markers, keyed to numbered callouts beneath it. */
+.ric-doc{background:var(--card); border:1px solid var(--line-2); border-radius:6px; padding:18px 16px 20px; margin:6px 0 34px; font-size:14px; line-height:1.5; box-shadow:0 1px 0 var(--line)}
+  .ric-title{font-family:var(--mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; text-align:center; border-bottom:2px solid var(--ink); padding-bottom:10px; margin-bottom:12px}
+  .ric-title small{display:block; font-size:11px; letter-spacing:.04em; text-transform:none; color:var(--faint); margin-top:4px}
+  .ric-parties{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px 14px; margin-bottom:14px}
+  .ric-parties div{border-bottom:1px solid var(--line-2); padding-bottom:4px; font-size:12.5px; color:var(--faint)}
+  .ric-parties span:not(.ric-pin){display:block; color:var(--ink); font-size:13.5px}
+  .ric-tila{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); border:2px solid var(--ink); margin:14px 0}
+  .ric-cell{padding:8px 8px 10px; border-right:1px solid var(--ink); position:relative}
+  .ric-cell:last-child{border-right:0}
+  .ric-cell h4{margin:0 0 4px; font-size:11px; letter-spacing:.06em; text-transform:uppercase; font-weight:600}
+  .ric-cell p{margin:0 0 6px; font-size:11.5px; color:var(--muted); line-height:1.35}
+  .ric-cell b{font-family:var(--mono); font-size:15px; font-weight:600}
+  .ric-block{border:1px solid var(--line-2); padding:10px 12px; margin:10px 0; position:relative}
+  .ric-block h5{margin:0 0 6px; font-size:11.5px; letter-spacing:.07em; text-transform:uppercase}
+  .ric-block p{margin:0 0 6px; color:var(--muted)}
+  .ric-block p:last-child{margin:0}
+  .ric-lines{width:100%; font-size:13px; font-family:var(--mono)}
+  .ric-lines td{padding:3px 0; border:0}
+  .ric-lines td:last-child{text-align:right; white-space:nowrap; padding-left:10px}
+  .ric-lines .ric-sum td{border-top:1px solid var(--line-2); font-weight:600}
+  .ric-lines .ric-ind td:first-child{padding-left:14px}
+  .ric-pin{display:inline-grid; place-items:center; width:22px; height:22px; border-radius:50%; background:var(--amber); color:#1A1206; font:600 12px/1 var(--body); vertical-align:middle; margin-right:6px; flex:none}
+  .ric-sign{display:flex; flex-wrap:wrap; gap:14px 24px; margin-top:16px; font-size:12.5px; color:var(--faint)}
+  .ric-sign span{flex:1 1 140px; border-top:1px solid var(--ink); padding-top:4px}
+  .body > .ric-notes, .ric-notes{list-style:none; counter-reset:ric; padding:0; margin:0}
+  .ric-notes > li{counter-increment:ric; display:grid; grid-template-columns:30px 1fr; gap:0 12px; margin:0 0 22px}
+  .ric-notes > li::before{content:counter(ric); display:grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--amber); color:#1A1206; font:600 13px/1 var(--body); margin-top:3px}
+  .ric-notes h3{margin:0 0 4px; font-size:17.5px}
+  .ric-notes p{margin:0 0 8px}
+  @media (max-width:620px){
+    .ric-tila{grid-template-columns:1fr 1fr}
+    .ric-cell{border-right:0; border-bottom:1px solid var(--ink)}
+    .ric-cell:nth-child(odd){border-right:1px solid var(--ink)}
+    .ric-cell:last-child{grid-column:1 / -1; border-right:0; border-bottom:0}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Reading a retail installment contract","description":"A specimen car finance contract with numbered callouts, starting with the federal disclosure box.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/reading-a-retail-installment-contract/",
+  "image":"https://budgetpilot.fun/articles/og/reading-a-retail-installment-contract.jpg",
+  "articleSection":"Borrowing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Borrowing","item":"https://budgetpilot.fun/articles/borrowing/"},
+  {"@type":"ListItem","position":4,"name":"Reading a retail installment contract"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/borrowing/">Borrowing</a>
+  </div>
+
+  <div class="kicker">Borrowing</div>
+  <h1>Reading a retail installment contract</h1>
+  <p class="standfirst">Put the contract on the table before anything else gets signed. Below is a specimen, simplified and filled with illustrative numbers, with a numbered marker on each part worth stopping at.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <div class="ric-doc" role="figure" aria-label="Specimen retail installment sale contract with numbered markers">
+  <div class="ric-title">Retail installment sale contract<small>Specimen for illustration. Not a real form; layouts and wording vary by seller and state.</small></div>
+
+  <div class="ric-parties">
+    <div>Buyer<span>Buyer name, address</span></div>
+    <div>Co-buyer<span>None</span></div>
+    <div><span class="ric-pin">1</span>Seller-creditor<span>Dealer name, address</span></div>
+  </div>
+
+  <div class="ric-tila">
+    <div class="ric-cell"><h4><span class="ric-pin">2</span>Annual percentage rate</h4><p>The cost of your credit as a yearly rate.</p><b>7.90%</b></div>
+    <div class="ric-cell"><h4><span class="ric-pin">3</span>Finance charge</h4><p>The dollar amount the credit will cost you.</p><b>$5,129.40</b></div>
+    <div class="ric-cell"><h4><span class="ric-pin">4</span>Amount financed</h4><p>The amount of credit provided to you or on your behalf.</p><b>$24,000.00</b></div>
+    <div class="ric-cell"><h4><span class="ric-pin">5</span>Total of payments</h4><p>What you will have paid after all scheduled payments.</p><b>$29,129.40</b></div>
+    <div class="ric-cell"><h4><span class="ric-pin">6</span>Total sale price</h4><p>Total cost of your purchase on credit, including $3,000.00 down.</p><b>$32,129.40</b></div>
+  </div>
+
+  <div class="ric-block"><h5><span class="ric-pin">7</span>Payment schedule</h5><p>60 monthly payments of $485.49, beginning one month after the contract date.</p></div>
+
+  <div class="ric-block"><h5><span class="ric-pin">8</span>Late charge · Prepayment · Security</h5><p>Late charge: as stated in the contract terms. Prepayment: whether you may pay early without penalty is stated here. Security: you are giving a security interest in the vehicle being purchased.</p></div>
+
+  <div class="ric-block"><h5><span class="ric-pin">9</span>Itemization of amount financed</h5>
+    <table class="ric-lines">
+      <tr><td>Vehicle cash price</td><td>$21,900.00</td></tr>
+      <tr><td>Document fee</td><td>$500.00</td></tr>
+      <tr><td>Sales tax (illustrative)</td><td>$1,200.00</td></tr>
+      <tr class="ric-sum"><td>1. Total cash price</td><td>$23,600.00</td></tr>
+      <tr><td>2. Amounts paid to others for you:</td><td></td></tr>
+      <tr class="ric-ind"><td>Public officials, title and registration (illustrative)</td><td>$400.00</td></tr>
+      <tr class="ric-ind"><td>Service contract company</td><td>$2,000.00</td></tr>
+      <tr class="ric-ind"><td>Gap waiver</td><td>$1,000.00</td></tr>
+      <tr class="ric-sum"><td>3. Subtotal (1 + 2)</td><td>$27,000.00</td></tr>
+      <tr><td>4. Down payment (cash)</td><td>−$3,000.00</td></tr>
+      <tr class="ric-sum"><td>5. Amount financed (3 − 4)</td><td>$24,000.00</td></tr>
+    </table>
+  </div>
+
+  <div class="ric-block"><h5><span class="ric-pin">10</span>Optional products and insurance</h5><p>Buyer's signature beside each optional product purchased. Statement that these products are not required to obtain credit.</p></div>
+
+  <div class="ric-block"><h5><span class="ric-pin">11</span>Assignment</h5><p>Seller intends to assign this contract to a finance company or bank.</p></div>
+
+  <div class="ric-block"><h5><span class="ric-pin">12</span>Arbitration and other terms</h5><p>Pages of additional terms, possibly including an arbitration clause, the lender's rights on default, and conditions on delivery.</p></div>
+
+  <div class="ric-sign"><span>Buyer signature · date</span><span>Seller signature · date</span></div>
+</div>
+
+<ol class="ric-notes">
+  <li><div><h3>Who you're actually borrowing from</h3>
+  <p>A dealer-arranged loan usually starts as a contract between you and the dealer, who is listed as the seller-creditor. Most are then sold, or assigned, to a bank or finance company (marker 11). So the name at the top may not be the name on your statements. Ask who the contract is expected to go to, because that company's payment rules are the ones you'll live with.</p></div></li>
+
+  <li><div><h3>The APR, the one rate that counts</h3>
+  <p>The Truth in Lending disclosures, the boxed row, are required by federal law in consumer credit contracts, and the APR is the headline. It folds the interest and certain finance-related costs into one yearly figure, so it is the number to compare between offers. If it differs from what you were told verbally, stop there. The contract governs, not the conversation.</p></div></li>
+
+  <li><div><h3>The finance charge in dollars</h3>
+  <p>$5,129.40 here is the total price of borrowing if you pay exactly on schedule. It is the total of payments minus the amount financed: $29,129.40 − $24,000.00. Say that figure out loud before signing. It lands differently than a percentage does.</p></div></li>
+
+  <li><div><h3>The amount financed, and what's hiding in it</h3>
+  <p>This is not the price of the car. It is everything you are borrowing, which in the specimen includes a service contract and a gap waiver (marker 9). Trace this number to the itemization and make sure every line in it is something you agreed to.</p></div></li>
+
+  <li><div><h3>Total of payments</h3>
+  <p>Sixty payments of $485.49 is $29,129.40. Multiply the payment by the number of payments yourself; if your result doesn't match the box, ask why before anything else. On real contracts the last payment is sometimes a few cents different, which is normal. A gap of dollars isn't.</p></div></li>
+
+  <li><div><h3>Total sale price</h3>
+  <p>The whole cost of buying this car on these terms: the total of payments plus the $3,000 down. $32,129.40 is the number to hold against the $21,900 vehicle price you negotiated, and the distance between them is taxes, fees, add-ons and interest.</p></div></li>
+
+  <li><div><h3>The payment schedule</h3>
+  <p>Check the number of payments, the amount and the first due date. A first payment due sooner or later than you expect changes how much interest accrues before it. Put the date in your calendar the day you sign; lenders don't always send a first bill in time.</p></div></li>
+
+  <li><div><h3>Late charges, prepayment, security</h3>
+  <p>Three short lines with long consequences. The late charge terms and any grace period are set by the contract and limited in different ways by different states, so read your own, not a general rule. The prepayment line tells you whether paying early is penalty-free and how interest is calculated, which decides whether an early payoff saves what you expect (see <a href="/articles/paying-a-car-loan-off-early/">paying a car loan off early</a>). The security line means the car is collateral: miss enough payments and it can be repossessed.</p></div></li>
+
+  <li><div><h3>The itemization, line by line</h3>
+  <p>The most useful block on the page. Cash price, then taxes and fees, then "amounts paid to others," which is where optional products usually appear. Our specimen's tax and title figures are placeholders; yours depend on your state and are worth confirming with its motor vehicle agency or revenue department. Every dollar in this list is financed at the APR for the full term. <a href="/articles/add-ons-inside-your-loan/">The add-ons that end up inside your loan</a> shows what that does to a $1,000 product.</p></div></li>
+
+  <li><div><h3>Optional means optional</h3>
+  <p>Service contracts, gap waivers, protection packages: contracts commonly say these are not required to obtain credit, with a separate signature for each. If you were told a product was required, and the contract says it isn't, believe the contract and ask for it to be removed before signing. Also look for how each can be cancelled later, and whether any unused portion is refunded.</p></div></li>
+
+  <li><div><h3>Assignment</h3>
+  <p>Once assigned, the finance company holds the contract and you deal with it directly. Some sales are also written as conditional on that assignment happening. If your paperwork says delivery depends on the dealer finding a buyer for the contract, ask what happens, and to your down payment and trade-in, if it doesn't.</p></div></li>
+
+  <li><div><h3>The pages nobody reads</h3>
+  <p>The back pages set the rules on default, insurance you must carry, where disputes are heard, and more. An arbitration clause, if present, may limit your ability to go to court. None of that is unusual, but it is binding, and you are allowed to take the time to read it. A seller who objects to you reading the contract has told you something useful.</p></div></li>
+</ol>
+
+<p>Take a copy of everything you sign, complete and with every blank filled in, before you leave with the car. The Consumer Financial Protection Bureau keeps plain-language material on auto financing at <a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/">consumerfinance.gov</a> if you want a second reader's view of any section.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/every-line-on-a-buyers-order/">Every line on a buyer's order</a></li>
+      <li><a href="/articles/the-out-the-door-price/">Asking for the out-the-door price</a></li>
+      <li><a href="/articles/what-a-preapproval-actually-is/">What a preapproval actually is</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

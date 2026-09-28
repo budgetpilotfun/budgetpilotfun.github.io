@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How an auto loan payment is built | Budget Pilot</title>
+<meta name="description" content="Every car loan payment is the same size, but the split between interest and principal changes each month. Six bars from one loan, and the math behind them.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/how-a-loan-payment-is-built/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="How an auto loan payment is built">
+<meta property="og:description" content="Same payment every month, a different mix inside it: interest versus principal, drawn to scale.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/how-a-loan-payment-is-built/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/how-a-loan-payment-is-built.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/how-a-loan-payment-is-built.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - How an auto loan payment is built">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Borrowing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How an auto loan payment is built">
+<meta name="twitter:description" content="Same payment every month, a different mix inside it: interest versus principal, drawn to scale.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/how-a-loan-payment-is-built.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Inline SVG stacked bars (interest cap over principal) at six points in one loan, then the prose. */
+.pb-figure{margin:8px 0 30px; padding:18px 14px 14px; background:var(--card); border:1px solid var(--line); border-radius:14px}
+  .pb-chart{display:block; width:100%; height:auto}
+  .pb-chart .pb-int{fill:var(--amber)}
+  .pb-chart .pb-prin{fill:var(--sky)}
+  .pb-chart .pb-base{stroke:var(--line-2); stroke-width:1}
+  .pb-chart .pb-guide{stroke:var(--line); stroke-width:1; stroke-dasharray:3 4}
+  .pb-chart text{font-family:var(--body); font-size:12px; fill:var(--muted)}
+  .pb-chart .pb-val{font-family:var(--mono); font-size:11px; fill:var(--amber-ink)}
+  .pb-chart .pb-top{font-family:var(--mono); font-size:11px; fill:var(--faint)}
+  .pb-figure figcaption{font-size:14px; color:var(--muted); margin-top:10px; line-height:1.55}
+  .pb-key{list-style:none; display:flex; flex-wrap:wrap; gap:6px 18px; margin:12px 0 0; padding:0; font-size:14px}
+  .pb-key li{display:flex; align-items:center; gap:8px; margin:0}
+  .pb-sw{width:14px; height:14px; border-radius:3px; display:inline-block}
+  .pb-sw-int{background:var(--amber)}
+  .pb-sw-prin{background:var(--sky)}
+  .pb-table td:not(:first-child), .pb-table th:not(:first-child){text-align:right; font-family:var(--mono); font-size:14px}
+  .pb-table td:nth-child(2){color:var(--amber-ink)}
+  .pb-formula{font-family:var(--mono); font-size:15px; background:var(--sky-soft); color:var(--ink); padding:12px 14px; border-radius:10px; overflow-x:auto; white-space:nowrap}
+  .pb-run{font-weight:600; color:var(--sky)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"How an auto loan payment is built","description":"Same payment every month, a different mix inside it: interest versus principal, drawn to scale.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/how-a-loan-payment-is-built/",
+  "image":"https://budgetpilot.fun/articles/og/how-a-loan-payment-is-built.jpg",
+  "articleSection":"Borrowing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Borrowing","item":"https://budgetpilot.fun/articles/borrowing/"},
+  {"@type":"ListItem","position":4,"name":"How an auto loan payment is built"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/borrowing/">Borrowing</a>
+  </div>
+
+  <div class="kicker">Borrowing</div>
+  <h1>How an auto loan payment is built</h1>
+  <p class="standfirst">The payment never changes. What it buys does. Six bars from one illustrative loan show where each month's money goes, and a little arithmetic explains why the mix keeps sliding.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <figure class="pb-figure">
+  <svg class="pb-chart" viewBox="0 0 380 270" role="img" aria-labelledby="pb-t pb-d">
+    <title id="pb-t">Interest and principal inside one monthly payment</title>
+    <desc id="pb-d">Six stacked bars of equal height, each one $495.03 payment. The interest part at the top shrinks from $145.83 in payment 1 to $2.87 in payment 60, while the principal part below grows from $349.20 to $492.16.</desc>
+    <text class="pb-top" x="6" y="24">$495.03</text>
+    <line class="pb-guide" x1="6" y1="30" x2="374" y2="30"/>
+    <rect class="pb-int"  x="30"  y="30" width="42" height="58.9"/>
+    <rect class="pb-prin" x="30"  y="88.9" width="42" height="141.1"/>
+    <text class="pb-val" x="51" y="64" text-anchor="middle">146</text>
+    <rect class="pb-int"  x="88"  y="30" width="42" height="49.6"/>
+    <rect class="pb-prin" x="88"  y="79.6" width="42" height="150.4"/>
+    <text class="pb-val" x="109" y="59" text-anchor="middle">123</text>
+    <rect class="pb-int"  x="146" y="30" width="42" height="38.7"/>
+    <rect class="pb-prin" x="146" y="68.7" width="42" height="161.3"/>
+    <text class="pb-val" x="167" y="53" text-anchor="middle">96</text>
+    <rect class="pb-int"  x="204" y="30" width="42" height="27.1"/>
+    <rect class="pb-prin" x="204" y="57.1" width="42" height="172.9"/>
+    <text class="pb-val" x="225" y="48" text-anchor="middle">67</text>
+    <rect class="pb-int"  x="262" y="30" width="42" height="14.6"/>
+    <rect class="pb-prin" x="262" y="44.6" width="42" height="185.4"/>
+    <text class="pb-val" x="283" y="41" text-anchor="middle">36</text>
+    <rect class="pb-int"  x="320" y="30" width="42" height="1.2"/>
+    <rect class="pb-prin" x="320" y="31.2" width="42" height="198.8"/>
+    <text class="pb-val" x="341" y="22" text-anchor="middle">3</text>
+    <line class="pb-base" x1="20" y1="230" x2="372" y2="230"/>
+    <text x="51"  y="250" text-anchor="middle">#1</text>
+    <text x="109" y="250" text-anchor="middle">#12</text>
+    <text x="167" y="250" text-anchor="middle">#24</text>
+    <text x="225" y="250" text-anchor="middle">#36</text>
+    <text x="283" y="250" text-anchor="middle">#48</text>
+    <text x="341" y="250" text-anchor="middle">#60</text>
+    <text x="190" y="267" text-anchor="middle">payment number</text>
+  </svg>
+  <ul class="pb-key">
+    <li><span class="pb-sw pb-sw-int"></span>Interest (dollars, rounded, printed on the cap)</li>
+    <li><span class="pb-sw pb-sw-prin"></span>Principal</li>
+  </ul>
+  <figcaption>Illustrative loan: $25,000 borrowed at 7% APR for 60 months, simple interest calculated monthly. Every bar is the same $495.03 payment.</figcaption>
+</figure>
+
+<div class="tscroll">
+<table class="pb-table">
+  <thead><tr><th>Payment</th><th>Interest</th><th>Principal</th><th>Balance after</th></tr></thead>
+  <tbody>
+    <tr><td>#1</td><td>$145.83</td><td>$349.20</td><td>$24,650.80</td></tr>
+    <tr><td>#12</td><td>$122.76</td><td>$372.27</td><td>$20,672.55</td></tr>
+    <tr><td>#24</td><td>$95.85</td><td>$399.18</td><td>$16,032.27</td></tr>
+    <tr><td>#36</td><td>$66.99</td><td>$428.04</td><td>$11,056.54</td></tr>
+    <tr><td>#48</td><td>$36.05</td><td>$458.98</td><td>$5,721.12</td></tr>
+    <tr><td>#60</td><td>$2.87</td><td>$492.16</td><td>$0.00</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>One rule, applied sixty times</h2>
+
+<p>A standard simple-interest auto loan charges interest on whatever you still owe, and nothing else. At 7% APR the monthly rate is 7 divided by 12, about 0.5833%. In month one you owe the full $25,000, so interest is $25,000 × 0.005833, or $145.83. The payment is fixed at $495.03, and whatever is left after interest, $349.20, comes off the balance.</p>
+
+<p>Month two starts from $24,650.80. Interest on that is $143.80, so $351.23 goes to principal. The balance fell, so the next interest charge is smaller, so a little more of the next payment reaches principal, so the balance falls a little faster. Each statement looks almost identical to the one before it. The change is cumulative, and that is what the bars make visible: the amber cap is a thick lid at the start and a sliver at the end.</p>
+
+<h2>Where the fixed payment comes from</h2>
+
+<p>Nobody picks $495.03 by feel. It is the one level payment that brings the balance to exactly zero on the last scheduled month, given the rate and the term. The standard formula:</p>
+
+<p class="pb-formula">payment = P × r ÷ (1 − (1 + r)<sup>−n</sup>)</p>
+
+<p>P is the amount borrowed, r the monthly rate, n the number of payments. Put in $25,000, 0.07 ÷ 12 and 60 and out comes $495.03. Change any input and the chart redraws itself. A higher rate thickens every amber cap. A longer term lowers the bars and stretches the row of them sideways, so the thick-capped early stretch lasts longer; that trade gets its own page, <a href="/articles/loan-terms-side-by-side/">36, 48, 60, 72, 84 months</a>.</p>
+
+<p>You can check any quote with a spreadsheet. <code>=PMT(0.07/12, 60, -25000)</code> returns 495.03, and swapping in your own rate, term and amount gives your own figure. If the payment a seller quotes is higher than what the formula returns for the same amount, rate and term, something else has been added to the amount financed, and it is worth finding out what.</p>
+
+<p>One more thing the formula hides: in this loan, principal outweighs interest from the very first payment. That is a property of these particular inputs, not a law. Push the rate high enough, or the term long enough, and the early bars flip, with interest taking the larger share of each payment for months before the balance starts to move in earnest.</p>
+
+<h2>What the slide means for you</h2>
+
+<p>Add up the interest across all 60 payments and it comes to $4,701.80. Add up only the first 30 and you get $3,438.71, roughly 73% of the total, paid in the first half of the loan. The second half costs $1,263.09. That lopsidedness is the most useful single fact about an amortizing loan, and three practical things follow from it.</p>
+
+<p><span class="pb-run">Extra money works hardest early.</span> A dollar of extra principal sent in month three stops interest from accruing on that dollar for almost five years. The same dollar in month 55 saves close to nothing, because by then there is hardly any interest left to avoid. Whether spare cash belongs there at all is a separate question, taken branch by branch in <a href="/articles/paying-a-car-loan-off-early/">paying a car loan off early</a>.</p>
+
+<p><span class="pb-run">Your balance trails your sense of progress.</span> After 24 payments on this loan you have handed over $11,880.72, which is 40% of the $29,701.80 you will pay in all. But the balance is still $16,032.27, meaning you have cleared about 36% of what you borrowed. The gap between those two percentages is the interest front-loading at work. It matters the day you want to trade the car in early, because the car is worth what the market says while the payoff is whatever the schedule says. When the schedule moves slower than the car loses value, the shortfall tends to follow you into the next deal, which is the staircase described in <a href="/articles/rolling-negative-equity-forward/">rolling negative equity into the next loan</a>.</p>
+
+<p><span class="pb-run">The textbook shape wobbles in real life.</span> Many simple-interest loans accrue interest daily rather than monthly, so the split on an actual statement shifts slightly depending on how many days passed since your last payment. And some contracts don't use simple interest at all. A precomputed-interest contract fixes the total finance charge at signing, and paying early may not save what the bars above suggest. Your contract says which method applies. If it isn't plain, ask the lender in writing before you plan around it.</p>
+
+<h2>Reading your own statement</h2>
+
+<p>Most loan statements, or the lender's online account page, break your last payment into an interest line and a principal line. Find that split for your most recent payment, then find it for the same month a year ago. The interest figure should be smaller now and the principal figure larger. If you have been making payments on time and the interest line has not budged, that is worth a phone call: either the loan is not built the way you assumed, or something is being applied somewhere you didn't expect.</p>
+
+<p>The numbers on your statement will not match ours, since your rate, term and balance are your own. The shape should. Somewhere around the middle of your loan, the principal slice starts doing most of the work, and every payment after that point is mostly you buying back the car rather than renting the money.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/when-in-the-month-you-pay/">Why the day you pay can matter</a></li>
+      <li><a href="/articles/how-rates-change-a-payment/">How interest rate moves change what you pay</a></li>
+      <li><a href="/articles/loan-to-value-on-a-car/">Loan-to-value on a car loan</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

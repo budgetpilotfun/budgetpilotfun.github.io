@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Budget Pilot | The money side of owning a car</title>
+<meta name="description" content="Plain, worked-out guides to car loans, leases, insurance, running costs and budgeting, with the arithmetic shown.">
+<link rel="canonical" href="https://budgetpilot.fun/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Budget Pilot">
+<meta property="og:description" content="Plain, worked-out guides to car loans, leases, insurance, running costs and budgeting, with the arithmetic shown.">
+<meta property="og:url" content="https://budgetpilot.fun/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/home.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/home.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Budget Pilot">
+<meta name="twitter:description" content="Plain, worked-out guides to car loans, leases, insurance, running costs and budgeting, with the arithmetic shown.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/home.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  .idx{list-style:none;margin:24px 0 0;padding:0}
+  .idx li{border-top:1px solid var(--line)}
+  .idx li:last-child{border-bottom:1px solid var(--line)}
+  .idx a{display:block;padding:18px 0;text-decoration:none;color:var(--ink)}
+  .idx h3{margin:0;font-size:18.5px;line-height:1.3}
+  .idx p{margin:5px 0 0;font-size:15px;line-height:1.5;color:var(--muted)}
+  .idx .sec{display:inline-block;margin-top:8px;font-size:11.5px;font-weight:600;
+            letter-spacing:.12em;text-transform:uppercase;color:var(--sky)}
+  .idx a:hover h3{color:var(--amber-ink)}
+  .shelf{display:grid;gap:12px;margin:24px 0 0}
+  @media(min-width:640px){.shelf{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:960px){.shelf{grid-template-columns:repeat(3,1fr)}}
+  .shelf a{display:block;background:var(--card);border:1px solid var(--line);
+           border-radius:14px;padding:20px;text-decoration:none;color:var(--ink)}
+  .shelf a:hover{border-color:var(--line-2)}
+  .shelf h3{margin:0 0 6px;font-family:var(--disp);font-weight:400;font-size:23px}
+  .shelf .n{font-family:var(--body);font-size:14px;color:var(--amber-ink);font-variant-numeric:tabular-nums}
+  .shelf p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+  .srch{margin:26px 0 0}
+  .srch input{width:100%;background:var(--card);border:1px solid var(--line-2);border-radius:999px;
+              padding:13px 20px;color:var(--ink);font-family:var(--body);font-size:16px}
+  .srch input::placeholder{color:var(--faint)}
+  .srch input:focus{outline:2px solid var(--amber);outline-offset:1px}
+  #sc{margin:12px 0 0;font-size:13px;color:var(--faint)}
+
+  .hero{padding:54px 0 10px}
+  .hero h1{font-size:clamp(40px,8vw,68px);max-width:14ch}
+  .hero .standfirst{max-width:36em}
+  .go{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+  .go a{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:600;
+        font-size:15px;text-decoration:none}
+  .go .pri{background:var(--ink);color:var(--paper)}
+  .go .sec2{border:1px solid var(--line-2);color:var(--ink)}
+  .picks{display:grid;gap:12px;margin:24px 0 0;counter-reset:pk}
+  @media(min-width:760px){.picks{grid-template-columns:repeat(2,1fr)}}
+  .picks a{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:18px 0;
+           border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+  .picks a::before{counter-increment:pk;content:"0" counter(pk);grid-row:span 2;
+           font-family:var(--disp);font-size:30px;color:var(--amber);line-height:1}
+  .picks h3{margin:0;font-size:18px}
+  .picks p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+  .leaseend{margin:54px 0 0;background:var(--sky-soft);border-radius:18px;padding:26px 24px}
+  .leaseend h2{margin:0 0 10px}
+  .leaseend p{margin:0 0 14px;color:var(--ink)}
+  .leaseend ul{margin:0 0 16px;padding-left:20px}
+  .leaseend .fine{font-size:14px;color:var(--muted);margin:0}
+
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://budgetpilot.fun/#site",
+   "url": "https://budgetpilot.fun/",
+   "name": "Budget Pilot",
+   "description": "The money side of owning a car.",
+   "inLanguage": "en-US",
+   "publisher": {
+    "@id": "https://budgetpilot.fun/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://budgetpilot.fun/#org",
+   "name": "Budget Pilot",
+   "url": "https://budgetpilot.fun/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://budgetpilot.fun/icon-512.png"
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap wrap--wide">
+  <section class="hero">
+    <div class="kicker">Car money, worked out</div>
+    <h1>The money side of owning a car.</h1>
+    <p class="standfirst">Loans, leases, insurance, fuel, repairs and the slow
+       arithmetic of depreciation, written out plainly and with the numbers shown.
+       100 articles, no sales pitch, nothing to sign up for.</p>
+    <div class="go">
+      <a class="pri" href="/articles/">Browse all 100 articles</a>
+      <a class="sec2" href="/articles/budgeting/">Start with budgeting</a>
+    </div>
+  </section>
+
+  <h2>Start here</h2>
+  <div class="picks">
+    <a href="/articles/what-a-car-really-costs-per-month/"><h3>What a car really costs per month</h3><p>A month of car debits as a bank statement, then what the statement quietly leaves out.</p></a>
+    <a href="/articles/your-real-cost-per-mile/"><h3>Your real cost per mile</h3><p>A fill-in worksheet for your car&#x27;s true cost per mile, with a worked example beside every line.</p></a>
+    <a href="/articles/how-a-loan-payment-is-built/"><h3>How an auto loan payment is built</h3><p>Same payment every month, a different mix inside it: interest versus principal, drawn to scale.</p></a>
+    <a href="/articles/your-options-at-lease-end/"><h3>Your options at lease end</h3><p>Return, buy or trade: three doors at lease end, and the steps behind each one.</p></a>
+  </div>
+
+  <h2>Browse by subject</h2>
+  <div class="shelf">
+    <a href="/articles/budgeting/"><h3>Budgeting</h3><p>Fitting a car into a household budget, and the bills that sneak up on it.</p><span class="n">20 articles</span></a>
+    <a href="/articles/borrowing/"><h3>Borrowing</h3><p>How car loans are built, what they cost, and what you sign.</p><span class="n">16 articles</span></a>
+    <a href="/articles/insurance/"><h3>Insurance</h3><p>Coverage, deductibles and claims, explained without the sales pitch.</p><span class="n">14 articles</span></a>
+    <a href="/articles/running-costs/"><h3>Running Costs</h3><p>Fuel, maintenance, tires, fees and the slow cost of depreciation.</p><span class="n">15 articles</span></a>
+    <a href="/articles/leasing/"><h3>Leasing</h3><p>Lease payments, lease-end choices, and when keeping the car makes sense.</p><span class="n">22 articles</span></a>
+    <a href="/articles/buying-selling/"><h3>Buying &amp; Selling</h3><p>Setting a price, paying safely, and knowing when to let a car go.</p><span class="n">13 articles</span></a>
+  </div>
+
+  <section class="leaseend">
+    <h2>Lease ending soon?</h2>
+    <p>You usually have three choices: hand it back, trade it in, or buy it. Buying
+       only makes sense if the payoff is fair against what the car is worth, so
+       run those numbers first.</p>
+    <ul>
+      <li><a href="/articles/your-options-at-lease-end/">Your options at lease end</a></li>
+      <li><a href="/articles/should-you-buy-out-your-lease/">Should you buy out your lease?</a></li>
+      <li><a href="/articles/lease-equity-explained/">When your leased car is worth more than the payoff</a></li>
+      <li><a href="/articles/questions-before-a-lease-buyout/">Twelve questions before a lease buyout</a></li>
+    </ul>
+    <p class="fine">If keeping it comes out ahead and you need to finance the
+       purchase, lease buyout financing is arranged by firms such as
+       <a href="https://championautofinance.com/">Champion Auto Finance</a>. It is not
+       a lender itself, so terms depend on lender underwriting.</p>
+  </section>
+
+  <h2>Recently published</h2>
+  <ul class="idx">
+    <li><a href="/articles/a-car-budget-for-college/"><h3>A car budget for a college student</h3><p>Four semesters of car costs laid out side by side, with the lumpy months marked and a way to fund them.</p><span class="sec">Budgeting</span></a></li>
+    <li><a href="/articles/a-car-budget-spreadsheet/"><h3>Setting up a car budget spreadsheet</h3><p>Four tabs, every column and every formula, row by row — a car budget you build once and keep for years.</p><span class="sec">Budgeting</span></a></li>
+    <li><a href="/articles/a-car-budget-when-a-baby-arrives/"><h3>A car budget when a baby arrives</h3><p>Every line of an illustrative car budget, before the baby and after, and why each one moves or stays put.</p><span class="sec">Budgeting</span></a></li>
+    <li><a href="/articles/a-car-fund-in-envelopes/"><h3>Building a car fund, envelope by envelope</h3><p>Five envelopes, five sinking funds, and a plain method for deciding how full each should be.</p><span class="sec">Budgeting</span></a></li>
+    <li><a href="/articles/add-ons-inside-your-loan/"><h3>The add-ons that end up inside your car loan</h3><p>Eight common add-ons, each with two prices: the menu price and the financed cost.</p><span class="sec">Borrowing</span></a></li>
+    <li><a href="/articles/adding-a-driver-to-your-policy/"><h3>Adding a driver to your policy</h3><p>Six illustrative households, one new driver each, and what adding that person tends to change on a car policy.</p><span class="sec">Insurance</span></a></li>
+    <li><a href="/articles/before-you-co-sign-a-car-loan/"><h3>Before you co-sign a car loan</h3><p>Co-signing, set out as numbered I-understand-that clauses, each with a plain explanation.</p><span class="sec">Borrowing</span></a></li>
+    <li><a href="/articles/budgeting-for-a-teen-driver/"><h3>Budgeting for a teenager behind the wheel</h3><p>A letter to the parent of a new driver about the money: insurance, the car, and who pays for what.</p><span class="sec">Budgeting</span></a></li>
+    <li><a href="/articles/buy-here-pay-here-examined/"><h3>Buy here, pay here lots, examined</h3><p>Seven claims from the banners on a buy here, pay here lot, and what each one usually means once you sign.</p><span class="sec">Borrowing</span></a></li>
+    <li><a href="/articles/buying-your-lease-vs-another-used-car/"><h3>Buying your leased car vs another used one</h3><p>What you already know about the car you lease, set against what you would have to guess about someone else&#x27;s.</p><span class="sec">Leasing</span></a></li>
+    <li><a href="/articles/car-costs-in-retirement/"><h3>Car costs in retirement</h3><p>A composite couple in three scenes: the last working year, the first retired year, and a decade on.</p><span class="sec">Budgeting</span></a></li>
+    <li><a href="/articles/car-costs-on-an-irregular-income/"><h3>Car costs on an irregular income</h3><p>Lean month, normal month, flush month: a playbook of car-cost rules for incomes that won&#x27;t sit still.</p><span class="sec">Budgeting</span></a></li>
+  </ul>
+  <p style="margin-top:26px"><a href="/articles/">All 100 articles &rarr;</a></p>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

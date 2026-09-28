@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What your insurer pays when your car is totaled | Budget Pilot</title>
+<meta name="description" content="How a total-loss payout is built: actual cash value constructed step by step from comparable cars and adjustments, then which parts of it you can dispute.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/what-a-total-loss-pays/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="What your insurer pays when your car is totaled">
+<meta property="og:description" content="Actual cash value built step by step for an illustrative car, then the places the number can be questioned.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/what-a-total-loss-pays/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/what-a-total-loss-pays.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/what-a-total-loss-pays.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - What your insurer pays when your car is totaled">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Insurance">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What your insurer pays when your car is totaled">
+<meta name="twitter:description" content="Actual cash value built step by step for an illustrative car, then the places the number can be questioned.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/what-a-total-loss-pays.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+/* Form: a valuation walkthrough. Each construction step is a ledger row with a running
+   figure in a right-hand column, so the actual cash value visibly builds, then nets down. */
+  .vw-intro-def{
+    border-left:3px solid var(--sky); padding:2px 0 2px 16px; margin:0 0 30px; font-size:16.5px;
+  }
+  .vw-steps{margin:18px 0 10px; counter-reset:vw}
+  .vw-step{
+    display:grid; grid-template-columns:34px minmax(0,1fr) auto; gap:4px 14px;
+    padding:16px 0; border-top:1px solid var(--line-2); align-items:start;
+  }
+  .vw-step::before{
+    counter-increment:vw; content:counter(vw);
+    width:30px; height:30px; border-radius:50%; display:grid; place-items:center;
+    background:var(--sky-soft); color:var(--sky); font-weight:600; font-size:14px;
+  }
+  .vw-step h3{margin:3px 0 4px; font-size:17px}
+  .vw-step p{margin:0 0 6px; font-size:15.5px; color:var(--muted)}
+  .vw-step p:last-child{margin-bottom:0}
+  .vw-fig{
+    text-align:right; font-family:var(--mono); font-size:15px; white-space:nowrap; padding-top:4px;
+    font-variant-numeric:tabular-nums;
+  }
+  .vw-fig small{display:block; font-size:12px; color:var(--faint)}
+  .vw-fig .vw-neg{color:var(--bad)} .vw-fig .vw-pos{color:var(--good)}
+  .vw-fig b{display:block; font-weight:600; font-size:16px; border-top:1px solid var(--line-2); margin-top:4px; padding-top:3px}
+  .vw-step.vw-key{background:var(--card); border:2px solid var(--amber); border-radius:8px; padding:16px 12px}
+  .vw-step.vw-key .vw-fig b{font-size:19px}
+  .vw-comps{
+    width:100%; font-size:14px; margin:8px 0 4px;
+  }
+  .vw-comps td,.vw-comps th{padding:5px 8px}
+  .vw-comps td:last-child,.vw-comps th:last-child{text-align:right; font-family:var(--mono)}
+  .vw-grounds{counter-reset:vg; list-style:none; padding:0; margin:0 0 24px}
+  .vw-grounds li{
+    position:relative; padding:12px 0 12px 44px; border-bottom:1px dashed var(--line-2); margin:0;
+  }
+  .vw-grounds li::before{
+    counter-increment:vg; content:counter(vg, upper-alpha);
+    position:absolute; left:0; top:12px; width:30px; height:30px; border:2px solid var(--amber);
+    border-radius:4px; display:grid; place-items:center; font-weight:600; font-size:14px; color:var(--amber-ink);
+  }
+  @media (max-width:480px){
+    .vw-step{grid-template-columns:30px minmax(0,1fr)}
+    .vw-fig{grid-column:2; text-align:left}
+    .vw-fig b{display:inline-block; margin-left:10px; border-top:0; padding-top:0}
+    .vw-step::before{width:26px; height:26px; font-size:13px}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"What your insurer pays when your car is totaled","description":"Actual cash value built step by step for an illustrative car, then the places the number can be questioned.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/what-a-total-loss-pays/",
+  "image":"https://budgetpilot.fun/articles/og/what-a-total-loss-pays.jpg",
+  "articleSection":"Insurance",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Insurance","item":"https://budgetpilot.fun/articles/insurance/"},
+  {"@type":"ListItem","position":4,"name":"What your insurer pays when your car is totaled"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/insurance/">Insurance</a>
+  </div>
+
+  <div class="kicker">Insurance</div>
+  <h1>What your insurer pays when your car is totaled</h1>
+  <p class="standfirst">The check is not for what you paid, and it is not for what you owe. It is for a figure called actual cash value, assembled from a handful of choices someone made about your car. Here are the choices, one at a time.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p class="vw-intro-def">Many policies pay a totaled car at its <strong>actual cash value</strong>: roughly, what the car was worth immediately before the loss, in its condition, in your market. Your policy defines the term, and the definition in your own declarations and policy form is the one that counts.</p>
+
+<p>Below, one illustrative valuation is built from scratch. The car, the comparables and every dollar figure are invented to show the mechanics; they don&rsquo;t reflect any insurer&rsquo;s method or any real vehicle&rsquo;s value. Follow the running figure down the right-hand side.</p>
+
+<div class="vw-steps">
+  <div class="vw-step">
+    <div>
+      <h3>Find comparable cars</h3>
+      <p>The valuation starts with similar vehicles: same make, model, year and ideally trim, recently sold or listed in your area. The report you receive should name them.</p>
+      <div class="tscroll"><table class="vw-comps">
+        <thead><tr><th>Comparable</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Comp 1, same trim, 41,000 mi</td><td>$14,400</td></tr>
+          <tr><td>Comp 2, same trim, 47,500 mi</td><td>$13,800</td></tr>
+          <tr><td>Comp 3, same trim, 37,500 mi</td><td>$14,700</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="vw-fig"><small>average</small>$14,300<b>$14,300</b></div>
+  </div>
+
+  <div class="vw-step">
+    <div>
+      <h3>Adjust for mileage</h3>
+      <p>The comps average 42,000 miles; your car had 50,000. The illustrative report deducts 5&cent; for each extra mile: 8,000 &times; $0.05.</p>
+    </div>
+    <div class="vw-fig"><span class="vw-neg">&minus;$400</span><b>$13,900</b></div>
+  </div>
+
+  <div class="vw-step">
+    <div>
+      <h3>Adjust for condition</h3>
+      <p>An adjuster rates the car&rsquo;s pre-loss condition, often from photos and your description. Here, a stained rear seat and a cracked bumper cover pull it below the comps.</p>
+    </div>
+    <div class="vw-fig"><span class="vw-neg">&minus;$250</span><b>$13,650</b></div>
+  </div>
+
+  <div class="vw-step">
+    <div>
+      <h3>Adjust for equipment</h3>
+      <p>Your car had a factory tow package the comps lacked, so the report adds value for it. This is the step where missing options most often go unnoticed.</p>
+    </div>
+    <div class="vw-fig"><span class="vw-pos">+$300</span><b>$13,950</b></div>
+  </div>
+
+  <div class="vw-step vw-key">
+    <div>
+      <h3>Actual cash value</h3>
+      <p>The adjusted figure: what this illustration says the car was worth the moment before the crash.</p>
+    </div>
+    <div class="vw-fig"><small>ACV</small><b>$13,950</b></div>
+  </div>
+
+  <div class="vw-step">
+    <div>
+      <h3>Taxes and fees, if they apply</h3>
+      <p>Whether a settlement includes sales tax, title and registration costs for a replacement depends on your state and your policy. We&rsquo;ve left this at zero to keep the arithmetic clean. Ask your adjuster directly whether it&rsquo;s included, and if not, why not.</p>
+    </div>
+    <div class="vw-fig"><small>ask</small>$0<b>$13,950</b></div>
+  </div>
+
+  <div class="vw-step">
+    <div>
+      <h3>Subtract your deductible</h3>
+      <p>Your collision or comprehensive deductible, depending on which coverage the loss falls under. The trade-off between a higher deductible and a lower premium looks different once you&rsquo;ve seen it subtracted from a total loss; see <a href="/articles/choosing-a-deductible/">choosing a deductible</a>.</p>
+    </div>
+    <div class="vw-fig"><span class="vw-neg">&minus;$1,000</span><b>$12,950</b></div>
+  </div>
+
+  <div class="vw-step vw-key">
+    <div>
+      <h3>Settlement</h3>
+      <p>If there&rsquo;s a loan, the lender listed on the policy is typically paid first, and anything left comes to you.</p>
+    </div>
+    <div class="vw-fig"><small>paid out</small><b>$12,950</b></div>
+  </div>
+
+  <div class="vw-step">
+    <div>
+      <h3>Against the loan payoff</h3>
+      <p>Suppose the loan payoff was $15,200. The settlement covers $12,950 of it. The remaining $2,250 is still owed, by you, on a car that no longer exists, unless gap coverage applies.</p>
+    </div>
+    <div class="vw-fig"><small>payoff $15,200</small><span class="vw-neg">&minus;$2,250</span><b>you owe</b></div>
+  </div>
+</div>
+
+<p>That last row is the one people don&rsquo;t see coming. A settlement is based on the car&rsquo;s value; a loan balance is based on what was borrowed and how much has been repaid. When the two drift apart, the gap is yours. Whether gap coverage makes sense, and when to drop it, is worked through in <a href="/articles/gap-coverage-when-it-earns-its-keep/">gap coverage, and when it earns its keep</a>.</p>
+
+<h2>Why it was totaled in the first place</h2>
+
+<p>A car is declared a total loss when repairing it no longer makes economic sense against its value. How that line is drawn depends on the insurer and, in some states, on a threshold set by law; it usually weighs the repair estimate against the actual cash value, and sometimes what the wreck would fetch as salvage. That is why an older car can be totaled by damage that would be repaired without a second thought on a newer one. The repair bill didn&rsquo;t grow; the value it is measured against shrank.</p>
+
+<p>It also means the ACV does double duty. It decides whether the car is totaled and how much you receive. A valuation that runs low can tip a repairable car into a total loss and then pay less for it.</p>
+
+<p>Some owners ask to keep the totaled car. Where that&rsquo;s allowed, the insurer typically deducts a salvage value from the settlement, and the car may then carry a branded title that affects its resale and insurability. Ask your insurer, and the state office that issues titles, before choosing it.</p>
+
+<h2>Where the number can be questioned</h2>
+
+<p>Every adjustment above was a judgment, and judgments can be challenged with evidence. Ask for the full valuation report in writing before you respond to an offer. Then go through it looking for these:</p>
+
+<ol class="vw-grounds">
+  <li><strong>Comparables that aren&rsquo;t comparable.</strong> A lower trim level, a different drivetrain, a car from a market far from yours, or an asking price treated as a sale price. Find your own comps from listings near you and send them.</li>
+  <li><strong>The mileage adjustment rate.</strong> Check both the mile difference and the per-mile figure. A small rate applied to the wrong baseline adds up.</li>
+  <li><strong>The condition rating.</strong> If the adjuster rated the car below how it actually was, send photos taken before the loss, service records and inspection reports.</li>
+  <li><strong>Missing equipment and recent investments.</strong> Factory options left off the report, and receipts for recent work such as new tires or a new battery. Whether recent maintenance raises value varies, but it costs nothing to submit it.</li>
+  <li><strong>Taxes and fees.</strong> If the settlement leaves them out, ask what your policy and state require.</li>
+  <li><strong>The appraisal clause.</strong> Many policies include a process for resolving a disagreement over value, in which each side hires an appraiser. Read yours for the steps and the costs you would bear.</li>
+</ol>
+
+<p>If the conversation stalls, every state has a department of insurance that accepts consumer complaints; its website will describe the process. Most disputes never get that far. A well-documented counteroffer, with comps and receipts attached, is often where they end.</p>
+
+<p>Keep notes of every call, with dates and names. The <a href="/articles/filing-a-claim-hour-by-hour/">hour-by-hour claim log</a> shows one way to keep them. Then, before accepting, reread the settlement letter once more with the loan statement beside it.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/full-coverage-isnt-a-policy/">&quot;Full coverage&quot; isn&#x27;t a policy</a></li>
+      <li><a href="/articles/depreciation-the-silent-bill/">Depreciation, the bill that never arrives</a></li>
+      <li><a href="/articles/loan-to-value-on-a-car/">Loan-to-value on a car loan</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What a car really costs per month | Budget Pilot</title>
+<meta name="description" content="One illustrative month of car spending laid out as a bank statement, line by line with a running balance, then read back to find the cost it leaves out.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/what-a-car-really-costs-per-month/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="What a car really costs per month">
+<meta property="og:description" content="A month of car debits as a bank statement, then what the statement quietly leaves out.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/what-a-car-really-costs-per-month/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/what-a-car-really-costs-per-month.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/what-a-car-really-costs-per-month.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - What a car really costs per month">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Budgeting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What a car really costs per month">
+<meta name="twitter:description" content="A month of car debits as a bank statement, then what the statement quietly leaves out.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/what-a-car-really-costs-per-month.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: a bank-statement excerpt - dated debit lines with a running balance, commentary beneath. */
+  .stmt{background:var(--card); border:1px solid var(--line-2); border-radius:6px; margin:8px 0 34px; font-size:14px}
+  .stmt-head{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 18px; padding:16px 16px 12px; border-bottom:2px solid var(--ink)}
+  .stmt-bank{font-family:var(--disp); font-size:21px; line-height:1.1}
+  .stmt-acct{font-family:var(--mono); font-size:12px; color:var(--faint); text-align:right}
+  .stmt-period{flex-basis:100%; font-size:12px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase}
+  .stmt table{font-family:var(--mono); font-size:13px; min-width:430px}
+  .stmt th{font-family:var(--body); font-size:11px; padding:8px 10px}
+  .stmt td{padding:7px 10px; white-space:nowrap}
+  .stmt td.stmt-desc{white-space:normal}
+  .stmt td.stmt-num, .stmt th.stmt-num{text-align:right}
+  .stmt tr.stmt-credit td.stmt-num:first-of-type{color:var(--good)}
+  .stmt td.stmt-debit{color:var(--bad)}
+  .stmt tr.stmt-carry td{color:var(--faint); font-style:italic}
+  .stmt tr.stmt-close td{border-top:2px solid var(--ink); border-bottom:0; font-weight:600}
+  .stmt .tscroll{margin:0}
+  .stmt-foot{display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); border-top:1px solid var(--line)}
+  .stmt-foot div{padding:10px 16px; border-right:1px solid var(--line)}
+  .stmt-foot div:last-child{border-right:0}
+  .stmt-foot span{display:block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--faint)}
+  .stmt-foot b{font-family:var(--mono); font-weight:600; font-size:15px}
+  .stmt-ref{font-family:var(--mono); font-size:11px; color:var(--faint); vertical-align:super; margin-left:2px}
+  .stmt-notes{counter-reset:stmtnote; list-style:none; padding:0; margin:0 0 30px}
+  .stmt-notes li{position:relative; padding:0 0 0 44px; margin:0 0 22px}
+  .stmt-notes li::before{counter-increment:stmtnote; content:counter(stmtnote); position:absolute; left:0; top:2px;
+    width:28px; height:28px; border:1.5px solid var(--amber); border-radius:50%; text-align:center;
+    font-family:var(--mono); font-size:13px; line-height:25px; color:var(--amber-ink)}
+  .stmt-recon{font-family:var(--mono); font-size:14px; border-top:1px dashed var(--line-2); border-bottom:1px dashed var(--line-2); padding:14px 0; margin:0 0 26px}
+  .stmt-recon div{display:flex; justify-content:space-between; gap:12px; padding:3px 0}
+  .stmt-recon div.stmt-sum{border-top:1px solid var(--line-2); margin-top:6px; padding-top:8px; font-weight:600}
+  .stmt-recon span:first-child{font-family:var(--body)}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"What a car really costs per month","description":"A month of car debits as a bank statement, then what the statement quietly leaves out.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/what-a-car-really-costs-per-month/",
+  "image":"https://budgetpilot.fun/articles/og/what-a-car-really-costs-per-month.jpg",
+  "articleSection":"Budgeting",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Budgeting","item":"https://budgetpilot.fun/articles/budgeting/"},
+  {"@type":"ListItem","position":4,"name":"What a car really costs per month"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/budgeting/">Budgeting</a>
+  </div>
+
+  <div class="kicker">Budgeting</div>
+  <h1>What a car really costs per month</h1>
+  <p class="standfirst">Below is one month from an illustrative household's dedicated car account, printed the way a bank would print it. The statement is accurate to the penny. It is also not the answer.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <div class="stmt" role="group" aria-label="Illustrative bank statement excerpt">
+  <div class="stmt-head">
+    <div class="stmt-bank">Car account</div>
+    <div class="stmt-acct">Acct ending 0000<br>Illustrative only</div>
+    <div class="stmt-period">Statement period: one calendar month, days 1&ndash;30</div>
+  </div>
+  <div class="tscroll">
+  <table>
+    <thead><tr><th>Day</th><th>Description</th><th class="stmt-num">Amount</th><th class="stmt-num">Balance</th></tr></thead>
+    <tbody>
+      <tr class="stmt-carry"><td>01</td><td class="stmt-desc">Opening balance</td><td class="stmt-num"></td><td class="stmt-num">412.18</td></tr>
+      <tr class="stmt-credit"><td>02</td><td class="stmt-desc">Transfer in from checking</td><td class="stmt-num">+900.00</td><td class="stmt-num">1,312.18</td></tr>
+      <tr><td>03</td><td class="stmt-desc">Auto loan payment<span class="stmt-ref">1</span></td><td class="stmt-num stmt-debit">&minus;389.00</td><td class="stmt-num">923.18</td></tr>
+      <tr><td>05</td><td class="stmt-desc">Fuel</td><td class="stmt-num stmt-debit">&minus;46.20</td><td class="stmt-num">876.98</td></tr>
+      <tr><td>08</td><td class="stmt-desc">Auto insurance, monthly installment</td><td class="stmt-num stmt-debit">&minus;142.00</td><td class="stmt-num">734.98</td></tr>
+      <tr><td>11</td><td class="stmt-desc">Car wash</td><td class="stmt-num stmt-debit">&minus;12.00</td><td class="stmt-num">722.98</td></tr>
+      <tr><td>12</td><td class="stmt-desc">Fuel</td><td class="stmt-num stmt-debit">&minus;51.35</td><td class="stmt-num">671.63</td></tr>
+      <tr><td>15</td><td class="stmt-desc">Parking, downtown lot</td><td class="stmt-num stmt-debit">&minus;18.50</td><td class="stmt-num">653.13</td></tr>
+      <tr><td>17</td><td class="stmt-desc">Toll account auto-replenish</td><td class="stmt-num stmt-debit">&minus;25.00</td><td class="stmt-num">628.13</td></tr>
+      <tr><td>19</td><td class="stmt-desc">Fuel</td><td class="stmt-num stmt-debit">&minus;44.80</td><td class="stmt-num">583.33</td></tr>
+      <tr><td>22</td><td class="stmt-desc">Oil change and filter<span class="stmt-ref">2</span></td><td class="stmt-num stmt-debit">&minus;64.99</td><td class="stmt-num">518.34</td></tr>
+      <tr><td>26</td><td class="stmt-desc">Transfer to car savings<span class="stmt-ref">3</span></td><td class="stmt-num stmt-debit">&minus;75.00</td><td class="stmt-num">443.34</td></tr>
+      <tr><td>27</td><td class="stmt-desc">Fuel</td><td class="stmt-num stmt-debit">&minus;49.10</td><td class="stmt-num">394.24</td></tr>
+      <tr class="stmt-close"><td>30</td><td class="stmt-desc">Closing balance</td><td class="stmt-num"></td><td class="stmt-num">394.24</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="stmt-foot">
+    <div><span>Credits</span><b>900.00</b></div>
+    <div><span>Debits</span><b>917.94</b></div>
+    <div><span>Net change</span><b>&minus;17.94</b></div>
+  </div>
+</div>
+
+<p>The household is a composite, and every figure above is invented for illustration. What is not invented is the arithmetic: twelve debits totaling $917.94, against a $900 transfer in, leaving the account $17.94 lighter than it started. If you asked this household what their car costs a month, most would read the debit total off the bottom of the statement and say "about nine hundred." That answer is honest, easy, and wrong in two different directions at once.</p>
+
+<p>Here is what the statement does and doesn't tell you, taken from the reference marks and from the lines that are missing.</p>
+
+<ol class="stmt-notes">
+  <li><strong>The loan payment is half spending, half saving.</strong> The $389 debit on day 3 looks like one cost, but the lender's own statement splits it. Suppose it shows $61.40 of interest and $327.60 of principal this month. The interest is gone. The principal is buying down a debt on an asset the household owns, so it is closer to a forced transfer into the car than an expense. For cash-flow purposes you still have to find the full $389. For judging what the car <em>costs</em>, only the $61.40 counts &mdash; plus whatever value the car lost this month, which brings us to the missing line. There's more on that split in <a href="/articles/how-a-loan-payment-is-built/">how an auto loan payment is built</a>.</li>
+  <li><strong>The oil change doesn't happen every month.</strong> A $64.99 service that comes around roughly every four months is really about $16.25 a month. Leaving it in at full value makes this month look expensive; leaving it out of next month's statement will make that month look cheap. Neither month is typical.</li>
+  <li><strong>The savings transfer is a guess, and probably a short one.</strong> The $75 moved on day 26 is meant to cover the bills that don't arrive monthly. Suppose last year this household's registration, inspection, and their share of a future set of tires came to $1,140. That is $95 a month, so the transfer runs $20 behind each month without anyone noticing. The calendar of those bills is its own subject; <a href="/articles/the-once-a-year-car-bills/">the car bills that arrive once a year</a> lays one out.</li>
+  <li><strong>The biggest cost has no line at all.</strong> Depreciation never posts. Suppose the household expects its car to be worth $6,000 less two years from now than it is today. That is $250 a month, spent quietly, visible only on the day the car is sold or traded. It is the one cost you can't see on any statement and can't stop paying by cutting back.</li>
+</ol>
+
+<h2>Two honest answers</h2>
+
+<p>Once the lines are sorted, the month resolves into two figures, and both are correct for different questions. First, strip out the loan payment and the savings transfer, since they get handled separately. What's left are the running costs that actually posted: fuel $191.45, insurance $142.00, car wash $12.00, parking $18.50, tolls $25.00, and the oil change at $64.99, for $453.94. Swap the lumpy oil change for its smoothed monthly value, and add the true monthly share of the annual bills:</p>
+
+<div class="stmt-recon" aria-label="Reconciliation">
+  <div><span>Running costs that posted</span><span>453.94</span></div>
+  <div><span>Oil change, full amount out</span><span>&minus;64.99</span></div>
+  <div><span>Oil change, smoothed in</span><span>+16.25</span></div>
+  <div><span>Annual bills at their real monthly rate</span><span>+95.00</span></div>
+  <div class="stmt-sum"><span>Smoothed running costs</span><span>500.20</span></div>
+  <div><span>Add the full loan payment</span><span>+389.00</span></div>
+  <div class="stmt-sum"><span>Cash the car needs each month</span><span>889.20</span></div>
+</div>
+
+<p>That $889.20 is the <strong>cash view</strong>: the sum you need to move into the car account every month so that it never drifts. It answers "can we afford to keep running this car?" The household is currently moving $900 and parking $75 of it in savings instead of the $95 it needs, which is why the balance keeps slipping by small, puzzling amounts.</p>
+
+<div class="stmt-recon" aria-label="Cost of ownership">
+  <div><span>Smoothed running costs</span><span>500.20</span></div>
+  <div><span>Interest portion of the payment</span><span>+61.40</span></div>
+  <div><span>Depreciation, estimated</span><span>+250.00</span></div>
+  <div class="stmt-sum"><span>What owning the car costs each month</span><span>811.60</span></div>
+</div>
+
+<p>That $811.60 is the <strong>ownership view</strong>. It swaps the principal portion of the loan for depreciation, which avoids counting the car twice &mdash; once when you pay it off and again when it loses value. It answers "what is this car costing us, compared with some other way of getting around?" It is the number to hold up against a cheaper car, a second car you're considering selling, or a bus pass.</p>
+
+<p>Notice that neither figure matches the $917.94 at the foot of the statement, and that the gap isn't a rounding error. A single month's statement is a sample of one: it catches the oil change and misses the registration, overweights this month's lumpy bill and ignores the car's steady slide in value.</p>
+
+<h2>Reading your own</h2>
+
+<p>You don't need a separate car account to do this, though it helps: with one, the statement filters itself. Without one, pull three months of your ordinary checking statements and a year of card statements, and mark every line that exists only because you own a car. Three months smooths out most of the fuel noise. The year of card statements is where the annual bills hide. Then sort every line into one of four piles: monthly and fixed, monthly and variable, irregular, and invisible. The last pile always holds depreciation, and usually holds the interest you've never separated from principal.</p>
+
+<p>If you'd rather work it out per mile instead of per month, the same inputs feed <a href="/articles/your-real-cost-per-mile/">a cost-per-mile worksheet</a>. Either way, the useful habit is the same one this household hasn't formed yet: treat the bottom line of a bank statement as a measurement of one month, not a description of the car.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+            <li><a href="/articles/a-car-fund-in-envelopes/">Building a car fund, envelope by envelope</a></li>
+      <li><a href="/articles/depreciation-the-silent-bill/">Depreciation, the bill that never arrives</a></li>
+      <li><a href="/articles/the-costs-nobody-counts/">Parking, tolls and the costs nobody counts</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

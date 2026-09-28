@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>When your leased car is worth more than the payoff | Budget Pilot</title>
+<meta name="description" content="One illustrative leased car in three markets: positive, flat and negative equity, each worked through route by route to show which exit leaves you better off.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/lease-equity-explained/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="When your leased car is worth more than the payoff">
+<meta property="og:description" content="One leased car, three markets: positive, flat and negative equity, each worked through.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/lease-equity-explained/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/lease-equity-explained.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/lease-equity-explained.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - When your leased car is worth more than the payoff">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Leasing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="When your leased car is worth more than the payoff">
+<meta name="twitter:description" content="One leased car, three markets: positive, flat and negative equity, each worked through.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/lease-equity-explained.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: three market scenarios for one car, each a panel with a payoff-vs-market bar pair and a routes table. */
+  .eqs-facts{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 30px; padding:0; list-style:none}
+  .eqs-facts li{border:1px solid var(--line-2); border-radius:999px; padding:5px 12px; font-size:14px; background:var(--card)}
+  .eqs-facts b{font-family:var(--mono); font-weight:600}
+  .eqs-scene{border:1px solid var(--line); border-radius:14px; background:var(--card); padding:18px 18px 8px; margin:0 0 30px}
+  .eqs-scene h2{margin:0 0 4px; font-size:clamp(23px,4vw,28px)}
+  .eqs-mark{font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin:0 0 14px}
+  .eqs-up .eqs-mark{color:var(--good)}
+  .eqs-flat .eqs-mark{color:var(--amber-ink)}
+  .eqs-down .eqs-mark{color:var(--bad)}
+  .eqs-bars{margin:0 0 16px}
+  .eqs-bar{display:grid; grid-template-columns:5.6em 1fr; gap:10px; align-items:center; margin:0 0 7px; font-size:13.5px}
+  .eqs-bar span:first-child{color:var(--muted)}
+  .eqs-track{height:22px; background:var(--line); border-radius:4px; position:relative; overflow:hidden}
+  .eqs-fill{position:absolute; inset:0 auto 0 0; border-radius:4px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;
+    font-family:var(--mono); font-size:12px; font-weight:600; color:var(--paper)}
+  .eqs-fill.is-payoff{background:var(--muted)}
+  .eqs-up .eqs-fill.is-market{background:var(--good)}
+  .eqs-flat .eqs-fill.is-market{background:var(--amber)}
+  .eqs-down .eqs-fill.is-market{background:var(--bad)}
+  .eqs-routes{width:100%; font-size:14.5px; margin:0 0 12px}
+  .eqs-routes td:last-child, .eqs-routes th:last-child{text-align:right; font-family:var(--mono); white-space:nowrap}
+  .eqs-routes tr.is-best td{font-weight:600}
+  .eqs-routes tr.is-best td:first-child::after{content:" ◂ best here"; color:var(--sky); font-size:12px; font-weight:600}
+  .eqs-scene p{font-size:16px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"When your leased car is worth more than the payoff","description":"One leased car, three markets: positive, flat and negative equity, each worked through.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/lease-equity-explained/",
+  "image":"https://budgetpilot.fun/articles/og/lease-equity-explained.jpg",
+  "articleSection":"Leasing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Leasing","item":"https://budgetpilot.fun/articles/leasing/"},
+  {"@type":"ListItem","position":4,"name":"When your leased car is worth more than the payoff"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/leasing/">Leasing</a>
+  </div>
+
+  <div class="kicker">Leasing</div>
+  <h1>When your leased car is worth more than the payoff</h1>
+  <p class="standfirst">The payoff on a lease is fixed. The market is not. Put the same car into three different markets and the best decision changes every time.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Take one leased car and hold every contract term still. Only the used-car market moves. What follows is a single illustrative car placed into three markets, each worked through the same three routes: hand it back, let a dealer buy it, or buy it yourself and keep it. The figures are invented for clarity and are not typical of any model, lessor or state.</p>
+
+<ul class="eqs-facts" aria-label="The illustrative car's fixed terms">
+  <li>Purchase price in the contract: <b>$20,000</b></li>
+  <li>Tax and fees if you buy it: <b>$1,200</b></li>
+  <li>Fee if you return it: <b>$400</b></li>
+  <li>Miles and wear: within limits</li>
+</ul>
+
+<p>Two more assumptions sit under all three scenarios. The lease is closed-end, so a return is priced under the contract's terms, whatever the market does. And the lessor permits a dealer to buy the car out. Not every lessor does, and some restrict which dealers may, so that is the first thing to confirm with yours.</p>
+
+<section class="eqs-scene eqs-up">
+  <h2>Market one: the car is worth $23,500</h2>
+  <p class="eqs-mark">Positive equity · +$3,500 on paper</p>
+  <div class="eqs-bars" aria-hidden="true">
+    <div class="eqs-bar"><span>Payoff</span><div class="eqs-track"><div class="eqs-fill is-payoff" style="width:85.1%">20,000</div></div></div>
+    <div class="eqs-bar"><span>Market</span><div class="eqs-track"><div class="eqs-fill is-market" style="width:100%">23,500</div></div></div>
+  </div>
+  <div class="tscroll"><table class="eqs-routes">
+    <thead><tr><th>Route</th><th>Working</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Return it</td><td>Pay the fee; the lessor keeps the $3,500</td><td>−$400</td></tr>
+      <tr class="is-best"><td>Dealer buys it</td><td>23,500 − 20,000</td><td>+$3,500</td></tr>
+      <tr><td>Buy and keep</td><td>23,500 − (20,000 + 1,200)</td><td>+$2,300</td></tr>
+    </tbody>
+  </table></div>
+  <p>Returning the car here is the one clearly wrong answer. It pays $400 to give away $3,500 of value, a swing of $3,900 against the best route. A dealer purchase captures the full difference, though depending on your state and how the sale is structured, tax may apply to that transaction too, which would narrow the gap. Buying and keeping nets less on paper, because you pay tax and fees on the purchase, but it leaves you with a known car worth more than you paid. If you wanted to keep driving it anyway, $2,300 of built-in value is a good position to start ownership from.</p>
+</section>
+
+<section class="eqs-scene eqs-flat">
+  <h2>Market two: the car is worth $20,400</h2>
+  <p class="eqs-mark">Roughly flat · +$400 on paper</p>
+  <div class="eqs-bars" aria-hidden="true">
+    <div class="eqs-bar"><span>Payoff</span><div class="eqs-track"><div class="eqs-fill is-payoff" style="width:85.1%">20,000</div></div></div>
+    <div class="eqs-bar"><span>Market</span><div class="eqs-track"><div class="eqs-fill is-market" style="width:86.8%">20,400</div></div></div>
+  </div>
+  <div class="tscroll"><table class="eqs-routes">
+    <thead><tr><th>Route</th><th>Working</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr><td>Return it</td><td>Pay the fee</td><td>−$400</td></tr>
+      <tr class="is-best"><td>Dealer buys it</td><td>20,400 − 20,000</td><td>+$400</td></tr>
+      <tr><td>Buy and keep</td><td>20,400 − (20,000 + 1,200)</td><td>−$800</td></tr>
+    </tbody>
+  </table></div>
+  <p>This is the market where money stops deciding and everything else starts. The spread between best and worst route is $1,200, and the dealer route's $400 edge could vanish in a slightly low offer or a tax quirk. Buying and keeping looks worst on paper, but the $800 is less than it seems if the alternative is buying some other used car, because that purchase would carry its own tax and fees, and a stranger's history. Here the non-money questions do the work: do you want this car, is its warranty ending, would a replacement cost you more in time and risk? <a href="/articles/should-you-buy-out-your-lease/">Should you buy out your lease?</a> has a checklist built for exactly this tie.</p>
+</section>
+
+<section class="eqs-scene eqs-down">
+  <h2>Market three: the car is worth $17,000</h2>
+  <p class="eqs-mark">Negative equity · −$3,000 on paper</p>
+  <div class="eqs-bars" aria-hidden="true">
+    <div class="eqs-bar"><span>Payoff</span><div class="eqs-track"><div class="eqs-fill is-payoff" style="width:85.1%">20,000</div></div></div>
+    <div class="eqs-bar"><span>Market</span><div class="eqs-track"><div class="eqs-fill is-market" style="width:72.3%">17,000</div></div></div>
+  </div>
+  <div class="tscroll"><table class="eqs-routes">
+    <thead><tr><th>Route</th><th>Working</th><th>Result</th></tr></thead>
+    <tbody>
+      <tr class="is-best"><td>Return it</td><td>Pay the fee; the shortfall is the lessor's</td><td>−$400</td></tr>
+      <tr><td>Dealer buys it</td><td>17,000 − 20,000, and you cover the gap</td><td>−$3,000</td></tr>
+      <tr><td>Buy and keep</td><td>17,000 − (20,000 + 1,200)</td><td>−$4,200</td></tr>
+    </tbody>
+  </table></div>
+  <p>Now the closed-end lease earns its keep. The residual set years ago turned out optimistic, and the contract says that is the lessor's problem. Return the car and you pay the fee and nothing more, assuming miles and wear are in order. A dealer "buying" it would need you to write a $3,000 check or roll that amount into your next loan, which only moves the loss somewhere it grows; <a href="/articles/rolling-negative-equity-forward/">rolling negative equity into the next loan</a> follows that path. Buying and keeping pays $4,200 over market for a car you already know. That can still be defensible, but only if you would otherwise pay a similar premium elsewhere, and in a market where comparable cars sell for $17,000, you probably would not.</p>
+  <p>One wrinkle can shift this scenario. If the car were well over its mileage allowance, returning it would carry an excess-mileage charge. At, say, 8,000 miles over and an invented $0.25 a mile, that is $2,000 on top of the fee, and return would cost $2,400. It would still beat buying by $1,800 here. Deeper overages narrow that gap further, and <a href="/articles/going-over-your-lease-miles/">going over your lease miles</a> projects where yours will land.</p>
+</section>
+
+<h2>Why the same car can visit all three</h2>
+
+<p>These are not three different cars. They could be one car at three moments. The purchase price in the contract barely moves, while the market value moves every month: with the season, with the supply of new cars, with fuel prices and with the mileage on the dash. A lease that sits in market three a year before its end can drift into market two by the final month, or the other way. That is why a single check, made once, is weaker than a check repeated a few times as the end date approaches.</p>
+
+<h2>Reading the three together</h2>
+
+<p>The pattern is simple once it is laid side by side. When the market beats the payoff, value exists and the only question is who collects it; handing the car back gives it to the lessor. When the market sits near the payoff, the routes cost about the same and the choice turns on whether you want the car. When the market falls short, the contract's residual works like insurance you already paid for, and returning the car is how you claim it.</p>
+
+<p>So the one number to find, several months before the lease ends, is where your car sits against its purchase price. Ask the lessor for the figure in writing. Then collect firm offers, more than one, from buyers who would actually pay. The difference between those two numbers tells you which of these three markets you are standing in.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/residual-value-explained/">Residual value, explained</a></li>
+      <li><a href="/articles/buying-your-lease-vs-another-used-car/">Buying your leased car vs buying another used one</a></li>
+      <li><a href="/articles/sales-tax-on-a-lease-buyout/">Sales tax when you buy out a lease</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How big a car repair fund should be | Budget Pilot</title>
+<meta name="description" content="Size a car repair fund from your own car, not a rule of thumb: three layers, from the cost of a bad day to the repairs you can see coming to the one you cannot.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/sizing-a-car-repair-fund/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="How big a car repair fund should be">
+<meta property="og:description" content="A three-layer method for sizing a repair fund from your own car&#x27;s facts instead of a round number.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/sizing-a-car-repair-fund/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/sizing-a-car-repair-fund.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/sizing-a-car-repair-fund.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - How big a car repair fund should be">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Budgeting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How big a car repair fund should be">
+<meta name="twitter:description" content="A three-layer method for sizing a repair fund from your own car&#x27;s facts instead of a round number.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/sizing-a-car-repair-fund.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+/* Form: a three-layer pyramid built in CSS. Bottom layer widest (most certain), top
+   narrowest (least certain). Layers are trapezoids via clip-path; each has a numbered
+   explanation beneath, read from the base upward. */
+  .py-stack{display:flex; flex-direction:column; align-items:center; gap:6px; margin:18px 0 8px}
+  .py-layer{
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;
+    min-height:84px; padding:10px 14% 10px; color:var(--ink);
+    clip-path:polygon(9% 0, 91% 0, 100% 100%, 0 100%);
+  }
+  .py-l3{width:52%; background:var(--amber); padding:10px 16%}
+  .py-l2{width:76%; background:var(--sky-soft)}
+  .py-l1{width:100%; background:var(--card); border-bottom:3px solid var(--ink)}
+  .py-l1{clip-path:polygon(6% 0, 94% 0, 100% 100%, 0 100%)}
+  .py-l3 .py-name, .py-l3 .py-amt{color:var(--paper)}
+  .py-name{font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; line-height:1.3}
+  .py-amt{font-family:var(--mono); font-size:18px; line-height:1.3}
+  .py-base{
+    display:flex; justify-content:space-between; gap:12px; width:100%; font-size:13px; color:var(--faint);
+    margin:0 0 30px; padding-top:4px;
+  }
+  .py-sum{
+    font-family:var(--mono); font-size:15px; text-align:center; border:2px solid var(--amber);
+    border-radius:4px; padding:10px 12px; margin:0 0 34px; overflow-wrap:anywhere;
+  }
+  .py-step{display:grid; grid-template-columns:48px 1fr; gap:4px 16px; margin:38px 0 0}
+  .py-badge{
+    width:44px; height:44px; display:grid; place-items:center; border-radius:6px;
+    font-family:var(--disp); font-size:24px; border:2px solid var(--line-2); grid-row:1 / span 2;
+  }
+  .py-step.py-s3 .py-badge{background:var(--amber); color:var(--paper); border-color:var(--amber)}
+  .py-step.py-s2 .py-badge{background:var(--sky-soft)}
+  .py-step h2{margin:0; font-size:clamp(22px,3.8vw,27px); align-self:center}
+  .py-step > div{grid-column:2}
+  .py-work{font-family:var(--mono); font-size:14.5px; background:var(--card); border:1px solid var(--line); border-radius:6px; padding:10px 12px; overflow-wrap:anywhere}
+  @media (max-width:440px){
+    .py-layer{min-height:74px; padding:8px 11%}
+    .py-l3{width:62%; padding:8px 14%}
+    .py-l2{width:82%}
+    .py-amt{font-size:16px}
+    .py-name{font-size:11px; letter-spacing:.06em}
+    .py-step{grid-template-columns:40px 1fr; gap:4px 12px}
+    .py-badge{width:38px; height:38px; font-size:20px}
+    .py-step > div{grid-column:1 / -1}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"How big a car repair fund should be","description":"A three-layer method for sizing a repair fund from your own car's facts instead of a round number.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/sizing-a-car-repair-fund/",
+  "image":"https://budgetpilot.fun/articles/og/sizing-a-car-repair-fund.jpg",
+  "articleSection":"Budgeting",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Budgeting","item":"https://budgetpilot.fun/articles/budgeting/"},
+  {"@type":"ListItem","position":4,"name":"How big a car repair fund should be"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/budgeting/">Budgeting</a>
+  </div>
+
+  <div class="kicker">Budgeting</div>
+  <h1>How big a car repair fund should be</h1>
+  <p class="standfirst">There is no correct number for a repair fund. There is a correct method, and it starts at the bottom with the cheapest, most certain layer and works up to the one you hope never to touch.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Round numbers for a repair fund get passed around because they are easy to remember, not because they fit anyone&rsquo;s car. A fund sized for a two-year-old car under warranty would be absurdly large for that car and far too small for a fourteen-year-old one with a hundred and sixty thousand miles. The pyramid below builds the number from three facts you can look up about your own car. We&rsquo;ve filled it with one illustrative example; the figures are ours, the method is yours to reuse.</p>
+
+<div class="py-stack" role="img" aria-label="Repair fund pyramid, illustrative: base layer, the bad day, $750; middle layer, the visible, $600; top layer, the big unknown, $1,500">
+  <div class="py-layer py-l3"><span class="py-name">3 &middot; The big unknown</span><span class="py-amt">$1,500</span></div>
+  <div class="py-layer py-l2"><span class="py-name">2 &middot; What you can see coming</span><span class="py-amt">$600</span></div>
+  <div class="py-layer py-l1"><span class="py-name">1 &middot; The cost of a bad day</span><span class="py-amt">$750</span></div>
+</div>
+<div class="py-base"><span>&uarr; less certain</span><span>more certain &darr;</span></div>
+
+<p class="py-sum">$750 + $600 + $1,500 = <b>$2,850</b> (illustrative)</p>
+
+<p>The shape matters. The bottom layer is the most certain money in the fund: you will almost certainly need it at some point, just not on a date you can predict. The top is the least certain and, for a newer car, may be the thinnest. Build from the bottom up and stop filling a layer once it&rsquo;s full.</p>
+
+<section class="py-step py-s1" aria-labelledby="py-h1">
+  <span class="py-badge" aria-hidden="true">1</span>
+  <h2 id="py-h1">The cost of a bad day</h2>
+  <div>
+    <p>This is the money you need the day something goes wrong, before anyone knows what the problem is. For most cars it has two parts.</p>
+    <p><strong>Your collision deductible.</strong> If you hit something, this is your share before insurance pays. It&rsquo;s printed on your declarations page, and the trade-off behind the number you chose is in <a href="/articles/choosing-a-deductible/">choosing a deductible</a>. A repair fund that can&rsquo;t cover its own deductible has a hole at the bottom.</p>
+    <p><strong>A tow and a diagnosis.</strong> Call a local tow company and a shop you&rsquo;d use and ask what they charge. Check first whether you already have roadside assistance through your policy, a card or a membership, in which case the tow may be covered and this part shrinks.</p>
+    <p class="py-work">$500 deductible + $250 tow and diagnostic = $750</p>
+    <p>Fill this layer first, and refill it first after you use it.</p>
+  </div>
+</section>
+
+<section class="py-step py-s2" aria-labelledby="py-h2">
+  <span class="py-badge" aria-hidden="true">2</span>
+  <h2 id="py-h2">What you can see coming</h2>
+  <div>
+    <p>These are repairs that aren&rsquo;t due today but will be within about a year, and most of them are knowable. Three places to look:</p>
+    <p><strong>The last inspection report.</strong> Most shops note wear items, such as brake pads at a few millimeters or tires near the wear bars, even when they don&rsquo;t push the work. Ask for the notes if you didn&rsquo;t get them.</p>
+    <p><strong>The maintenance schedule in your owner&rsquo;s manual.</strong> Timing belts, fluid services and spark plugs come due at stated intervals of miles or time. Find your odometer reading on the schedule and read ahead twelve months.</p>
+    <p><strong>The obvious ages.</strong> Batteries and tires both age, and the tire&rsquo;s manufacture date is molded into its sidewall.</p>
+    <p class="py-work">Brakes quoted $400 + battery estimate $200 = $600</p>
+    <p>This layer changes every time you get new information. As <a href="/articles/maintenance-as-a-car-ages/">a car moves through its life stages</a>, it tends to grow.</p>
+  </div>
+</section>
+
+<section class="py-step py-s3" aria-labelledby="py-h3">
+  <span class="py-badge" aria-hidden="true">3</span>
+  <h2 id="py-h3">The big unknown</h2>
+  <div>
+    <p>The top layer is for a single large repair that isn&rsquo;t scheduled and might never happen: a transmission, a major engine job, an expensive electronic module. You can&rsquo;t predict it, but you can size it sensibly.</p>
+    <p><strong>Start with warranty status.</strong> If the car is still under a manufacturer&rsquo;s powertrain warranty, read what it covers and until when; this layer may be close to zero until that date. If you&rsquo;re weighing an extended service contract to fill this layer instead, run the numbers in <a href="/articles/extended-warranty-arithmetic/">extended warranty arithmetic</a> first.</p>
+    <p><strong>Then ask a mechanic one question.</strong> &ldquo;At this car&rsquo;s age and mileage, what&rsquo;s the most expensive thing that commonly goes, and roughly what does it cost here?&rdquo; You&rsquo;re asking for an order of magnitude, not a promise.</p>
+    <p><strong>Then cap it at the car.</strong> There&rsquo;s little sense in holding more for a single repair than you&rsquo;d be willing to spend on this car at all. If the honest answer is &ldquo;I&rsquo;d replace it before paying that,&rdquo; the top layer is really the start of your next-car fund.</p>
+    <p class="py-work">One plausible major repair, per the mechanic&rsquo;s estimate = $1,500</p>
+  </div>
+</section>
+
+<h2>What stays out of the pyramid</h2>
+
+<p>A repair fund works best when it holds only repairs. Oil changes, wiper blades and car washes are ordinary running costs and belong in the monthly budget. Registration, inspection fees and the insurance premium, if you pay it yearly, are predictable bills with known dates; they belong in their own sinking funds. Mixing them in makes the fund look healthier than it is, right up until the renewal notice empties layer one the week before a tow truck is needed.</p>
+
+<p>Where the money sits matters less than whether you can reach it within a day or two. A separate savings account, named for the car, is enough. What doesn&rsquo;t work is a credit card limit treated as a fund: it is available, but it is a loan, and it charges you for the privilege of having had a bad day.</p>
+
+<h2>Filling it, and keeping it full</h2>
+
+<p>With the total at $2,850, filling it over a year means $237.50 a month ($2,850 &divide; 12). Over eighteen months, about $158. Fill the layers in order, bottom first, so that at any point the fund can handle the likeliest bad day even if it can&rsquo;t yet handle the worst.</p>
+
+<p>Recalculate it twice a year, or whenever something changes: a new deductible, a fresh inspection report, a warranty expiring, a birthday for the car with a zero on the end. Layer two will shrink as you pay for the things in it and grow as new things appear. Layer three will creep up as the car ages and then, at some point, stop making sense at all.</p>
+
+<p>That point is worth noticing when it arrives. When the top layer of the pyramid is larger than what the car is worth to you, the fund has quietly stopped being about repairs.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/a-car-fund-in-envelopes/">Building a car fund, envelope by envelope</a></li>
+      <li><a href="/articles/the-service-menu-translated/">The service menu, translated</a></li>
+      <li><a href="/articles/dealer-service-or-independent-shop/">Dealer service or independent shop</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

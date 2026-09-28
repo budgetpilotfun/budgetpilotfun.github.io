@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How a lease payment is calculated | Budget Pilot</title>
+<meta name="description" content="A lease payment derived from first principles: the depreciation fee, the rent charge and tax, built line by line in plain notation with one worked example.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/how-a-lease-payment-is-calculated/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="How a lease payment is calculated">
+<meta property="og:description" content="Depreciation fee, rent charge, tax: a lease payment derived line by line, with one worked example.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/how-a-lease-payment-is-calculated/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/how-a-lease-payment-is-calculated.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/how-a-lease-payment-is-calculated.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - How a lease payment is calculated">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Leasing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How a lease payment is calculated">
+<meta name="twitter:description" content="Depreciation fee, rent charge, tax: a lease payment derived line by line, with one worked example.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/how-a-lease-payment-is-calculated.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: a derivation. Givens, definitions, numbered lines of working, a boxed result. */
+  .deriv-given{
+    border:1px solid var(--line-2); border-radius:10px; background:var(--card);
+    padding:14px 18px; margin:0 0 30px;
+  }
+  .deriv-given dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:4px 14px; font-size:15.5px}
+  .deriv-given dt{font-family:var(--mono); font-weight:600; color:var(--amber-ink)}
+  .deriv-given dd{margin:0; color:var(--muted)}
+  .deriv-label{
+    font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--sky); margin:0 0 8px;
+  }
+  .deriv-line{
+    display:grid; grid-template-columns:3.2em 1fr; align-items:baseline;
+    margin:0 0 6px;
+  }
+  .deriv-line .deriv-no{font-family:var(--mono); font-size:13px; color:var(--faint)}
+  .deriv-line code{
+    font-family:var(--mono); font-size:15px; background:none; color:var(--ink);
+    overflow-wrap:anywhere; line-height:1.55;
+  }
+  .deriv-block{margin:6px 0 26px; padding:12px 0 6px; border-top:1px dashed var(--line-2)}
+  .deriv-why{font-size:15.5px; color:var(--muted); margin:6px 0 0 3.2em}
+  .deriv-result{
+    border:2px solid var(--amber); border-radius:4px; padding:14px 16px; margin:26px 0;
+    font-family:var(--mono); font-size:15.5px; line-height:1.7; overflow-wrap:anywhere;
+  }
+  .deriv-result b{color:var(--amber-ink)}
+  .deriv-heading{font-family:var(--disp); font-weight:400; font-size:26px; margin:40px 0 12px}
+  @media (max-width:420px){
+    .deriv-line{grid-template-columns:2.4em 1fr}
+    .deriv-why{margin-left:2.4em}
+    .deriv-given dl{grid-template-columns:1fr}
+    .deriv-given dd{margin-bottom:6px}
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"How a lease payment is calculated","description":"Depreciation fee, rent charge, tax: a lease payment derived line by line, with one worked example.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/how-a-lease-payment-is-calculated/",
+  "image":"https://budgetpilot.fun/articles/og/how-a-lease-payment-is-calculated.jpg",
+  "articleSection":"Leasing",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Leasing","item":"https://budgetpilot.fun/articles/leasing/"},
+  {"@type":"ListItem","position":4,"name":"How a lease payment is calculated"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/leasing/">Leasing</a>
+  </div>
+
+  <div class="kicker">Leasing</div>
+  <h1>How a lease payment is calculated</h1>
+  <p class="standfirst">Three terms, one sum. Once you have seen where each piece comes from, a lease quote stops being a number you are handed and becomes a number you can check.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Most people meet a lease payment as a finished figure on a worksheet. It can be taken apart, and because it is built from only a handful of inputs, it can also be put back together by hand. What follows is that reassembly, done the way a textbook would do it: name the quantities, write the relationships, then substitute numbers.</p>
+
+<p>Nothing here is any leasing company's formula stated as law. It is the standard structure most closed-end consumer leases follow, and your contract's disclosure section will show you which figures your lessor actually used.</p>
+
+<div class="deriv-given">
+  <p class="deriv-label">Given</p>
+  <dl>
+    <dt>C</dt><dd>adjusted capitalized cost: the price of the car for leasing purposes, after any cap cost reduction, plus any fees rolled in</dd>
+    <dt>R</dt><dd>residual value: what the contract says the car will be worth at the end</dd>
+    <dt>n</dt><dd>term, in months</dd>
+    <dt>MF</dt><dd>money factor: the lease's finance rate, written as a small decimal</dd>
+    <dt>t</dt><dd>tax rate applied to the monthly payment, where your state taxes it that way</dd>
+  </dl>
+</div>
+
+<h2 class="deriv-heading">Part one: paying for what you use up</h2>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(1)</span><code>value consumed = C − R</code></div>
+  <p class="deriv-why">You take the car at C and hand back something the contract has already priced at R. The gap between them is the part of the car you used up. That is the core of the deal.</p>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(2)</span><code>D = (C − R) ÷ n</code></div>
+  <p class="deriv-why">Spread evenly across the term, the value consumed becomes the monthly <em>depreciation fee</em>, D. Every month carries an equal share, regardless of how fast the car's market value is actually falling.</p>
+</div>
+
+<h2 class="deriv-heading">Part two: paying for the money</h2>
+
+<p>The lessor has its money tied up in the car the whole time. Your balance starts at C and ends at R, so on average the lessor is carrying roughly halfway between the two.</p>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(3)</span><code>average balance ≈ (C + R) ÷ 2</code></div>
+  <p class="deriv-why">Not a sum to pay; just the midpoint of a balance falling from C to R.</p>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(4)</span><code>monthly interest ≈ (C + R) ÷ 2 × APR ÷ 1200</code></div>
+  <p class="deriv-why">An annual percentage rate divided by 12 gives a monthly rate; dividing by another 100 turns a percentage into a decimal. Hence 1200.</p>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(5)</span><code>= (C + R) × APR ÷ 2400</code></div>
+  <p class="deriv-why">Fold the “÷ 2” from line (3) into the 1200 and you get 2400.</p>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(6)</span><code>MF = APR ÷ 2400</code></div>
+  <p class="deriv-why">This is the whole secret of the money factor. It is the rate with the averaging and the monthly conversion already baked in, which is why it looks so oddly small.</p>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(7)</span><code>F = (C + R) × MF</code></div>
+  <p class="deriv-why">Substituting (6) into (5) gives the monthly <em>rent charge</em>, F. Note the plus sign. People who expect to see C − R here are surprised, but the rent charge is levied on money outstanding, and the residual is money outstanding right up to the last day.</p>
+</div>
+
+<h2 class="deriv-heading">Part three: assembling the payment</h2>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(8)</span><code>base payment P₀ = D + F</code></div>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(9)</span><code>P = P₀ × (1 + t)</code></div>
+  <p class="deriv-why">This line is the one that varies most. Some states tax each monthly payment, some tax the full price or the total of payments up front, and some add local taxes on top. Line (9) models the monthly method only. Your state’s motor vehicle or revenue agency, and the tax line on your lease contract, tell you which applies.</p>
+</div>
+
+<h2 class="deriv-heading">Worked example</h2>
+
+<p>The inputs below are illustrative, chosen to keep the arithmetic clean. They are not a quote, a typical deal, or anyone's current rate.</p>
+
+<div class="deriv-given">
+  <p class="deriv-label">Let</p>
+  <dl>
+    <dt>C</dt><dd>$30,000</dd>
+    <dt>R</dt><dd>$18,000</dd>
+    <dt>n</dt><dd>36 months</dd>
+    <dt>MF</dt><dd>0.00125</dd>
+    <dt>t</dt><dd>6% (illustrative only)</dd>
+  </dl>
+</div>
+
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(2′)</span><code>D = (30,000 − 18,000) ÷ 36 = 12,000 ÷ 36 = $333.33</code></div>
+</div>
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(7′)</span><code>F = (30,000 + 18,000) × 0.00125 = 48,000 × 0.00125 = $60.00</code></div>
+</div>
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(8′)</span><code>P₀ = 333.33 + 60.00 = $393.33</code></div>
+</div>
+<div class="deriv-block">
+  <div class="deriv-line"><span class="deriv-no">(9′)</span><code>P = 393.33 × 1.06 = 393.33 + 23.60 = $416.93</code></div>
+</div>
+
+<div class="deriv-result">
+  ∴ <b>P = $416.93 per month</b><br>
+  of which $333.33 buys the car’s decline,<br>
+  $60.00 rents the money,<br>
+  $23.60 is tax.
+</div>
+
+<p>As a side result, line (6) run backwards tells you what that money factor means as an annual rate: 0.00125 × 2400 = 3.00%. That conversion gets a page of its own in <a href="/articles/money-factor-explained/">the money factor, and how to convert it</a>.</p>
+
+<h2 class="deriv-heading">Corollaries</h2>
+
+<p><strong>Lowering C is worth more than it looks.</strong> A dollar off the capitalized cost appears twice: once in (C − R), where it cuts the depreciation fee by 1/36 of a dollar a month, and once in (C + R), where it trims the rent charge too. In the example, $1,000 off C saves $1,000 ÷ 36 = $27.78 in depreciation plus $1,000 × 0.00125 = $1.25 in rent, or $29.03 a month before tax.</p>
+
+<p><strong>A higher residual cuts one term and raises the other.</strong> Raising R by $1,000 lowers D by $27.78 but raises F by $1.25, a net drop of $26.53. That is why leases on cars expected to hold their value tend to price well, and why the residual deserves its own look in <a href="/articles/residual-value-explained/">residual value, explained</a>.</p>
+
+<p><strong>Money down is not a discount.</strong> A cap cost reduction lowers C, and so the payment, but it is the same money paid earlier. If the car is totaled early, that cash is generally gone. Whether gap coverage or your contract offsets any of that is something to read for, not assume.</p>
+
+<p><strong>The term changes only D directly.</strong> Stretching n spreads the same C − R over more months, but in practice a longer lease usually comes with a lower residual, so both inputs move at once. Recompute rather than guess.</p>
+
+<p><strong>Fees hide in C.</strong> An acquisition fee, add-on products, or a rolled-in balance all inflate the capitalized cost and flow through both lines. The disclosure section of a consumer lease itemizes what went into the gross capitalized cost; that list is where to look first.</p>
+
+<h2 class="deriv-heading">Checking a real quote</h2>
+
+<p>Ask for five figures: the adjusted capitalized cost, the residual, the term, the money factor, and how tax is applied. With those, lines (2), (7), (8) and (9) take a phone calculator and a minute. If your result and the quoted payment disagree by more than a few cents of rounding, something is in the deal that has not been named yet, and the difference, multiplied back out, often tells you roughly how big it is. Divide the gap by (1 + t), then by (1/n + MF), and you have an estimate of how much extra was folded into the capitalized cost. In the example, an unexplained $10 a month works out to 10 ÷ 1.06 ÷ (1/36 + 0.00125) ≈ $325.</p>
+
+<p>That last step is the practical payoff of doing it by hand. The number stops being a verdict and becomes an equation, and equations can be audited.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+      <li><a href="/articles/money-factor-explained/">The money factor, and how to convert it</a></li>
+      <li><a href="/articles/lease-or-buy-six-years-out/">Lease or buy, six years out</a></li>
+      <li><a href="/articles/lease-ad-fine-print/">Reading the fine print on a lease ad</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>

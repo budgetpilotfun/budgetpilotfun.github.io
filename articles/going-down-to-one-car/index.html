@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Going down to one car | Budget Pilot</title>
+<meta name="description" content="Selling the second car, weighed on a two-pan scale: what goes on each side, which weights have a price, and why the verdict depends on how you weigh the rest.">
+<link rel="canonical" href="https://budgetpilot.fun/articles/going-down-to-one-car/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Budget Pilot">
+<meta property="og:title" content="Going down to one car">
+<meta property="og:description" content="Every consideration for selling the second car, placed on a two-pan scale, with the arithmetic for the priced ones.">
+<meta property="og:url" content="https://budgetpilot.fun/articles/going-down-to-one-car/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://budgetpilot.fun/articles/og/going-down-to-one-car.jpg">
+<meta property="og:image:secure_url" content="https://budgetpilot.fun/articles/og/going-down-to-one-car.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Budget Pilot - Going down to one car">
+<meta property="article:published_time" content="2026-09-28">
+<meta property="article:section" content="Budgeting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Going down to one car">
+<meta name="twitter:description" content="Every consideration for selling the second car, placed on a two-pan scale, with the arithmetic for the priced ones.">
+<meta name="twitter:image" content="https://budgetpilot.fun/articles/og/going-down-to-one-car.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Form: a two-pan balance scale drawn in CSS; each consideration is a labeled weight on one side. */
+  .bal-rig{position:relative; margin:14px 0 0; padding:18px 0 34px}
+  .bal-beam{position:relative; height:6px; background:var(--ink); border-radius:3px; margin:0 25%}
+  .bal-beam::before{content:""; position:absolute; left:50%; top:-12px; width:16px; height:16px; margin-left:-8px; border-radius:50%; background:var(--amber)}
+  .bal-beam::after{content:""; position:absolute; left:50%; top:6px; width:0; height:0; margin-left:-12px; border:12px solid transparent; border-top:0; border-bottom:22px solid var(--ink)}
+  .bal-cords i{position:absolute; top:24px; width:2px; height:34px; background:var(--line-2)}
+  .bal-cords i:first-child{left:calc(25% - 1px)}
+  .bal-cords i:last-child{left:calc(75% - 1px)}
+  .bal-pans{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .bal-pan{border:2px solid var(--ink); border-top:0; border-radius:0 0 22px 22px; padding:10px 8px 14px; min-height:60px; background:var(--card)}
+  .bal-pan h3{margin:0 0 10px; text-align:center; font-family:var(--disp); font-weight:400; font-size:20px}
+  .bal-pan h3 small{display:block; font-family:var(--body); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--faint)}
+  .bal-stack{display:flex; flex-direction:column-reverse; gap:5px; margin:0; padding:0; list-style:none}
+  .bal-wt{border-radius:5px 5px 3px 3px; padding:5px 8px; font-size:13px; line-height:1.3; border:1.5px solid var(--sky); background:var(--sky-soft); color:var(--ink)}
+  .bal-wt b{font-family:var(--mono); font-size:11px; font-weight:600; color:var(--sky); display:block}
+  .bal-wt.bal-heavy{padding:11px 8px; border-width:2.5px}
+  .bal-wt.bal-mid{padding:8px 8px}
+  .bal-wt.bal-unpriced{border-style:dashed; border-color:var(--amber); background:transparent}
+  .bal-wt.bal-unpriced b{color:var(--amber-ink)}
+  .bal-caption{font-size:13.5px; color:var(--faint); text-align:center; margin:14px 0 30px}
+  .bal-arith{font-family:var(--mono); font-size:14px; margin:0 0 24px; border:1px solid var(--line); border-radius:8px; background:var(--card); overflow:hidden}
+  .bal-arith div{display:flex; justify-content:space-between; gap:10px; padding:6px 14px; border-bottom:1px solid var(--line)}
+  .bal-arith div span:first-child{font-family:var(--body)}
+  .bal-arith .bal-sub{font-weight:600; background:var(--paper-2)}
+  .bal-arith div:last-child{border-bottom:0}
+  .bal-verdict{border:2px solid var(--amber); border-radius:10px; padding:16px 18px; margin:30px 0}
+  .bal-verdict p:last-child{margin:0}
+  @media (max-width:400px){ .bal-wt{font-size:12px; padding:4px 6px} .bal-pan{padding:8px 5px 12px} .bal-pan h3{font-size:17px} }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BlogPosting","headline":"Going down to one car","description":"Every consideration for selling the second car, placed on a two-pan scale, with the arithmetic for the priced ones.",
+  "datePublished":"2026-09-28","dateModified":"2026-09-28","inLanguage":"en-US",
+  "mainEntityOfPage":"https://budgetpilot.fun/articles/going-down-to-one-car/",
+  "image":"https://budgetpilot.fun/articles/og/going-down-to-one-car.jpg",
+  "articleSection":"Budgeting",
+  "author":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/"},
+  "publisher":{"@type":"Organization","name":"Budget Pilot","url":"https://budgetpilot.fun/",
+   "logo":{"@type":"ImageObject","url":"https://budgetpilot.fun/icon-512.png"}}},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://budgetpilot.fun/"},
+  {"@type":"ListItem","position":2,"name":"Articles","item":"https://budgetpilot.fun/articles/"},
+  {"@type":"ListItem","position":3,"name":"Budgeting","item":"https://budgetpilot.fun/articles/budgeting/"},
+  {"@type":"ListItem","position":4,"name":"Going down to one car"}]}
+]}
+</script>
+</head>
+<body>
+
+<header class="mast">
+  <a class="brand" href="/" aria-label="Budget Pilot - home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <span>Budget Pilot</span>
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a class="opt" href="/articles/budgeting/">Budgeting</a>
+    <a class="opt" href="/articles/leasing/">Leasing</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/budgeting/">Budgeting</a>
+  </div>
+
+  <div class="kicker">Budgeting</div>
+  <h1>Going down to one car</h1>
+  <p class="standfirst">Most households that talk about going to one car talk about it for years. That's often because the case is closer than either side admits. Here is every weight we could think of, placed on the pan where it belongs.</p>
+
+  <div class="byline">
+    <span>Budget Pilot</span> · <span>September 28, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The weights below are sized by how much they usually matter, but the sizes are our judgment, not a measurement. Solid weights are ones you can put a dollar figure on. Dashed weights are real but have no natural price &mdash; and those are the ones that decide most households' answer.</p>
+
+<div class="bal-rig" aria-hidden="true">
+  <div class="bal-beam"></div>
+  <div class="bal-cords"><i></i><i></i></div>
+</div>
+<div class="bal-pans">
+  <div class="bal-pan">
+    <h3><small>Pan one</small>Sell it</h3>
+    <ul class="bal-stack">
+      <li class="bal-wt bal-heavy"><b>priced</b>Its insurance stops</li>
+      <li class="bal-wt bal-heavy"><b>priced</b>Its depreciation stops</li>
+      <li class="bal-wt bal-mid"><b>priced</b>Its maintenance and repairs stop</li>
+      <li class="bal-wt bal-mid"><b>priced &middot; once</b>Cash from the sale</li>
+      <li class="bal-wt"><b>priced</b>Registration and fees stop</li>
+      <li class="bal-wt bal-unpriced"><b>unpriced</b>One car to look after</li>
+      <li class="bal-wt bal-unpriced"><b>unpriced</b>A free parking space</li>
+    </ul>
+  </div>
+  <div class="bal-pan">
+    <h3><small>Pan two</small>Keep it</h3>
+    <ul class="bal-stack">
+      <li class="bal-wt bal-heavy"><b>priced</b>Days you both need a car</li>
+      <li class="bal-wt bal-heavy bal-unpriced"><b>unpriced</b>Schedules that can't flex</li>
+      <li class="bal-wt bal-mid"><b>priced</b>More miles on the car you keep</li>
+      <li class="bal-wt bal-mid bal-unpriced"><b>unpriced</b>A backup when one breaks</li>
+      <li class="bal-wt bal-mid bal-unpriced"><b>unpriced</b>Late or lone trips</li>
+      <li class="bal-wt"><b>priced</b>Rentals for trips away</li>
+      <li class="bal-wt bal-unpriced"><b>unpriced</b>Time spent coordinating</li>
+    </ul>
+  </div>
+</div>
+<p class="bal-caption">The beam is drawn level. Where it settles is up to you.</p>
+
+<h2>The weights in pan one</h2>
+
+<p><strong>Insurance and depreciation</strong> are the heavy pair, and both stop the day the car leaves. The insurance saving isn't the whole premium for that car &mdash; ask your insurer to quote the policy with one vehicle, since multi-car discounts can disappear and a driver's rating may shift. Depreciation matters most if the second car is fairly new; on an old car it may be small. <strong>Maintenance</strong> is often heavier than people expect on a second car, precisely because second cars tend to be the older one. <strong>Registration and fees</strong> are light but certain; your last renewal notice gives the figure.</p>
+
+<p><strong>The sale proceeds</strong> come once. They're worth a lot if the car is paid off and nothing if you owe as much as it's worth. If there's a loan on it, the lender's payoff figure is what counts, not the balance on your last statement. <a href="/articles/selling-a-car-you-still-owe-on/">Selling a car you still owe on</a> covers that case.</p>
+
+<p>Notice what's missing from this pan: <strong>most of the fuel</strong>. If the second car did 6,000 miles a year, most of those trips don't vanish when it's sold. They move to the other car, a bus, a bike, or a rideshare. Only the trips you stop taking altogether save fuel.</p>
+
+<h2>The weights in pan two</h2>
+
+<p><strong>Overlap days</strong> are the heaviest priced weight: days when two people need to be in two places that one car can't serve. Count them honestly from a real month's calendar, not from memory. <strong>More miles on the remaining car</strong> is real wear &mdash; tires, oil, depreciation that tracks mileage &mdash; and it's the reason a cost-per-mile figure helps here; <a href="/articles/your-real-cost-per-mile/">your real cost per mile</a> separates the part that grows with each extra mile. <strong>Rentals</strong> cover the occasional trip where both drivers need wheels at once.</p>
+
+<p>The dashed weights are where the argument lives. <strong>Schedules that can't flex</strong> &mdash; a shift start, a school pickup window, a job that requires a car on short notice &mdash; can make the whole exercise moot. <strong>A backup</strong> matters more the less reliable the remaining car is. <strong>Late or lone trips</strong> are a safety question some households weigh very heavily and others not at all. <strong>Coordination time</strong> is small per day and relentless over a year.</p>
+
+<h2>Pricing what can be priced</h2>
+
+<p>Here is one illustrative household's attempt, with invented inputs. Their second car is older and paid off.</p>
+
+<div class="bal-arith" aria-label="Illustrative arithmetic">
+  <div><span>Insurance saved</span><span>$1,200</span></div>
+  <div><span>Depreciation avoided</span><span>$1,500</span></div>
+  <div><span>Maintenance avoided</span><span>$700</span></div>
+  <div><span>Registration avoided</span><span>$150</span></div>
+  <div class="bal-sub"><span>Pan one, per year</span><span>$3,550</span></div>
+  <div><span>36 overlap days &times; $40 rideshare</span><span>$1,440</span></div>
+  <div><span>6,000 shifted miles &times; $0.18</span><span>$1,080</span></div>
+  <div><span>2 rental weekends &times; $150</span><span>$300</span></div>
+  <div class="bal-sub"><span>Pan two, per year</span><span>$2,820</span></div>
+  <div class="bal-sub"><span>Difference in favor of selling</span><span>$730</span></div>
+</div>
+
+<p>That's $730 a year, or about $61 a month, plus a one-time sum from the sale. It is a real saving. It's also small enough that a single dashed weight could outweigh it. Would this household pay $61 a month to never have to negotiate who takes the car? Many would. Many wouldn't.</p>
+
+<p>Your own arithmetic might come out lopsided in either direction. A newer second car with a high premium, used mainly for a commute that could be done by transit, might show several thousand dollars in favor of selling. A household with daily overlap and no transit might show the opposite. Run it with your own numbers before letting anyone &mdash; including us &mdash; tell you the answer.</p>
+
+<div class="bal-verdict">
+<p><strong>The verdict depends on which pan you weigh heavier.</strong> If the priced difference is large and the dashed weights on pan two are light for you, sell. If the priced difference is small, as it is here, the dashed weights decide, and only the people who'd live with the result can size them. One way to find out without committing: park the second car for a month. Keep it insured and registered, but don't drive it. Count the overlap days, note the rideshares, and pay attention to the arguments. A month is enough to learn how heavy the dashed weights really are.</p>
+</div>
+
+<h2>When the second car still has a loan</h2>
+
+<p>A loan changes the scale in two ways. Pan one gains the monthly payment, which stops when the car is sold &mdash; but only if the sale price covers the payoff. If it doesn't, the shortfall has to be paid in cash at the sale, and that one-time cost belongs on pan two. Ask the lender for a written payoff figure good through a specific date, then compare it with what comparable cars are actually selling for, not what they're listed at. Also note that the payment itself is partly principal: the interest is a true saving, while the principal is money you were putting into an asset you're now turning back into cash. Counting the entire payment as a saving and the sale proceeds as a windfall counts the same money twice.</p>
+
+<p>If the trial goes well and you sell, redirect some of the insurance and depreciation you've freed up into the remaining car's repair fund. With one car, a breakdown matters more than it did with two.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Keep reading</h2>
+    <ul>
+            <li><a href="/articles/when-you-stop-commuting/">When you stop commuting</a></li>
+      <li><a href="/articles/splitting-car-costs-as-a-couple/">Splitting car costs as a couple</a></li>
+      <li><a href="/articles/sizing-a-car-repair-fund/">How big a car repair fund should be</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/articles/budgeting/">Budgeting</a>
+      <a href="/articles/borrowing/">Borrowing</a>
+      <a href="/articles/insurance/">Insurance</a>
+      <a href="/articles/running-costs/">Running Costs</a>
+      <a href="/articles/leasing/">Leasing</a>
+      <a href="/articles/buying-selling/">Buying &amp; Selling</a>
+      <a href="/about/">About</a>
+    </div>
+    <p>Budget Pilot writes about the money side of owning a car. Nothing here is
+       financial, tax, insurance or legal advice; check the specifics of your own
+       situation with the people who hold the paperwork. &copy; 2026 Budget Pilot.</p>
+  </div>
+</footer>
+</body>
+</html>
