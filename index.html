@@ -7,8 +7,8 @@
 <meta name="description" content="Plain, worked-out guides to car loans, leases, insurance, running costs and budgeting, with the arithmetic shown.">
 <link rel="canonical" href="https://budgetpilot.fun/">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="theme-color" content="#F7F3EC" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#10161F" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C0C0E" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -31,56 +31,71 @@
 <meta name="twitter:image" content="https://budgetpilot.fun/articles/og/home.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/articles/article.css">
 <style>
-  .idx{list-style:none;margin:24px 0 0;padding:0}
-  .idx li{border-top:1px solid var(--line)}
-  .idx li:last-child{border-bottom:1px solid var(--line)}
-  .idx a{display:block;padding:18px 0;text-decoration:none;color:var(--ink)}
-  .idx h3{margin:0;font-size:18.5px;line-height:1.3}
-  .idx p{margin:5px 0 0;font-size:15px;line-height:1.5;color:var(--muted)}
-  .idx .sec{display:inline-block;margin-top:8px;font-size:11.5px;font-weight:600;
-            letter-spacing:.12em;text-transform:uppercase;color:var(--sky)}
-  .idx a:hover h3{color:var(--amber-ink)}
-  .shelf{display:grid;gap:12px;margin:24px 0 0}
-  @media(min-width:640px){.shelf{grid-template-columns:repeat(2,1fr)}}
-  @media(min-width:960px){.shelf{grid-template-columns:repeat(3,1fr)}}
-  .shelf a{display:block;background:var(--card);border:1px solid var(--line);
-           border-radius:14px;padding:20px;text-decoration:none;color:var(--ink)}
-  .shelf a:hover{border-color:var(--line-2)}
-  .shelf h3{margin:0 0 6px;font-family:var(--disp);font-weight:400;font-size:23px}
-  .shelf .n{font-family:var(--body);font-size:14px;color:var(--amber-ink);font-variant-numeric:tabular-nums}
-  .shelf p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-  .srch{margin:26px 0 0}
-  .srch input{width:100%;background:var(--card);border:1px solid var(--line-2);border-radius:999px;
-              padding:13px 20px;color:var(--ink);font-family:var(--body);font-size:16px}
-  .srch input::placeholder{color:var(--faint)}
-  .srch input:focus{outline:2px solid var(--amber);outline-offset:1px}
-  #sc{margin:12px 0 0;font-size:13px;color:var(--faint)}
-
-  .hero{padding:54px 0 10px}
-  .hero h1{font-size:clamp(40px,8vw,68px);max-width:14ch}
-  .hero .standfirst{max-width:36em}
-  .go{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
-  .go a{display:inline-block;padding:11px 20px;border-radius:999px;font-weight:600;
-        font-size:15px;text-decoration:none}
+  /* hero */
+  .hero{padding:60px 0 14px;max-width:980px}
+  .hero h1{font-size:clamp(44px,8.6vw,90px);letter-spacing:-.04em;line-height:.97;max-width:15ch;margin:0 0 22px}
+  .hero .standfirst{max-width:40em}
+  .metaline{display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.03em;text-transform:uppercase;color:var(--faint);margin:0 0 4px;padding:18px 0 0;border-top:1px solid var(--line)}
+  .metaline span{position:relative;padding-right:16px}
+  .metaline span+span::before{content:"";position:absolute;left:-9px;top:50%;width:3px;height:3px;border-radius:50%;background:var(--amber);transform:translateY(-50%)}
+  .go{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+  .go a{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:2px;font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
   .go .pri{background:var(--ink);color:var(--paper)}
-  .go .sec2{border:1px solid var(--line-2);color:var(--ink)}
-  .picks{display:grid;gap:12px;margin:24px 0 0;counter-reset:pk}
-  @media(min-width:760px){.picks{grid-template-columns:repeat(2,1fr)}}
-  .picks a{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;padding:18px 0;
-           border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
-  .picks a::before{counter-increment:pk;content:"0" counter(pk);grid-row:span 2;
-           font-family:var(--disp);font-size:30px;color:var(--amber);line-height:1}
-  .picks h3{margin:0;font-size:18px}
+  .go .pri:hover{background:var(--amber);color:#fff}
+  .go .sec2{border:1.5px solid var(--ink);color:var(--ink)}
+  .go .sec2:hover{background:var(--ink);color:var(--paper)}
+
+  /* wide-page section labels */
+  main.wrap--wide > h2{font-family:var(--body);font-weight:700;font-size:13.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);margin:64px 0 0;display:flex;align-items:center;gap:12px}
+  main.wrap--wide > h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  /* start-here picks */
+  .picks{display:grid;gap:0 40px;margin:16px 0 0;counter-reset:pk;border-top:1.5px solid var(--ink)}
+  @media(min-width:760px){.picks{grid-template-columns:1fr 1fr}}
+  .picks a{display:grid;grid-template-columns:auto 1fr;gap:3px 18px;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);align-content:start}
+  .picks a::before{counter-increment:pk;content:"0" counter(pk);grid-row:span 2;font-family:var(--mono);font-size:14px;font-weight:500;color:var(--amber);line-height:1.5;font-variant-numeric:tabular-nums}
+  .picks h3{margin:0;font-size:19px;letter-spacing:-.01em}
+  .picks a:hover h3{color:var(--amber-ink)}
   .picks p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
-  .leaseend{margin:54px 0 0;background:var(--sky-soft);border-radius:18px;padding:26px 24px}
-  .leaseend h2{margin:0 0 10px}
+
+  /* subject shelf */
+  .shelf{display:grid;gap:0;margin:16px 0 0;border-top:1.5px solid var(--ink);border-left:1px solid var(--line)}
+  @media(min-width:720px){.shelf{grid-template-columns:1fr 1fr}}
+  @media(min-width:1000px){.shelf{grid-template-columns:1fr 1fr 1fr}}
+  .shelf a{position:relative;display:block;padding:24px 22px 22px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+  .shelf a:hover{background:var(--paper-2)}
+  .shelf h3{margin:0 0 8px;font-family:var(--disp);font-weight:700;font-size:25px;letter-spacing:-.02em}
+  .shelf p{margin:0 0 16px;font-size:14px;color:var(--muted);line-height:1.5}
+  .shelf .n{font-family:var(--mono);font-size:12px;color:var(--amber-ink);text-transform:uppercase;letter-spacing:.05em;font-variant-numeric:tabular-nums}
+  .shelf a::after{content:"\2197";position:absolute;top:22px;right:20px;font-size:17px;color:var(--faint)}
+  .shelf a:hover::after{color:var(--amber)}
+
+  /* lease-end callout */
+  .leaseend{margin:60px 0 0;background:var(--sky-soft);border-left:3px solid var(--amber);border-radius:2px;padding:28px 26px}
+  .leaseend h2{margin:0 0 10px;font-size:26px}
   .leaseend p{margin:0 0 14px;color:var(--ink)}
   .leaseend ul{margin:0 0 16px;padding-left:20px}
-  .leaseend .fine{font-size:14px;color:var(--muted);margin:0}
+  .leaseend li{margin-bottom:6px}
+  .leaseend .fine{font-size:13.5px;color:var(--muted);margin:0}
 
+  /* plain index lists */
+  .idx{list-style:none;margin:16px 0 0;padding:0;border-top:1.5px solid var(--ink)}
+  .idx li{border-bottom:1px solid var(--line)}
+  .idx a{display:block;padding:18px 0;text-decoration:none;color:var(--ink)}
+  .idx h3{margin:0;font-size:18px;line-height:1.3;letter-spacing:-.01em}
+  .idx p{margin:5px 0 0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+  .idx .sec{display:inline-block;margin-top:9px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-ink)}
+  .idx a:hover h3{color:var(--amber-ink)}
+
+  /* search (shared with articles index) */
+  .srch{margin:26px 0 0}
+  .srch input{width:100%;background:var(--card);border:1.5px solid var(--line-2);border-radius:2px;padding:14px 18px;color:var(--ink);font-family:var(--body);font-size:16px}
+  .srch input::placeholder{color:var(--faint)}
+  .srch input:focus{outline:2px solid var(--amber);outline-offset:1px;border-color:var(--amber)}
+  #sc{margin:12px 0 0;font-size:12.5px;color:var(--faint);font-family:var(--mono)}
 </style>
 <script type="application/ld+json">
 {
@@ -115,7 +130,7 @@
 
 <header class="mast">
   <a class="brand" href="/" aria-label="Budget Pilot - home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6.5 16h2.6M16 6.5v2.6M25.5 16h-2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 16l7-7" stroke="#D9822B" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="17" width="6" height="12" rx="1" fill="currentColor"/><rect x="13" y="10" width="6" height="19" rx="1" fill="currentColor"/><rect x="23" y="3" width="6" height="26" rx="1" fill="#1B45E0"/></svg>
     <span>Budget Pilot</span>
   </a>
   <nav>
@@ -133,6 +148,7 @@
     <p class="standfirst">Loans, leases, insurance, fuel, repairs and the slow
        arithmetic of depreciation, written out plainly and with the numbers shown.
        100 articles, no sales pitch, nothing to sign up for.</p>
+    <div class="metaline"><span>100 articles</span><span>No sign-up, nothing to buy</span><span>The arithmetic shown</span></div>
     <div class="go">
       <a class="pri" href="/articles/">Browse all 100 articles</a>
       <a class="sec2" href="/articles/budgeting/">Start with budgeting</a>
